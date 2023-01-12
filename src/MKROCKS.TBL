@@ -1,0 +1,163 @@
+	.DATA
+MEDROCK1:
+	.word   14,16,6,9
+	.long   0565bf7eH
+	.word   05080H
+	.long   ROCK_P
+MEDROCK2:
+	.word   12,16,7,8
+	.long   0565c38cH
+	.word   05080H
+MEDROCK3:
+	.word   16,13,6,5
+	.long   0565c74aH
+	.word   05080H
+MEDROCK4:
+	.word   15,11,6,6
+	.long   0565caaaH
+	.word   05080H
+MEDROCK5:
+	.word   12,15,6,7
+	.long   0565cdb4H
+	.word   05000H
+MEDROCK6:
+	.word   12,15,5,6
+	.long   0565d138H
+	.word   05000H
+MEDROCK7:
+	.word   16,13,9,7
+	.long   0565d4bcH
+	.word   05080H
+MEDROCK8:
+	.word   15,11,9,5
+	.long   0565d821H
+	.word   05080H
+LILROCK1:
+	.word   7,8,3,3
+	.long   0565db2bH
+	.word   05000H
+	.long   ROCK_P
+LILROCK2:
+	.word   7,8,3,4
+	.long   0565dc43H
+	.word   05000H
+LILROCK3:
+	.word   8,7,4,3
+	.long   0565dd5bH
+	.word   05000H
+LILROCK4:
+	.word   7,9,3,5
+	.long   0565de73H
+	.word   05000H
+LILROCK5:
+	.word   7,8,3,4
+	.long   0565dfaeH
+	.word   05000H
+LILROCK6:
+	.word   8,8,3,3
+	.long   0565e0c6H
+	.word   05000H
+BIGANVILPC1:
+	.word   12,13,6,6
+	.long   0565e206H
+	.word   05080H
+	.long   ROCK_P
+BIGANVILPC2:
+	.word   10,14,5,7
+	.long   0565e502H
+	.word   05000H
+BIGANVILPC3:
+	.word   13,11,7,5
+	.long   0565e7beH
+	.word   05080H
+BIGANVILPC4:
+	.word   15,9,7,4
+	.long   0565ea55H
+	.word   05080H
+BIGANVILPC5:
+	.word   15,7,8,4
+	.long   0565ecc3H
+	.word   05080H
+BIGANVILPC6:
+	.word   15,5,8,3
+	.long   0565ee95H
+	.word   05080H
+BIGANVILPC7:
+	.word   13,9,6,4
+	.long   0565efeeH
+	.word   05080H
+BIGANVILPC8:
+	.word   13,13,6,6
+	.long   0565f22fH
+	.word   05080H
+BIGANVILPC9:
+	.word   11,15,5,8
+	.long   0565f544H
+	.word   05000H
+BIGANVILPC10:
+	.word   15,10,7,4
+	.long   0565f87dH
+	.word   05080H
+BIGANVILPC11:
+	.word   16,7,8,3
+	.long   0565fb16H
+	.word   05080H
+BIGANVILPC12:
+	.word   18,6,9,2
+	.long   0565fd10H
+	.word   05080H
+BIGANVILPC13:
+	.word   14,7,7,3
+	.long   0565fed0H
+	.word   05080H
+LILANVILPC1:
+	.word   6,13,2,7
+	.long   056600a7H
+	.word   05000H
+	.long   ROCK_P
+LILANVILPC2:
+	.word   5,9,2,5
+	.long   0566022dH
+	.word   05000H
+LILANVILPC3:
+	.word   6,5,3,2
+	.long   0566030eH
+	.word   05000H
+LILANVILPC4:
+	.word   6,7,3,3
+	.long   056603a4H
+	.word   05000H
+LILANVILPC5:
+	.word   6,9,2,4
+	.long   05660476H
+	.word   05000H
+LILANVILPC6:
+	.word   5,11,2,6
+	.long   05660584H
+	.word   05000H
+LILANVILPC7:
+	.word   4,14,1,7
+	.long   05660697H
+	.word   05000H
+LILANVILPC9:
+	.word   6,7,3,3
+	.long   056607afH
+	.word   05000H
+LILANVILPC10:
+	.word   8,6,3,3
+	.long   05660881H
+	.word   05000H
+LILANVILPC11:
+	.word   6,7,3,3
+	.long   05660971H
+	.word   05000H
+LILANVILPC12:
+	.word   6,10,3,5
+	.long   05660a43H
+	.word   05000H
+LILANVILPC13:
+	.word   5,15,2,8
+	.long   05660b6fH
+	.word   05000H
+	.TEXT
+

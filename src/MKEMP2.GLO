@@ -1,0 +1,4 @@
+	.globl	YANG_P
+	.globl	SKS
+	.globl	EMP_P
+	.globl	LZMORPH_P

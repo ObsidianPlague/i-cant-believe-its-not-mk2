@@ -1,0 +1,39 @@
+	.DATA
+RNWALK1:
+	.word   75,144,36,-2
+	.long   0383dfe6H
+	.word   06580H
+RNWALK2:
+	.word   64,144,26,-2
+	.long   03847436H
+	.word   06480H
+RNWALK3:
+	.word   64,145,25,-2
+	.long   0384f56cH
+	.word   06580H
+RNWALK4:
+	.word   64,143,26,-3
+	.long   03856528H
+	.word   06580H
+RNWALK5:
+	.word   64,143,25,-5
+	.long   0385d8d0H
+	.word   06580H
+RNWALK6:
+	.word   64,141,25,-7
+	.long   03864fc0H
+	.word   06580H
+RNWALK7:
+	.word   64,143,25,-5
+	.long   0386c3e8H
+	.word   06580H
+RNWALK8:
+	.word   65,144,26,-4
+	.long   03873becH
+	.word   06580H
+RNWALK9:
+	.word   69,142,25,-6
+	.long   0387c5c8H
+	.word   06880H
+	.TEXT
+

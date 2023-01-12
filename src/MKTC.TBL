@@ -1,0 +1,32 @@
+	.DATA
+LILXPLODE1:
+	.word   12,11,6,5
+	.long   05660ce6H
+	.word   06080H
+	.long   RDBOOM
+LILXPLODE2:
+	.word   22,22,11,11
+	.long   05660ff6H
+	.word   06080H
+LILXPLODE3:
+	.word   33,32,16,16
+	.long   05661a42H
+	.word   06080H
+LILXPLODE4:
+	.word   34,34,18,18
+	.long   05662d2aH
+	.word   06080H
+LILXPLODE5:
+	.word   34,34,17,18
+	.long   05664214H
+	.word   06480H
+LILXPLODE6:
+	.word   31,29,16,14
+	.long   056655deH
+	.word   06080H
+LILXPLODE7:
+	.word   30,30,16,15
+	.long   056664e8H
+	.word   06080H
+	.TEXT
+

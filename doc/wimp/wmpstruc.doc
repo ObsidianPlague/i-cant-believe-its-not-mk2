@@ -1,0 +1,1069 @@
+// THIS FILE IS INTENDED FOR DOCUMENTATION PURPOSES ONLY.
+
+// It describes the current WIMP file format.
+// The file wmpstruc.h should be included in any program referencing WIMP
+// files.  It contains older structures which support old versions of the
+// WIMP file format.
+
+
+/* The following programs read wimp .img libs and must be looked at
+	whenever the .img file format changes...
+	WIMP,  WLIB,  BGTOOL,  BLIMP,  LOAD2
+
+
+BASIC LAYOUT OF WIMP FILE
+
+
+	LIB_HEADER  ("offset" field points to start of image headers)
+
+	Image Data
+
+	Palette Data
+
+	IMAGE headers
+
+	PAL headers
+
+	SEQUENCE info if any
+
+	SCRIPT info if any
+
+	POINT TABLES if any
+
+	ALTERNATE PALETTES if any
+
+	DAMAGE TABLES if any
+
+
+*/
+
+#define  NUM_DEF_PAL	3
+#define  MAX_LIB  12
+
+#define  MAX_SCR  64
+#define  MAX_SEQ  128
+#define  MAX_FRM  300
+#define  MAX_IMG  500
+#define  MAX_PAL  200
+#define  NUM_BUF  4
+
+#define round_x(x)	((x+3)&(~3))	/* perform rounding of an x size to
+	 							a mult of 4 */
+
+typedef unsigned char UCHAR;
+
+struct LIB_HEADER	{
+	int   num_images;	  /* Number of images in library */
+	int   num_palettes;	  /* Number of palettes */
+	long  offset;		  /* Offset in file to IMAGE and PAL headers*/
+	int   version;	  /* NEW FOR WIMP 5.0 and above! */
+	int   num_seq;	  /* number of defined sequences */
+	int   num_scripts;     /* number of defined scripts */
+	int   num_dam;         /* Number of damage tables   */
+	int   temp;		  /* = 0xabcd if version is valid  */
+	UCHAR bufscr[NUM_BUF]; /* 8 bits defines the script for each buffer */
+				  /* 0xff means buffer is not in use */	
+	int   spare1;
+	int   spare2;
+	int   spare3;
+	};
+
+#define PNAMELEN 9
+#define INAMELEN 15
+
+char  defltname[INAMELEN+1];
+
+/* Flags in IMAGE structure */
+
+#define  MARKED	1	/* Marked in a range command */
+#define  LOADED	2	/* Current version is loaded in memory */
+#define  CHANGED 	4/* Image data differs from when it was loaded*/
+#define  DELETE 	8/*Image will not be saved when lib is 
+			saved(not used)*/
+#define  DOWN		0x10	/* Image or palette is currently in GSP mem */
+#define  NEW		0x20	/* Img or pal was created in this 
+					Wimp session */
+#define  SEQFLG	0x40	/* For ENTRYs and SEQSCRS only. distinguishes bet. 
+				img/seq or seq/scr  */
+
+#define	M_COPIES   0x300 // tells LOADIMG how many copies to make
+			    	   // if this image is loaded from a universe
+				   // 0-3 means 1-4
+#define	B_COPIES   8     // tells LOADIMG how many copies to make
+
+
+
+
+#define NUM_DAM	6		// number of possible damage tables
+
+typedef struct	{
+	char  name[INAMELEN+1];	/* image name */
+	int   flags;			/* i.e. range selected */
+	int   xoff, yoff;		/* animation offsets */
+	unsigned int xsize, ysize;	/* size in pixels */
+	int   palind;			/* pointer to palette data */
+	long  offset;			/* offset in file of image */
+	char  far *data;		/* pointer to image data */
+	int   lib;			/* index into library handle array */
+	char  dam[NUM_DAM];		/* damage tables */
+	int   frame;			/* frame number for anim. purposes */
+	int   pt_tbl;			/* NEW for WIMP >= 6.01 
+
+/*	When reading .img files...
+		If the pt_tbl field >= 0, then
+		it means that a point table
+		is associated with this image, and follows
+		at the end of the .img file.
+
+       When writing images, the index numbers are sorted in
+              image order.  The tables are written in order at
+		the end of the image file.  		*/
+
+	int othpals;	// Ver 6.30 and greater.
+		      	// Ability to associate alternate palettes to an image
+		      	// When saved to a file, this field is the number of 
+		      	// 		other palettes minus 1.
+		      	// When read from a file, this field becomes the index
+		      	// 		of the other palette table.
+	int	spare1;
+	int	spare2;
+	int	spare3;
+	} IMAGE;
+
+
+
+typedef struct {
+	char  name[PNAMELEN+1];	/* name of palette */
+	char  flags;		
+	char  bits_pr_pxl;		/* bits per pixel used */
+	unsigned int num_cols;	/* number of colors used */
+	long  offset;			/* offset in file of image */
+	int   *data;			/* pointer to palette data */
+	int   lib;			/* index into library handle array */
+	unsigned char colind; 	/* pointer to start color in CRAM */ 
+	char  cmap;			/* Which color map to use (0-F) */
+	int   spare1;
+	int   spare2;
+	int   spare3;
+         } PAL;
+
+
+
+
+
+#define PTTBL_VER	0x60a			// point tables added
+#define OTHPALVSN	0x61d		// alternate palettes supported
+#define LGMODLVSN	0x632			// WIMP converted to large
+						model, damage tables supported
+#define REVERTVSN	0x634			// Write imgs and palettes for
+						 backward compatibility
+
+
+char dirbuf[40];
+struct LIB_HEADER	lib_hdr;
+
+
+// AS OF VER 6.50, WIMP FILES WILL NEED TO STORE FAR POINTERS
+//	(when WIMP moves to large model)
+
+typedef	struct  {
+	void  far *itemptr;	// points to an IMAGE or sequence
+	int   indx; 	       // used only when saving to file
+	UCHAR ticks;
+	int   deltax;
+	int   deltay;
+	int   spare1;
+	int   spare2;
+	int   spare3;
+	}  FENTRY;
+
+
+typedef struct	{
+	char  name[INAMELEN+1]; // script name 
+	int   flags;		   
+	int   num;
+	FENTRY	far *entry[16];  // 16 sequences in buffer 
+	int   startx;		   //start x pos in scripts, seq ctr in seqs
+	int   starty;
+	char  dam[NUM_DAM];	   // damage table index (seqs only,
+				-1 if none)
+	int   spare1;
+	int   spare2;
+	}  FSEQSCR;
+
+
+
+
+struct POINT {
+	int	x,y;
+	};
+
+typedef struct {
+	struct POINT	pt[10];
+	}  POINT_TABLE;
+
+
+
+#define	MAX_DAM	128
+FSEQSCR *damage[MAX_DAM];
+
+
+
+//==========================================================================
+
+
+char *read_imglib(int cur_lib,char *libname)
+{
+IMAGE *animg;
+ENTRY oldent;
+SEQSCR oldss;
+struct PALETTE oldpal;
+int  q, z, p, d, j;
+int	ni, np, qq, nb, nd;
+int	b,s,ns,ss,bb;
+int	t;
+FENTRY	*ent;
+struct LIB_HEADER	new_hdr;
+int *pntr;
+
+if ((libh[cur_lib] = open(libname,O_RDONLY | O_BINARY)) <= 0)
+	{
+	sprintf(tmp,"[%s] could not be opened",libname);
+	return(tmp);
+	}
+
+read (libh[cur_lib], (char *)&new_hdr, sizeof(struct LIB_HEADER));
+lseek(libh[cur_lib],new_hdr.offset,SEEK_SET);
+
+if (new_hdr.version > VERSION)
+	{
+	close(libh[cur_lib]); 
+	return("This file created with a LATER version of WIMP!");
+	}
+
+qq = q = lib_hdr.num_images;
+z = lib_hdr.num_palettes;		/* don't count default palettes */
+ss = s = lib_hdr.num_seq;
+bb = b = lib_hdr.num_scripts;
+
+if ((ni = (new_hdr.num_images += q)) > MAX_IMG)
+	{
+	undo_libread(q,z,s,cur_lib);
+	sprintf(tmp,"Limit exceeded on images (new = %d)",ni);
+	return(tmp);
+	}
+if ((np = (new_hdr.num_palettes += z - NUM_DEF_PAL)) > MAX_PAL)
+	{
+	undo_libread(q,z,s,cur_lib);
+	sprintf(tmp,"CLEAN UP YOUR DAMN PALETTES!! (new = %d)",np);
+	return(tmp);
+	}
+if ((ns = (new_hdr.num_seq += s)) > MAX_SEQ)
+	{
+	undo_libread(q,z,s,cur_lib);
+	sprintf(tmp,"Limit exceeded on sequences (new = %d)",ns);
+	return(tmp);
+	}
+
+if (new_hdr.temp != 0xabcd)  // version is valid
+	{
+	return(read_oldimglib(cur_lib,&new_hdr));
+	}
+
+
+if ((nb = (new_hdr.num_scripts += b)) > MAX_SCR)
+    {
+    undo_libread(q,z,s,cur_lib);
+    while (--b >= lib_hdr.num_scripts)
+	   {
+	   for (t = script[b]->num; --t >= 0;) free(script[b]->entry[t]);
+	   free(script[b]);
+	   }
+    sprintf(tmp,"Limit exceeded on scripts (new = %d)",nb);
+    return(tmp);
+    }
+
+d = lib_hdr.num_dam;
+if ((nd = (new_hdr.num_dam += d)) > MAX_DAM)
+    {
+    nd = MAX_DAM;
+    sprintf(tmp,"Damage table limit exceeded. (%d of %d in file loaded)",
+                nd-d,new_hdr.num_dam);
+    }
+
+new_hdr.spare1 = new_hdr.spare2 = new_hdr.spare3 = 0;
+
+while (q < ni) 
+    {
+    POSIT(14,45);
+    animg =  (IMAGE *)malloc(sizeof(IMAGE));
+    if (animg == NULL)
+        {
+        undo_libread(q,z,s,cur_lib);
+        sprintf(tmp,"Couldn't malloc struct for img #%d",q);
+        return(tmp);
+        }
+    read (libh[cur_lib], (char *)animg, sizeof(IMAGE));
+    if ((unsigned int)(animg->xoff+500) > 1000)
+        {
+     sprintf(tmp,"X Anim pt of [%s] is set to %+4d!",animg->name,animg->xoff);
+        if (YesNoWindow(tmp,"CONTINUE","ABORT"))
+            {
+            undo_libread(q,z,s,cur_lib);
+            return(NULL);
+            }
+        }
+    if ((unsigned int)(animg->yoff+400) > 800)
+        {
+      sprintf(tmp,"Y Anim pt of [%s] is set to %+4d!",animg->name,animg->yoff);
+        if (YesNoWindow(tmp,"CONTINUE","ABORT"))
+            {
+            undo_libread(q,z,s,cur_lib);
+            return(NULL);
+            }
+        }
+    animg->palind += z-3;
+    animg->flags &= MARKED|M_COPIES;
+    animg->frame = -1;        /* indicated not downloaded to GSP as a frame */
+    animg->lib = cur_lib;
+    animg->data = NULL;
+    if (new_hdr.version < PTTBL_VER) animg->pt_tbl = -1;
+    if (new_hdr.version < OTHPALVSN) animg->othpals = -1; // no other palettes
+    if (new_hdr.version < LGMODLVSN)
+        {
+        for (j=NUM_DAM;--j>=0;)    animg->dam[j] = -1; // no damage tables
+        lseek(libh[cur_lib],-6L,SEEK_CUR);    // adjust for added spares.
+        }
+    else if (new_hdr.version >= REVERTVSN)
+        lseek(libh[cur_lib],-6L,SEEK_CUR);    // added spares not written.
+    animg->spare1 = animg->spare2 = animg->spare3 = 0;
+    img[q++] = animg;
+    }
+
+while (z < np) 
+    {
+    pal[z] =  (PAL *)malloc(sizeof(PAL));
+    if (pal[z] == NULL)
+        {
+        undo_libread(q,z,s,cur_lib);
+        sprintf(tmp,"Couldn't malloc struct for pal #%d",z);
+        return(tmp);
+        }
+    if ((new_hdr.version < LGMODLVSN) || (new_hdr.version >= REVERTVSN))
+        {
+        read (libh[cur_lib],(char *)&oldpal, sizeof(struct PALETTE));
+        strcpy(pal[z]->name,oldpal.name);
+        pal[z]->bits_pr_pxl = oldpal.bits_pr_pxl;
+        pal[z]->num_cols = oldpal.num_cols;
+        pal[z]->offset = oldpal.offset;
+        pal[z]->cmap = oldpal.cmap;
+        pal[z]->flags =  oldpal.flags;
+        }
+    else
+        read (libh[cur_lib],(char *)pal[z], sizeof(PAL));
+    pal[z]->lib = cur_lib;
+    pal[z]->colind = 0;
+    pal[z]->cmap &= 0xf;    /* 0-f only valid values */
+    pal[z]->flags &= MARKED;
+    pal[z]->spare1 = pal[z]->spare2 = pal[z]->spare3 = 0;
+    pal[z++]->data = NULL;
+    }
+
+while (s < ns)
+    {
+    sequence[s] =  (FSEQSCR *)malloc(sizeof(FSEQSCR));
+    if (sequence[s] == NULL) 
+        {
+        undo_libread(q,z,s,cur_lib);
+        sprintf(tmp,"Couldn't malloc struct for seq #%d",s);
+        return(tmp);
+        }
+    if (new_hdr.version < LGMODLVSN)
+        {
+        read (libh[cur_lib],(char *)&oldss, sizeof(SEQSCR));
+        strcpy(sequence[s]->name,oldss.name);
+        sequence[s]->flags = oldss.flags;
+        sequence[s]->num = oldss.num;
+        sequence[s]->startx = oldss.startx;
+        sequence[s]->starty = oldss.starty;
+        for (j=NUM_DAM;--j>=0;)
+		sequence[s]->dam[j] = -1; // no damage tables
+        }
+    else 
+        read (libh[cur_lib],(char *)sequence[s], sizeof(FSEQSCR));
+    for (t = sequence[s]->num; --t >= 0;)
+        {
+        ent = sequence[s]->entry[t] = (FENTRY *)malloc(sizeof(FENTRY));
+        if (ent == NULL) 
+            {
+            free(sequence[s]);
+            undo_libread(q,z,s,cur_lib);
+            sprintf(tmp,"Couldn't malloc struct for seq #%d entry #%d",s,t);
+            return(tmp);
+            }
+        if (new_hdr.version < LGMODLVSN)
+            {
+            read (libh[cur_lib], (char *)&oldent, sizeof(ENTRY));
+            ent->indx = oldent.indx;
+            ent->ticks = oldent.ticks;
+            ent->deltax = oldent.deltax;
+            ent->deltay = oldent.deltay;
+            }
+        else
+            read (libh[cur_lib], (char *)ent, sizeof(FENTRY));
+
+   (IMAGE *)ent->itemptr = ((ent->indx+qq) < 0) ? &dummyi : img[ent->indx+qq];
+        ent->indx = -1;
+        ent->spare1 = ent->spare2 = ent->spare3 = 0;
+        }
+    sequence[s]->spare1 = sequence[s]->spare2 = 0;
+    s++;
+    }
+
+for (q=0; q < 4; q++ )
+    {
+// if buffer not empty, DON'T use new file's definition
+    if (lib_hdr.bufscr[q])     new_hdr.bufscr[q] = lib_hdr.bufscr[q];
+// other wise, if NEW buffer is not empty, adjust the script
+//                        index as needed
+    else if (new_hdr.bufscr[q])
+        {
+        if (new_hdr.bufscr[q] <= (UCHAR)nb)    new_hdr.bufscr[q] += (UCHAR)b;
+        else new_hdr.bufscr[q] = 0;
+        }
+    }
+while (b < nb)
+    {
+    if (b == MAX_SCR)     
+        {
+        nb = b;
+       ErrorWindow("Maximum number of scripts reached. The rest not loaded.");
+        break;
+        }
+    script[b] =  (FSEQSCR *)malloc(sizeof(FSEQSCR));
+    if (script[b] == NULL)
+        {
+        nb = b;
+       sprintf(tmp,"Malloc error on script #%d. Other scripts not loaded.",b);
+        ErrorWindow(tmp);
+        break;
+        }
+    if (new_hdr.version < LGMODLVSN)
+        {
+        read (libh[cur_lib],(char *)&oldss, sizeof(SEQSCR));
+        strcpy(script[b]->name,oldss.name);
+        script[b]->flags = oldss.flags;
+        script[b]->num = oldss.num;
+        script[b]->startx = oldss.startx;
+        script[b]->starty = oldss.starty;
+        for (j=NUM_DAM;--j>=0;)    script[b]->dam[j] = -1; // no damage tables
+        }
+    else
+        read (libh[cur_lib],(char *)script[b], sizeof(FSEQSCR));
+    for (t = script[b]->num; --t >= 0;)
+        {
+        ent = script[b]->entry[t] = (FENTRY *)malloc(sizeof(FENTRY));
+        if (ent == NULL) 
+            {
+            free(script[b]);
+            nb = b;
+ sprintf(tmp,"Malloc error on scr #%d, ent %d. Other scripts not loaded",b,t);
+            ErrorWindow(tmp);
+            break;
+            }
+        if (new_hdr.version < LGMODLVSN)
+            {
+            read (libh[cur_lib], (char *)&oldent, sizeof(ENTRY));
+            ent->indx = oldent.indx;
+            ent->ticks = oldent.ticks;
+            ent->deltax = oldent.deltax;
+            ent->deltay = oldent.deltay;
+            }
+        else
+            read (libh[cur_lib], (char *)ent, sizeof(FENTRY));
+        (FSEQSCR *)ent->itemptr = sequence[ent->indx+ss];
+        ent->spare1 = ent->spare2 = ent->spare3 = 0;
+        ent->indx = -1;
+        }
+    script[b]->spare1 = script[b]->spare2 = 0;
+    b++;
+    }
+
+q = qq;
+if (new_hdr.version >= PTTBL_VER)
+    {
+    if (emmflag) map_pages(0x0000,pthandle);
+    while (qq < ni)                   // NEW SUPPORT FOR POINT TABLES
+        {
+        if (img[qq]->pt_tbl >= 0)
+            {
+            if ((p=create_point_table()) < 0) break;
+          read (libh[cur_lib], (char far *)pt_table[p], sizeof(POINT_TABLE));
+            img[qq]->pt_tbl = p;
+            }
+        else img[qq]->pt_tbl = -1;
+        qq++;
+        }
+
+    while (qq < ni)        // in case previous loop broken out of
+        {
+        img[qq++]->pt_tbl = -1;
+        }
+    }
+
+
+qq = q;
+if (new_hdr.version >= OTHPALVSN)
+    {
+    while (qq < ni)                   // NEW SUPPORT FOR ALTERNATE PALETTES
+        {
+        if (img[qq]->othpals >= 0)
+            {
+            if ((othpal_table[othpal_indx] = _fmalloc(16)) == NULL)
+                {
+       sprintf(tmp,"Couldn't malloc Alternate Palette Table #%d",othpal_indx);
+                ErrorWindow(tmp);
+                break;
+                }
+            read (libh[cur_lib], othpal_table[othpal_indx], 16);    //FarRead
+            img[qq]->othpals = othpal_indx++;
+            }
+        qq++;
+        }
+    }
+
+
+if (new_hdr.version < LGMODLVSN) new_hdr.num_dam = 0;
+if (new_hdr.num_dam < 0) new_hdr.num_dam = 0;
+lib_hdr = new_hdr;
+lib_hdr.num_scripts = nb;
+
+/*******************     DAMAGE TABLES
+
+    DAMAGE TABLES ARE SEQUENCES OR SCRIPTS
+    They are stored in a wimp file as two consecutive words which
+        represent  1) whether it is a sequence or a script
+                   2) what the index of the sequence or script is
+
+    When they are read from an .img file, they are converted internally
+        to point to the sequence or script they represent.
+
+    I.E.   damage[0] is a long word containing  SEQFLG and 3.
+             After processing...
+             damage[0] = &sequence[3];
+
+    I.E.   damage[6] is a long word containing  0 and 12.
+             After processing...
+             damage[0] = &script[12];
+
+             It's that simple!!
+***************************************************************/
+
+
+if (new_hdr.num_dam > 0)
+    {
+    read(libh[cur_lib],FarBuf,new_hdr.num_dam*sizeof(FSEQSCR *));
+    pntr = (int *)FarBuf;
+    while (d < nd)
+        {
+        t = *pntr++;
+        if ((t == SEQFLG) || (t == 0))
+            {
+            if (*pntr < 0)
+                {
+                sprintf(tmp,"Bad index (%d) in damage tbl %d",*pntr,d);
+                 ErrorWindow(tmp);
+                remove_damage_refs(d);
+                nd--;
+                lib_hdr.num_dam--;
+                }
+            else damage[d++] = (t)?sequence[ss + *pntr] : script[bb + *pntr];
+            }
+        else {
+            sprintf(tmp,"Bad flag (%d) in damage tbl %d",t,d);
+             ErrorWindow(tmp);
+            remove_damage_refs(d);
+            nd--;
+            lib_hdr.num_dam--;
+            }
+        pntr++;
+        }
+    }
+
+return(NULL);
+}
+
+
+
+char *read_oldimglib(int clib,struct LIB_HEADER *lhdr)
+{
+register int j;
+IMAGE *animg;
+struct IMG *oimg;
+struct ANIM_SEQ *oseq;
+struct ANIM_BUF *obuf;
+int  q, z;
+int    ni, np, qq;
+int    b,s,ns,ss;
+int    t;
+FENTRY *ent;
+struct    ANIM_ENTRY    *aframe;
+FSEQSCR    *sqsc;
+struct    BUF_ENTRY        *bufent;
+
+DisplayMsg(infowin,10,-1,
+    " OLD WIMP FILE DETECTED! When you save this, it will no longer ",
+    " be compatible with OLD WIMP!!!  Save to a different name!!!! ");
+
+*(long *)lhdr->bufscr = 0L;   // no buffers in use
+//lseek(libh[clib],-4L,SEEK_SET);    // adjust for additional field
+                                                  // in new wimps header
+
+qq = q = lib_hdr.num_images;
+z = lib_hdr.num_palettes;        /* don't count default palettes */
+ss = s = lib_hdr.num_seq;
+b = lib_hdr.num_scripts;
+
+ni = lhdr->num_images;
+np = lhdr->num_palettes;
+ns = lhdr->num_seq;
+
+oimg = (struct IMG *) tmp;
+while (q < ni) 
+    {
+    POSIT(14,45);
+    animg =  (IMAGE *)malloc(sizeof(IMAGE));
+    if (animg == NULL)
+        {
+        undo_libread(q,z,s,clib);
+        sprintf(tmp,"Couldn't malloc struct for img #%d",q);
+        return(tmp);
+        }
+    read (libh[clib], (char *)oimg, sizeof(struct IMG));
+    if ((unsigned int)(oimg->xoff+500) > 1000)
+        {
+   sprintf(tmp,"X Anim pt of [%s] is set to %+4d!",animg->name,animg->xoff);
+        if (YesNoWindow(tmp,"CONTINUE","ABORT"))
+            {
+            undo_libread(q,z,s,clib);
+            return(NULL);
+            }
+        }
+    if ((unsigned int)(oimg->yoff+400) > 800)
+        {
+     sprintf(tmp,"Y Anim pt of [%s] is set to %+4d!",animg->name,animg->yoff);
+        if (YesNoWindow(tmp,"CONTINUE","ABORT"))
+            {
+            undo_libread(q,z,s,clib);
+            return(NULL);
+            }
+        }
+    strcpy(animg->name,oimg->name);
+    animg->xoff = oimg->xoff;
+    animg->yoff = oimg->yoff;
+    animg->xsize = oimg->xsize;
+    animg->ysize = oimg->ysize;
+    animg->offset = oimg->offset;
+    animg->palind = oimg->palind + z-3;
+    animg->flags = oimg->flags & MARKED;
+    animg->frame = -1;        /* indicated not downloaded to GSP as a frame */
+    animg->lib = clib;
+    animg->data = NULL;
+    animg->spare1 = animg->spare2 = animg->spare3 = 0;
+    animg->pt_tbl = animg->othpals = -1;
+    for (j=NUM_DAM;--j>=0;)    animg->dam[j] = -1; // no damage tables
+    img[q++] = animg;
+    }
+
+while (z < np) 
+    {
+    pal[z] =  (PAL *)malloc(sizeof(PAL));
+    if (pal[z] == NULL)
+        {
+        undo_libread(q,z,s,clib);
+        sprintf(tmp,"Couldn't malloc struct for pal #%d",z);
+        return(tmp);
+        }
+    read (libh[clib],(char *)pal[z], sizeof(struct PALETTE));
+    pal[z]->lib = clib;
+    pal[z]->colind = 0;
+    pal[z]->cmap = 0;        /* 0-f only valid values */
+    pal[z]->flags &= MARKED;
+    pal[z++]->data = NULL;
+    }
+
+oseq = (struct ANIM_SEQ *) tmp;
+aframe = (struct ANIM_ENTRY *)tmp;
+while (s < ns)
+    {
+    sequence[s] = sqsc = (FSEQSCR *)malloc(sizeof(FSEQSCR));
+    if (sqsc == NULL) 
+        {
+        undo_libread(q,z,s,clib);
+        sprintf(tmp,"Couldn't malloc struct for seq #%d",s);
+        return(tmp);
+        }
+    read (libh[clib],(char *)oseq, sizeof(struct ANIM_SEQ));
+    strcpy(sqsc->name,oseq->name);
+    sqsc->num = oseq->num_frames;
+    sqsc->flags = SEQFLG;
+    for (j=NUM_DAM;--j>=0;)    sqsc->dam[j] = -1; // no damage tables
+    for (t = sqsc->num; --t >= 0;)
+        {
+        ent = sequence[s]->entry[t] = (FENTRY *)malloc(sizeof(FENTRY));
+        if (ent == NULL) 
+            {
+            free(sqsc);
+            undo_libread(q,z,s,clib);
+            sprintf(tmp,"Couldn't malloc struct for seq #%d entry #%d",s,t);
+            return(tmp);
+            }
+        read (libh[clib], tmp, sizeof(struct ANIM_ENTRY));
+        ent->itemptr = (void *)img[aframe->imgind+qq];
+        ent->indx = -1;
+        ent->ticks = aframe->ticks;
+        ent->deltax = aframe->deltax;
+        ent->deltay = aframe->deltay;
+        }
+    s++;
+    }
+
+obuf = (struct ANIM_BUF *) tmp;
+bufent = (struct BUF_ENTRY *)tmp;
+for (q = 0; q < 4; q++)
+    {
+    if (lhdr->num_scripts & (1<<q))
+        {
+        lhdr->bufscr[q] = (char)(b+1);
+        script[b] = sqsc = (FSEQSCR *)malloc(sizeof(FSEQSCR));
+        if (sqsc == NULL)
+            {
+            sprintf(tmp,"Couldn't malloc struct for buffer #%d. ",q);
+            ErrorWindow(tmp);
+            goto scrabt;
+            }
+        read (libh[clib], (char *)obuf, sizeof(struct ANIM_BUF));
+        
+        sprintf(sqsc->name,"Script (buf %d)",q);            
+        sqsc->flags = 0;
+        sqsc->num = obuf->num_seq;
+        sqsc->startx = obuf->startx;
+        sqsc->starty = obuf->starty;
+        for (j=NUM_DAM;--j>=0;)    sqsc->dam[j] = -1; // no damage tables
+        for (t = sqsc->num; --t >= 0;)
+            {
+            ent = sqsc->entry[t] = (FENTRY *)malloc(sizeof(FENTRY));
+            if (ent == NULL) 
+                {
+                free(sqsc);
+                sprintf(tmp,"Couldn't malloc buffer #%d entry #%d. ",q,t);
+                ErrorWindow(tmp);
+                goto scrabt;
+                }
+            read (libh[clib], (char *)bufent, sizeof(struct BUF_ENTRY));
+            ent->itemptr = (void *)sequence[bufent->seqind+ss];
+            ent->indx = -1;
+            ent->ticks = 1;
+            ent->deltax = bufent->deltax;
+            ent->deltay = bufent->deltay;
+            }
+        b++;
+        }
+    if (lib_hdr.bufscr[q])     lhdr->bufscr[q] = lib_hdr.bufscr[q];
+    }
+scrabt:
+memmove(&lib_hdr,lhdr,sizeof(struct LIB_HEADER));
+lib_hdr.num_scripts = b;
+while (get_cursor_pos() != 2);    // wait for rt click
+UnDisplayWin(infowin);
+return(NULL);
+}
+
+
+
+//==========================================================================
+
+
+
+char *write_imglib(char *fptr)
+{
+long    longtmp, lngsize, lastoff;
+unsigned    int size, totsize;
+int    ni,np,ns,i,nb;
+int    q,t,cur_lib;
+FENTRY *ent;
+PAL        *apal;
+struct PALETTE oldpal;
+IMAGE        *animg;
+int p,pcur;
+POINT_TABLE far *hold;
+
+lib_hdr.temp = 0xabcd;
+lib_hdr.version = VERSION;
+
+if ((nlibh = open(fptr,O_CREAT|O_WRONLY|O_BINARY|O_TRUNC,S_IWRITE)) < 0) 
+    {
+    sprintf(tmp,"Can't open %s",fptr);
+    return(tmp);
+    }
+
+del_zero_seq();                    // Clean up any sequence messes first
+flush_damage_tables();                // get rid of unused and tighten holes
+//convert_damage_for_write();    
+
+ni = lib_hdr.num_images;
+np = lib_hdr.num_palettes;
+ns = lib_hdr.num_seq;
+nb = lib_hdr.num_scripts;
+
+
+//    Order point tables (if any exist)
+
+pcur = 0;
+for (q = 0; q < ni; q++)
+    {
+    if ((p=img[q]->pt_tbl) < 0) continue;
+    if (p != pcur)
+        {
+        for (i = q; i < ni; i++)
+            {
+            if (img[i]->pt_tbl == pcur)
+                {         // swap these indices.
+                img[i]->pt_tbl = p;
+                img[q]->pt_tbl = pcur;
+                hold = pt_table[pcur];
+                pt_table[pcur] = pt_table[p];
+                pt_table[p] = hold;
+                }
+            }
+        }
+    pcur++;
+    }
+
+if (pcur != pt_indx)
+    {
+ sprintf(tmp,"Miscount of Point Tables! %d defined, %d sorted",pt_indx,pcur);
+    ErrorWindow(tmp);
+    }
+
+
+/*  Compute offset within file of image data */
+
+longtmp = 0;
+for (q = NUM_DEF_PAL; q < np; q++)
+    {
+    longtmp += pal[q]->num_cols << 1;   /* Number of bytes in palette q */
+    }
+
+for (q = 0; q < ni; q++)
+    {
+    longtmp += (unsigned)(round_x(img[q]->xsize)*img[q]->ysize);
+                                    /*  Num bytes in img */
+    }
+
+lib_hdr.offset = longtmp + (long)sizeof(struct LIB_HEADER);
+
+/*  WRITE LIB HEADER INFO */
+
+write (nlibh, (char *)&lib_hdr, sizeof(struct LIB_HEADER));
+
+/*    WRITE PALETTE DATA */
+
+for (q = NUM_DEF_PAL; q < np;)
+    {
+    apal = pal[q];
+    if (apal->flags & LOADED)
+        {
+        apal->offset = tell(nlibh);
+        write( nlibh, (char *)apal->data, apal->num_cols << 1);
+        apal->flags &= ~(LOADED|DOWN);
+        apal->lib = 0;
+        free(apal->data);
+        q++;
+        continue;
+        }
+    longtmp = tell(nlibh);
+    cur_lib = apal->lib;
+    lseek(libh[cur_lib], apal->offset, SEEK_SET);
+    for (size = totsize = 0; !(pal[q]->flags & LOADED); q++)
+        {
+        if (q == np) break;
+        apal = pal[q];
+        if (cur_lib != apal->lib) break;
+        lastoff = apal->offset;
+        apal->offset = longtmp;
+        apal->lib = 0;
+        size = apal->num_cols << 1;
+        longtmp += (long)size;
+        totsize += size;
+        if (pal[q+1]->offset != lastoff+size) { q++; break;}
+        }
+    read (libh[cur_lib], FarBuf, totsize);        //Far Read
+    write(nlibh, FarBuf, totsize);        //FarWrite
+    }
+
+/*    WRITE IMAGE DATA */
+
+for (q = 0; q < ni;)
+    {
+    animg = img[q];
+    if (animg->flags & LOADED)
+        {
+//        flush(nlibh);
+        animg->offset = tell(nlibh);
+        lngsize = (long)round_x(animg->xsize)*animg->ysize;
+        write(nlibh, animg->data, (int)lngsize);  // FarWrite
+        animg->flags &= ~LOADED;  // clear LOADED flag
+        animg->lib = 0;
+        memavail += (unsigned long)_fmsize(animg->data);
+        _ffree(animg->data);
+        q++;
+        continue;
+        }
+    longtmp = tell(nlibh);
+    cur_lib = animg->lib;
+    lseek(libh[cur_lib], animg->offset, SEEK_SET);
+    for (size = (int)(lngsize = 0L); !(img[q]->flags & LOADED); q++)
+        {
+        if (q == ni) break;
+        animg = img[q];
+        if (cur_lib != animg->lib) break;
+        size = round_x(animg->xsize) * animg->ysize;
+        lngsize += (long)size;
+        if (lngsize >= 65500L) { lngsize -= size; break; }
+        animg->lib = 0;
+        lastoff = animg->offset;
+        animg->offset = longtmp;
+        longtmp += (long)size;
+        if (img[q+1]->offset != lastoff+size) { q++; break;}
+        }
+    read (libh[cur_lib], FarBuf, (int)lngsize);    //FarRead
+//    flush(nlibh);
+    write (nlibh, FarBuf, (int)lngsize);    // FarWrite
+    }
+
+/*  WRITE IMAGE and PALETTE HEADER INFO */
+
+for (q = 0; q < ni; )
+    {
+write(nlibh, (char *)img[q++], sizeof(IMAGE)-6);  // lose spares in new struct
+    }
+
+for (q = NUM_DEF_PAL; q < np; q++)
+    {
+    apal = pal[q];
+    strcpy(oldpal.name,apal->name);
+    oldpal.flags = apal->flags;
+    oldpal.bits_pr_pxl = apal->bits_pr_pxl;
+    oldpal.num_cols = apal->num_cols;
+    oldpal.offset = apal->offset;
+    oldpal.lib = apal->lib;
+    oldpal.colind = apal->colind;
+    oldpal.cmap = apal->cmap;
+    write(nlibh, (char *)&oldpal, sizeof(struct PALETTE)); // write old struct
+    free(apal);
+    }
+
+/* WRITE ANIMATION STRUCTURES  */
+
+/*                                FOR EACH SEQUENCE...  */
+
+for (q = 0; q < ns; q++)
+    {
+    /*                            WRITE THE SEQUENCE... */
+
+    write (nlibh, (char *)sequence[q], sizeof(FSEQSCR));
+
+    /*                            THEN, FOR EACH FRAME IN THE SEQ...  */
+
+    for (t = sequence[q]->num; --t >= 0;)
+        {
+        ent = sequence[q]->entry[t];
+
+        /*                        FIND THE INDEX OF THE IMAGE... */
+        i = -1;
+        if ((IMAGE *)ent->itemptr != &dummyi)
+            {
+            for (i=lib_hdr.num_images; --i >= 0 ; )
+                {
+                if (img[i] == (IMAGE *)ent->itemptr) break;
+                }
+            }
+        /*                THEN WRITE AND FREE THE FRAME    */
+        ent->indx = i;
+        ent->itemptr = NULL;        /* found img num of this frame */
+        write (nlibh, (char *)ent, sizeof(FENTRY));
+        free (ent);
+        }
+    }
+
+for (q = 0; q < nb; q++)
+    {                //                        WRITE THE SCRIPT...
+    write (nlibh, (char *)script[q], sizeof(FSEQSCR));
+                    //                 THEN, FOR EACH ENTRY IN THE SCRIPT...
+    for (t = script[q]->num; --t >= 0;)
+        {
+        ent = script[q]->entry[t];
+                    //                       FIND THE INDEX OF THE SEQUENCE...
+        for (i = lib_hdr.num_seq; --i >= 0; )
+            {
+            if (sequence[i] == (FSEQSCR *)ent->itemptr)
+                {
+                ent->itemptr = NULL;        /* found num of this seq */
+                ent->indx = i;
+                    //                        THEN WRITE AND FREE THE ENTRY
+                write (nlibh, (char *)ent, sizeof(FENTRY));
+                free (ent);
+                break;
+                }
+            }
+        }
+    }
+
+if (emmflag) map_pages(0x0000,pthandle);
+
+for (p = 0; p < pt_indx; p++) 
+    {
+    write (nlibh, (char far *)pt_table[p], sizeof(POINT_TABLE));    //FarWrite
+    if (!emmflag) _ffree(pt_table[p]);
+    }
+pt_indx = 0;
+
+for (p = 0; p < othpal_indx; p++) 
+    {
+    if (othpal_table[p] != NULL)
+        {
+        write (nlibh, othpal_table[p], 16);        //FarWrite
+        _ffree(othpal_table[p]);
+        }
+    }
+othpal_indx = 0;
+
+
+for (i = 0; i < lib_hdr.num_dam; i++)
+    {
+    if (damage[i]->flags & SEQFLG)
+        {
+        FP_SEG(damage[i]) = find_seq_indx(damage[i]);
+        FP_OFF(damage[i]) = SEQFLG;
+        }
+    else {
+        FP_SEG(damage[i]) = find_scr_indx(damage[i]);
+        FP_OFF(damage[i]) = 0;
+        }
+    }
+write(nlibh,(char *)damage,lib_hdr.num_dam*sizeof(FSEQSCR *));
+
+
+for (q = 0; q < nb; )  free(script[q++]);
+for (q = 0; q < ns; )  free(sequence[q++]);
+for (q = 0; q < ni; )  free(img[q++]);
+
+while (num_libs > 0)     close(libh[--num_libs]);
+delete_tmpmrg();
+close(nlibh);
+//free_all_damage_tables();
+
+memav2 = (long)_memavl();
+return(NULL);
+}

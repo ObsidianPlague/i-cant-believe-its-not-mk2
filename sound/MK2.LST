@@ -1,0 +1,1993 @@
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 1
+
+
+ROM Table
+
+ROM Name  Checksum  Size    Space Remaining
+--------  --------  ------  ---------------
+U2.ROM    $BD00     512 kB    1 kB (0%)
+U3.ROM    $3C00     512 kB    1 kB (0%)
+U4.ROM    $4200     512 kB    0 kB (0%)
+U5.ROM    $C700     512 kB    0 kB (0%)
+U6.ROM    $1D00     512 kB    0 kB (0%)
+U7.ROM    $7400     512 kB    3 kB (0%)
+
+
+Sound Call Table
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+0        ($0000)  0          0.4      0.5   kill sound on all tracks
+1        ($0001)  0            -        -   music: Main #1 (1st fight)
+2        ($0002)  0            -        -   music: Main #1 (2nd and 3rd fight)
+3        ($0003)  0            -        -   music: Finish it #1
+4        ($0004)  0            -        -   music: End it #1
+5        ($0005)  0            -        -   music: Main #2 (1st fight)
+6        ($0006)  0            -        -   music: Main #2 (2nd and 3rd fight)
+7        ($0007)  0            -        -   music: Finish it #2
+8        ($0008)  0            -        -   music: End it #2
+9        ($0009)  0            -        -   music: Main #3 (1st fight)
+10       ($000a)  0            -        -   music: Main #3 (2nd and 3rd fight)
+11       ($000b)  0            -        -   music: Finish it #3
+12       ($000c)  0            -        -   music: End it #3
+13       ($000d)  0            -        -   music: Main #4 (1st fight)
+14       ($000e)  0            -        -   music: Main #4 (2nd and 3rd fight)
+15       ($000f)  0            -        -   music: Finish it #4
+16       ($0010)  0            -        -   music: End it #4
+17       ($0011)  0            -        -   music: Main #5 (1st fight)
+18       ($0012)  0            -        -   music: Main #5 (2nd and 3rd fight)
+19       ($0013)  0            -        -   music: Finish it #5
+20       ($0014)  0            -        -   music: End it #5
+21       ($0015)  0            -        -   music: Main #6 (1st fight)
+22       ($0016)  0            -        -   music: Main #6 (2nd and 3rd fight)
+23       ($0017)  0            -        -   music: Finish it #6
+24       ($0018)  0            -        -   music: End it #6
+25       ($0019)  0            -        -   music: Main #7 (1st fight)
+26       ($001a)  0            -        -   music: Main #7 (2nd and 3rd fight)
+27       ($001b)  0            -        -   music: Finish it #7
+28       ($001c)  0            -        -   music: End it #7
+
+50       ($0032)  0            -        -   music: MK II select screen
+51       ($0033)  0        136.9    157.0   music: Mortal Sans
+52       ($0034)  0        208.4    239.0   music: Begin Fatality
+53       ($0035)  0        193.4    221.8   music: End Fatality
+54       ($0036)  0            -        -   music: One Player Map
+55       ($0037)  0        108.0    123.8   music: End One player map
+56       ($0038)  0            -        -   music: Buy-in tune
+57       ($0039)  0            -        -   music: MTV attract mode tune
+58       ($003a)  0        184.6    211.7   music: Shang-Tsung friendship
+59       ($003b)  0        226.4    259.7   music: Liu Kang's disco fever
+60       ($003c)  0        748.8    858.7   music: End Show
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 2
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+61       ($003d)  0            -        -   music: end credits
+62       ($003e)  0        181.2    207.8   music: Really dumb friendship
+63       ($003f)  0        167.4    192.0   music: Babality tune
+64       ($0040)  0            -        -   music: End Show with gong & credits
+65       ($0041)  0            -        -   Music: Story Attract Mode
+66       ($0042)  0            -        -   Music: Smelly Attract Mode
+
+70       ($0046)  1         37.7     43.2   FX: DCS logo jet flyby
+71       ($0047)  2         37.7     43.2   FX: DCS logo jet flyby
+72       ($0048)  3         37.7     43.2   FX: DCS logo jet flyby
+
+80       ($0050)  0      MARKED music: Mortal Sans
+81       ($0051)  0      MARKED music: End One player map
+
+90       ($005a)  0        239.4    274.6   FX: Quick low drone
+91       ($005b)  0        134.4    154.1   FX: Reverse cymbal
+
+99       ($0063)  0            -        -   music: Disco lives forever
+100      ($0064)  1         38.9     44.6   big hit #1
+101      ($0065)  2         38.9     44.6   big hit #1
+102      ($0066)  3         38.9     44.6   big hit #1
+103      ($0067)  1         38.1     43.7   big hit #2
+104      ($0068)  2         38.1     43.7   big hit #2
+105      ($0069)  3         38.1     43.7   big hit #2
+106      ($006a)  1         24.7     28.3   Block a Major hit
+107      ($006b)  2         24.7     28.3   Block a Major hit
+108      ($006c)  3         24.7     28.3   Block a Major hit
+109      ($006d)  1         15.9     18.2   block #1
+110      ($006e)  2         15.9     18.2   block #1
+111      ($006f)  3         15.9     18.2   block #1
+112      ($0070)  1         14.6     16.8   block #2
+113      ($0071)  2         14.6     16.8   block #2
+114      ($0072)  3         14.6     16.8   block #2
+115      ($0073)  1         16.3     18.7   body hit #1
+116      ($0074)  2         16.3     18.7   body hit #1
+117      ($0075)  3         16.3     18.7   body hit #1
+118      ($0076)  1         18.0     20.6   body hit #2
+119      ($0077)  2         18.0     20.6   body hit #2
+120      ($0078)  3         18.0     20.6   body hit #2
+121      ($0079)  1         25.5     29.3   face hit #1
+122      ($007a)  2         25.5     29.3   face hit #1
+123      ($007b)  3         25.5     29.3   face hit #1
+124      ($007c)  1         18.8     21.6   face hit #2
+125      ($007d)  2         18.8     21.6   face hit #2
+126      ($007e)  3         18.8     21.6   face hit #2
+127      ($007f)  1         60.7     69.6   Biggie Hit #3
+128      ($0080)  2         60.7     69.6   Biggie Hit #3
+129      ($0081)  3         60.7     69.6   Biggie Hit #3
+130      ($0082)  1         25.5     29.3   big whoosh #1
+131      ($0083)  2         25.5     29.3   big whoosh #1
+132      ($0084)  3         25.5     29.3   big whoosh #1
+133      ($0085)  1         18.4     21.1   big whoosh #2
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 3
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+134      ($0086)  2         18.4     21.1   big whoosh #2
+135      ($0087)  3         18.4     21.1   big whoosh #2
+136      ($0088)  1         16.3     18.7   whoosh #1
+137      ($0089)  2         16.3     18.7   whoosh #1
+138      ($008a)  3         16.3     18.7   whoosh #1
+139      ($008b)  1         23.0     26.4   whoosh #2
+140      ($008c)  2         23.0     26.4   whoosh #2
+141      ($008d)  3         23.0     26.4   whoosh #2
+142      ($008e)  1         20.1     23.0   whoosh #3
+143      ($008f)  2         20.1     23.0   whoosh #3
+144      ($0090)  3         20.1     23.0   whoosh #3
+145      ($0091)  1         20.9     24.0   Body hit #3
+146      ($0092)  2         20.9     24.0   Body hit #3
+147      ($0093)  3         20.9     24.0   Body hit #3
+148      ($0094)  1         21.3     24.5   fall #1
+149      ($0095)  2         21.3     24.5   fall #1
+150      ($0096)  3         21.3     24.5   fall #1
+151      ($0097)  1         28.9     33.1   fall #2
+152      ($0098)  2         28.9     33.1   fall #2
+153      ($0099)  3         28.9     33.1   fall #2
+154      ($009a)  1         31.8     36.5   Crunch #1
+155      ($009b)  2         31.8     36.5   Crunch #1
+156      ($009c)  3         31.8     36.5   Crunch #1
+157      ($009d)  1         35.2     40.3   Crunch #2
+158      ($009e)  2         35.2     40.3   Crunch #2
+159      ($009f)  3         35.2     40.3   Crunch #2
+160      ($00a0)  1         24.7     28.3   Stab #1
+161      ($00a1)  2         24.7     28.3   Stab #1
+162      ($00a2)  3         24.7     28.3   Stab #1
+163      ($00a3)  1         66.6     76.3   Biggie Stab #1
+164      ($00a4)  2         66.6     76.3   Biggie Stab #1
+165      ($00a5)  3         66.6     76.3   Biggie Stab #1
+166      ($00a6)  1         66.6     76.3   Biggie Stab #2
+167      ($00a7)  2         66.6     76.3   Biggie Stab #2
+168      ($00a8)  3         66.6     76.3   Biggie Stab #2
+169      ($00a9)  1         66.6     76.3   Biggie Stab #3
+170      ($00aa)  2         66.6     76.3   Biggie Stab #3
+171      ($00ab)  3         66.6     76.3   Biggie Stab #3
+172      ($00ac)  1         66.6     76.3   fall #3
+173      ($00ad)  2         66.6     76.3   fall #3
+174      ($00ae)  3         66.6     76.3   fall #3
+175      ($00af)  1         66.6     76.3   fall #4
+176      ($00b0)  2         66.6     76.3   fall #4
+177      ($00b1)  3         66.6     76.3   fall #4
+178      ($00b2)  1         66.6     76.3   Big Fall #1
+179      ($00b3)  2         66.6     76.3   Big Fall #1
+180      ($00b4)  3         66.6     76.3   Big Fall #1
+181      ($00b5)  1         32.2     37.0   Mileena spits bones
+182      ($00b6)  2         32.2     37.0   Mileena spits bones
+183      ($00b7)  3         32.2     37.0   Mileena spits bones
+184      ($00b8)  1         84.5     97.0   Sub-Zero: freeze his own self
+185      ($00b9)  2         84.5     97.0   Sub-Zero: freeze his own self
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 4
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+186      ($00ba)  3         84.5     97.0   Sub-Zero: freeze his own self
+187      ($00bb)  1         42.3     48.5   coin drop
+188      ($00bc)  2         42.3     48.5   coin drop
+189      ($00bd)  3         42.3     48.5   coin drop
+190      ($00be)  1         20.1     23.0   Big Whoosh #3
+191      ($00bf)  2         20.1     23.0   Big Whoosh #3
+192      ($00c0)  3         20.1     23.0   Big Whoosh #3
+193      ($00c1)  1         45.2     51.8   Old big hit #1
+194      ($00c2)  2         45.2     51.8   Old big hit #1
+195      ($00c3)  3         45.2     51.8   Old big hit #1
+196      ($00c4)  1         45.2     51.8   Old big hit #2
+197      ($00c5)  2         45.2     51.8   Old big hit #2
+198      ($00c6)  3         45.2     51.8   Old big hit #2
+199      ($00c7)  1         10.5     12.0   Player's feet landing
+200      ($00c8)  2         10.5     12.0   Player's feet landing
+201      ($00c9)  3         10.5     12.0   Player's feet landing
+202      ($00ca)  1         35.2     40.3   long rip
+203      ($00cb)  2         35.2     40.3   long rip
+204      ($00cc)  3         35.2     40.3   long rip
+205      ($00cd)  1         26.4     30.2   short rip
+206      ($00ce)  2         26.4     30.2   short rip
+207      ($00cf)  3         26.4     30.2   short rip
+208      ($00d0)  1         26.8     30.7   old rip
+209      ($00d1)  2         26.8     30.7   old rip
+210      ($00d2)  3         26.8     30.7   old rip
+211      ($00d3)  1         28.9     33.1   bite head off
+212      ($00d4)  2         28.9     33.1   bite head off
+213      ($00d5)  3         28.9     33.1   bite head off
+214      ($00d6)  1         51.5     59.0   Blood spooge
+215      ($00d7)  2         51.5     59.0   Blood spooge
+216      ($00d8)  3         51.5     59.0   Blood spooge
+217      ($00d9)  1         20.5     23.5   Big whoosh #4
+218      ($00da)  2         20.5     23.5   Big whoosh #4
+219      ($00db)  3         20.5     23.5   Big whoosh #4
+220      ($00dc)  1         32.2     37.0   Raiden: Smack you against wall
+221      ($00dd)  2         32.2     37.0   Raiden: Smack you against wall
+222      ($00de)  3         32.2     37.0   Raiden: Smack you against wall
+223      ($00df)  1         50.2     57.6   Danger sound - about to get it
+224      ($00e0)  2         50.2     57.6   Danger sound - about to get it
+225      ($00e1)  3         50.2     57.6   Danger sound - about to get it
+226      ($00e2)  1         30.6     35.0   Vortex spark #1
+227      ($00e3)  2         30.6     35.0   Vortex spark #1
+228      ($00e4)  3         30.6     35.0   Vortex spark #1
+229      ($00e5)  1         24.3     27.8   Vortex spark #2
+230      ($00e6)  2         24.3     27.8   Vortex spark #2
+231      ($00e7)  3         24.3     27.8   Vortex spark #2
+232      ($00e8)  1         76.2     87.4   Liu Kang: end of fight warble
+233      ($00e9)  2         76.2     87.4   Liu Kang: end of fight warble
+234      ($00ea)  3         76.2     87.4   Liu Kang: end of fight warble
+235      ($00eb)  1        100.5    115.2   Liu Kang: spinning kick
+236      ($00ec)  2        100.5    115.2   Liu Kang: spinning kick
+237      ($00ed)  3        100.5    115.2   Liu Kang: spinning kick
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 5
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+238      ($00ee)  1         31.0     35.5   Liu Kang: kick #1
+239      ($00ef)  2         31.0     35.5   Liu Kang: kick #1
+240      ($00f0)  3         31.0     35.5   Liu Kang: kick #1
+241      ($00f1)  1         55.7     63.8   Liu Kang: kick #2
+242      ($00f2)  2         55.7     63.8   Liu Kang: kick #2
+243      ($00f3)  3         55.7     63.8   Liu Kang: kick #2
+244      ($00f4)  1         47.7     54.7   Liu Kang: uppercut
+245      ($00f5)  2         47.7     54.7   Liu Kang: uppercut
+246      ($00f6)  3         47.7     54.7   Liu Kang: uppercut
+247      ($00f7)  1        144.8    166.1   Liu Kang: morph into dragon
+248      ($00f8)  2        144.8    166.1   Liu Kang: morph into dragon
+249      ($00f9)  3        144.8    166.1   Liu Kang: morph into dragon
+250      ($00fa)  1         29.3     33.6   Liu Kang: dragon bites in half
+251      ($00fb)  2         29.3     33.6   Liu Kang: dragon bites in half
+252      ($00fc)  3         29.3     33.6   Liu Kang: dragon bites in half
+253      ($00fd)  1         57.8     66.2   Liu Kang: unmorph from dragon
+254      ($00fe)  2         57.8     66.2   Liu Kang: unmorph from dragon
+255      ($00ff)  3         57.8     66.2   Liu Kang: unmorph from dragon
+256      ($0100)  1         29.7     34.1   Jax: rip arms off
+257      ($0101)  2         29.7     34.1   Jax: rip arms off
+258      ($0102)  3         29.7     34.1   Jax: rip arms off
+259      ($0103)  1         98.4    112.8   Sub-Z: frozen explosion
+260      ($0104)  2         98.4    112.8   Sub-Z: frozen explosion
+261      ($0105)  3         98.4    112.8   Sub-Z: frozen explosion
+262      ($0106)  1         42.7     49.0   bubbles
+263      ($0107)  2         42.7     49.0   bubbles
+264      ($0108)  3         42.7     49.0   bubbles
+265      ($0109)  1        119.7    137.3   splash
+266      ($010a)  2        119.7    137.3   splash
+267      ($010b)  3        119.7    137.3   splash
+268      ($010c)  1        152.8    175.2   acid sizzle
+269      ($010d)  2        152.8    175.2   acid sizzle
+270      ($010e)  3        152.8    175.2   acid sizzle
+271      ($010f)  1        139.8    160.3   Scorpion: take off mask
+272      ($0110)  2        139.8    160.3   Scorpion: take off mask
+273      ($0111)  3        139.8    160.3   Scorpion: take off mask
+274      ($0112)  1         45.2     51.8   Scorpion: throw flame
+275      ($0113)  2         45.2     51.8   Scorpion: throw flame
+276      ($0114)  3         45.2     51.8   Scorpion: throw flame
+277      ($0115)  1        162.0    185.8   Scorpion: ignite and burn
+278      ($0116)  2        162.0    185.8   Scorpion: ignite and burn
+279      ($0117)  3        162.0    185.8   Scorpion: ignite and burn
+280      ($0118)  1         62.8     72.0   Reptile and other's magical poof
+281      ($0119)  2         62.8     72.0   Reptile and other's magical poof
+282      ($011a)  3         62.8     72.0   Reptile and other's magical poof
+283      ($011b)  1         64.9     74.4   Kung Lao: victim peels apart
+284      ($011c)  2         64.9     74.4   Kung Lao: victim peels apart
+285      ($011d)  3         64.9     74.4   Kung Lao: victim peels apart
+286      ($011e)  1         59.4     68.2   Raiden: electrocute big time
+287      ($011f)  2         59.4     68.2   Raiden: electrocute big time
+288      ($0120)  3         59.4     68.2   Raiden: electrocute big time
+289      ($0121)  1        166.2    190.6   Major crowd cheer
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 6
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+290      ($0122)  2        166.2    190.6   Major crowd cheer
+291      ($0123)  3        166.2    190.6   Major crowd cheer
+292      ($0124)  1         85.4     97.9   Mileena sucks
+293      ($0125)  2         85.4     97.9   Mileena sucks
+294      ($0126)  3         85.4     97.9   Mileena sucks
+295      ($0127)  1        104.2    119.5   Raiden wins effect
+296      ($0128)  2        104.2    119.5   Raiden wins effect
+297      ($0129)  3        104.2    119.5   Raiden wins effect
+
+300      ($012c)  1         43.9     50.4   Cage: Shadow kick
+301      ($012d)  2         43.9     50.4   Cage: Shadow kick
+302      ($012e)  3         43.9     50.4   Cage: Shadow kick
+303      ($012f)  1         39.8     45.6   Sword Guy: Swords eject from arms
+304      ($0130)  2         39.8     45.6   Sword Guy: Swords eject from arms
+305      ($0131)  3         39.8     45.6   Sword Guy: Swords eject from arms
+306      ($0132)  1         39.3     45.1   Sword Guy: Plunges the swords in...
+307      ($0133)  2         39.3     45.1   Sword Guy: Plunges the swords in...
+308      ($0134)  3         39.3     45.1   Sword Guy: Plunges the swords in...
+309      ($0135)  1         17.6     20.2   Kitana: throw fan
+310      ($0136)  2         17.6     20.2   Kitana: throw fan
+311      ($0137)  3         17.6     20.2   Kitana: throw fan
+312      ($0138)  1        103.0    118.1   Kitana: fan hits
+313      ($0139)  2        103.0    118.1   Kitana: fan hits
+314      ($013a)  3        103.0    118.1   Kitana: fan hits
+315      ($013b)  1         20.9     24.0   Kitana: fan blocked
+316      ($013c)  2         20.9     24.0   Kitana: fan blocked
+317      ($013d)  3         20.9     24.0   Kitana: fan blocked
+318      ($013e)  1         66.1     75.8   Cage: throw snot up
+319      ($013f)  2         66.1     75.8   Cage: throw snot up
+320      ($0140)  3         66.1     75.8   Cage: throw snot up
+321      ($0141)  1         33.9     38.9   Cage: snot hits
+322      ($0142)  2         33.9     38.9   Cage: snot hits
+323      ($0143)  3         33.9     38.9   Cage: snot hits
+324      ($0144)  1         29.3     33.6   Cage: snot blocked
+325      ($0145)  2         29.3     33.6   Cage: snot blocked
+326      ($0146)  3         29.3     33.6   Cage: snot blocked
+327      ($0147)  1         63.6     73.0   Mileena: tsais throw
+328      ($0148)  2         63.6     73.0   Mileena: tsais throw
+329      ($0149)  3         63.6     73.0   Mileena: tsais throw
+330      ($014a)  1         66.6     76.3   Mileena: tsais hits
+331      ($014b)  2         66.6     76.3   Mileena: tsais hits
+332      ($014c)  3         66.6     76.3   Mileena: tsais hits
+333      ($014d)  1         29.3     33.6   Mileena: tsais blocked
+334      ($014e)  2         29.3     33.6   Mileena: tsais blocked
+335      ($014f)  3         29.3     33.6   Mileena: tsais blocked
+336      ($0150)  1         92.1    105.6   Reptile: spit stuff
+337      ($0151)  2         92.1    105.6   Reptile: spit stuff
+338      ($0152)  3         92.1    105.6   Reptile: spit stuff
+339      ($0153)  1         37.7     43.2   Reptile: spit hits
+340      ($0154)  2         37.7     43.2   Reptile: spit hits
+341      ($0155)  3         37.7     43.2   Reptile: spit hits
+342      ($0156)  1         20.9     24.0   Reptile: spit blocked
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 7
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+343      ($0157)  2         20.9     24.0   Reptile: spit blocked
+344      ($0158)  3         20.9     24.0   Reptile: spit blocked
+345      ($0159)  1         95.4    109.4   Scorpion: rope throw
+346      ($015a)  2         95.4    109.4   Scorpion: rope throw
+347      ($015b)  3         95.4    109.4   Scorpion: rope throw
+348      ($015c)  1         66.6     76.3   Scorpion: rope hits
+349      ($015d)  2         66.6     76.3   Scorpion: rope hits
+350      ($015e)  3         66.6     76.3   Scorpion: rope hits
+351      ($015f)  1         20.9     24.0   Scorpion: rope blocked
+352      ($0160)  2         20.9     24.0   Scorpion: rope blocked
+353      ($0161)  3         20.9     24.0   Scorpion: rope blocked
+354      ($0162)  1         63.6     73.0   HatHead: throw hat
+355      ($0163)  2         63.6     73.0   HatHead: throw hat
+356      ($0164)  3         63.6     73.0   HatHead: throw hat
+357      ($0165)  1         34.3     39.4   HatHead: hat hits
+358      ($0166)  2         34.3     39.4   HatHead: hat hits
+359      ($0167)  3         34.3     39.4   HatHead: hat hits
+360      ($0168)  1         37.7     43.2   HatHead: hat blocked
+361      ($0169)  2         37.7     43.2   HatHead: hat blocked
+362      ($016a)  3         37.7     43.2   HatHead: hat blocked
+
+366      ($016e)  1         29.3     33.6   Edward: sword scrape
+367      ($016f)  2         29.3     33.6   Edward: sword scrape
+368      ($0170)  3         29.3     33.6   Edward: sword scrape
+369      ($0171)  1         45.2     51.8   Raiden: Arcing #1
+370      ($0172)  2         45.2     51.8   Raiden: Arcing #1
+371      ($0173)  3         45.2     51.8   Raiden: Arcing #1
+372      ($0174)  1         38.9     44.6   Raiden: Arcing #2
+373      ($0175)  2         38.9     44.6   Raiden: Arcing #2
+374      ($0176)  3         38.9     44.6   Raiden: Arcing #2
+375      ($0177)  1         27.6     31.7   Raiden: Arcing #3
+376      ($0178)  2         27.6     31.7   Raiden: Arcing #3
+377      ($0179)  3         27.6     31.7   Raiden: Arcing #3
+378      ($017a)  1        105.9    121.4   Raiden: Throw Sparks
+379      ($017b)  2        105.9    121.4   Raiden: Throw Sparks
+380      ($017c)  3        105.9    121.4   Raiden: Throw Sparks
+381      ($017d)  1         54.4     62.4   Raiden: Spark hits
+382      ($017e)  2         54.4     62.4   Raiden: Spark hits
+383      ($017f)  3         54.4     62.4   Raiden: Spark hits
+384      ($0180)  1         29.3     33.6   Raiden: Spark blocked
+385      ($0181)  2         29.3     33.6   Raiden: Spark blocked
+386      ($0182)  3         29.3     33.6   Raiden: Spark blocked
+387      ($0183)  1         87.9    100.8   Raiden: Hold and Fry
+388      ($0184)  2         87.9    100.8   Raiden: Hold and Fry
+389      ($0185)  3         87.9    100.8   Raiden: Hold and Fry
+390      ($0186)  1         71.2     81.6   Kitana: Sonic Girl Trap
+391      ($0187)  2         71.2     81.6   Kitana: Sonic Girl Trap
+392      ($0188)  3         71.2     81.6   Kitana: Sonic Girl Trap
+393      ($0189)  1         20.1     23.0   Reptile: hocking a loogie
+394      ($018a)  2         20.1     23.0   Reptile: hocking a loogie
+395      ($018b)  3         20.1     23.0   Reptile: hocking a loogie
+396      ($018c)  1        108.8    124.8   Reptile: hocking and spitting
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 8
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+397      ($018d)  2        108.8    124.8   Reptile: hocking and spitting
+398      ($018e)  3        108.8    124.8   Reptile: hocking and spitting
+399      ($018f)  1         23.9     27.4   Kitana: Kissy sound
+400      ($0190)  2         23.9     27.4   Kitana: Kissy sound
+401      ($0191)  3         23.9     27.4   Kitana: Kissy sound
+402      ($0192)  1         63.6     73.0   Liu Kang: Throw Fireball
+403      ($0193)  2         63.6     73.0   Liu Kang: Throw Fireball
+404      ($0194)  3         63.6     73.0   Liu Kang: Throw Fireball
+405      ($0195)  1         58.6     67.2   Liu Kang: Fireball hits
+406      ($0196)  2         58.6     67.2   Liu Kang: Fireball hits
+407      ($0197)  3         58.6     67.2   Liu Kang: Fireball hits
+408      ($0198)  1         25.1     28.8   Liu Kang: Fireball blocked
+409      ($0199)  2         25.1     28.8   Liu Kang: Fireball blocked
+410      ($019a)  3         25.1     28.8   Liu Kang: Fireball blocked
+411      ($019b)  1         66.1     75.8   Liu Kang: Flying Kick
+412      ($019c)  2         66.1     75.8   Liu Kang: Flying Kick
+413      ($019d)  3         66.1     75.8   Liu Kang: Flying Kick
+414      ($019e)  1         40.6     46.6   Raiden: Teleport
+415      ($019f)  2         40.6     46.6   Raiden: Teleport
+416      ($01a0)  3         40.6     46.6   Raiden: Teleport
+417      ($01a1)  1         55.2     63.4   Raiden: Get Up
+418      ($01a2)  2         55.2     63.4   Raiden: Get Up
+419      ($01a3)  3         55.2     63.4   Raiden: Get Up
+420      ($01a4)  1         81.6     93.6   Shang Tsung: Throw Skulls
+421      ($01a5)  2         81.6     93.6   Shang Tsung: Throw Skulls
+422      ($01a6)  3         81.6     93.6   Shang Tsung: Throw Skulls
+423      ($01a7)  1         58.6     67.2   Shang Tsung: Skulls hit
+424      ($01a8)  2         58.6     67.2   Shang Tsung: Skulls hit
+425      ($01a9)  3         58.6     67.2   Shang Tsung: Skulls hit
+426      ($01aa)  1         25.1     28.8   Shang Tsung: Skulls blocked
+427      ($01ab)  2         25.1     28.8   Shang Tsung: Skulls blocked
+428      ($01ac)  3         25.1     28.8   Shang Tsung: Skulls blocked
+429      ($01ad)  1         46.0     52.8   Sub-Zero: Slide Trip
+430      ($01ae)  2         46.0     52.8   Sub-Zero: Slide Trip
+431      ($01af)  3         46.0     52.8   Sub-Zero: Slide Trip
+432      ($01b0)  1         29.3     33.6   Cage: Shadow Elbow
+433      ($01b1)  2         29.3     33.6   Cage: Shadow Elbow
+434      ($01b2)  3         29.3     33.6   Cage: Shadow Elbow
+435      ($01b3)  1          6.3      7.2   Reptile: slow moving orb #1 - 4 times
+436      ($01b4)  2          6.3      7.2   Reptile: slow moving orb #1 - 4 times
+437      ($01b5)  3          6.3      7.2   Reptile: slow moving orb #1 - 4 times
+438      ($01b6)  1         26.8     30.7   Baraka: little stab #1
+439      ($01b7)  2         26.8     30.7   Baraka: little stab #1
+440      ($01b8)  3         26.8     30.7   Baraka: little stab #1
+441      ($01b9)  1         22.6     25.9   Baraka: little stab #2
+442      ($01ba)  2         22.6     25.9   Baraka: little stab #2
+443      ($01bb)  3         22.6     25.9   Baraka: little stab #2
+444      ($01bc)  1         25.1     28.8   Baraka: little stab #3
+445      ($01bd)  2         25.1     28.8   Baraka: little stab #3
+446      ($01be)  3         25.1     28.8   Baraka: little stab #3
+447      ($01bf)  1        101.3    116.2   Baraka: many stabs
+448      ($01c0)  1        100.9    115.7   Baraka: many whooshes
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 9
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+449      ($01c1)  1        100.9    115.7   Baraka: many whooshes
+450      ($01c2)  1         25.1     28.8   Sub-Zero: freeze pee puddle
+451      ($01c3)  2         25.1     28.8   Sub-Zero: freeze pee puddle
+452      ($01c4)  3         25.1     28.8   Sub-Zero: freeze pee puddle
+453      ($01c5)  1         76.2     87.4   Sub-Zero: throw ice
+454      ($01c6)  2         76.2     87.4   Sub-Zero: throw ice
+455      ($01c7)  3         76.2     87.4   Sub-Zero: throw ice
+456      ($01c8)  1            -        -   Reptile: slow moving orb #1 - infinite
+457      ($01c9)  2            -        -   Reptile: slow moving orb #1 - infinite
+458      ($01ca)  3            -        -   Reptile: slow moving orb #1 - infinite
+459      ($01cb)  1         62.4     71.5   Reptile: orb explodes
+460      ($01cc)  2         62.4     71.5   Reptile: orb explodes
+461      ($01cd)  3         62.4     71.5   Reptile: orb explodes
+462      ($01ce)  1         31.8     36.5   Johnny Cage: nut crunch
+463      ($01cf)  2         31.8     36.5   Johnny Cage: nut crunch
+464      ($01d0)  3         31.8     36.5   Johnny Cage: nut crunch
+465      ($01d1)  1         61.5     70.6   Raiden: Dive and carry
+466      ($01d2)  2         61.5     70.6   Raiden: Dive and carry
+467      ($01d3)  3         61.5     70.6   Raiden: Dive and carry
+468      ($01d4)  1         34.7     39.8   Scorpion: teleport
+469      ($01d5)  2         34.7     39.8   Scorpion: teleport
+470      ($01d6)  3         34.7     39.8   Scorpion: teleport
+471      ($01d7)  1         49.8     57.1   Kung Lao: teleport
+472      ($01d8)  2         49.8     57.1   Kung Lao: teleport
+473      ($01d9)  3         49.8     57.1   Kung Lao: teleport
+474      ($01da)  1         53.6     61.4   Malena: teleport
+475      ($01db)  2         53.6     61.4   Malena: teleport
+476      ($01dc)  3         53.6     61.4   Malena: teleport
+477      ($01dd)  1         43.1     49.4   Shang Tsung: morph
+478      ($01de)  2         43.1     49.4   Shang Tsung: morph
+479      ($01df)  3         43.1     49.4   Shang Tsung: morph
+480      ($01e0)  1         53.2     61.0   Baraka: sword snot
+481      ($01e1)  2         53.2     61.0   Baraka: sword snot
+482      ($01e2)  3         53.2     61.0   Baraka: sword snot
+483      ($01e3)  1         66.6     76.3   Baraka: sword snot hits
+484      ($01e4)  2         66.6     76.3   Baraka: sword snot hits
+485      ($01e5)  3         66.6     76.3   Baraka: sword snot hits
+486      ($01e6)  1         12.6     14.4   Baraka: sword snot blocked
+487      ($01e7)  2         12.6     14.4   Baraka: sword snot blocked
+488      ($01e8)  3         12.6     14.4   Baraka: sword snot blocked
+489      ($01e9)  1         34.7     39.8   Sub-Zero: ice hits
+490      ($01ea)  2         34.7     39.8   Sub-Zero: ice hits
+491      ($01eb)  3         34.7     39.8   Sub-Zero: ice hits
+492      ($01ec)  1         12.6     14.4   Sub-Zero: ice blocked
+493      ($01ed)  2         12.6     14.4   Sub-Zero: ice blocked
+494      ($01ee)  3         12.6     14.4   Sub-Zero: ice blocked
+495      ($01ef)  1         54.8     62.9   Kung Lao: spin sound (4 times)
+496      ($01f0)  2         54.8     62.9   Kung Lao: spin sound
+497      ($01f1)  3         54.8     62.9   Kung Lao: spin sound
+
+500      ($01f4)  1         96.7    110.9   Big door slides shut
+501      ($01f5)  2         96.7    110.9   Big door slides shut
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 10
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+502      ($01f6)  3         96.7    110.9   Big door slides shut
+503      ($01f7)  1         98.4    112.8   Big door closes
+504      ($01f8)  2         98.4    112.8   Big door closes
+505      ($01f9)  3         98.4    112.8   Big door closes
+506      ($01fa)  1         61.9     71.0   screen message hits
+507      ($01fb)  2         61.9     71.0   screen message hits
+508      ($01fc)  3         61.9     71.0   screen message hits
+509      ($01fd)  1         59.4     68.2   baby #1
+510      ($01fe)  2         59.4     68.2   baby #1
+511      ($01ff)  3         59.4     68.2   baby #1
+512      ($0200)  1        118.0    135.4   baby #2
+513      ($0201)  2        118.0    135.4   baby #2
+514      ($0202)  3        118.0    135.4   baby #2
+515      ($0203)  1         17.6     20.2   Splish #1
+516      ($0204)  2         17.6     20.2   Splish #1
+517      ($0205)  3         17.6     20.2   Splish #1
+518      ($0206)  1         14.2     16.3   Splish #2
+519      ($0207)  2         14.2     16.3   Splish #2
+520      ($0208)  3         14.2     16.3   Splish #2
+521      ($0209)  1         38.9     44.6   Splish #3
+522      ($020a)  2         38.9     44.6   Splish #3
+523      ($020b)  3         38.9     44.6   Splish #3
+524      ($020c)  1         20.1     23.0   Cursor: low D
+525      ($020d)  2         20.1     23.0   Cursor: low D
+526      ($020e)  3         20.1     23.0   Cursor: low D
+527      ($020f)  1         18.0     20.6   Cursor: G
+528      ($0210)  2         18.0     20.6   Cursor: G
+529      ($0211)  3         18.0     20.6   Cursor: G
+530      ($0212)  1         39.8     45.6   Pick Player #1
+531      ($0213)  2         39.8     45.6   Pick Player #1
+532      ($0214)  3         39.8     45.6   Pick Player #1
+533      ($0215)  1         52.3     60.0   Pick Player #2
+534      ($0216)  2         52.3     60.0   Pick Player #2
+535      ($0217)  3         52.3     60.0   Pick Player #2
+536      ($0218)  1         11.3     13.0   Time-Down Tick
+537      ($0219)  2         11.3     13.0   Time-Down Tick
+538      ($021a)  3         11.3     13.0   Time-Down Tick
+539      ($021b)  1        139.4    159.8   Gong #1
+540      ($021c)  2        139.4    159.8   Gong #1
+541      ($021d)  3        139.4    159.8   Gong #1
+542      ($021e)  1         18.8     21.6   Cursor: low E
+543      ($021f)  2         18.8     21.6   Cursor: low E
+544      ($0220)  3         18.8     21.6   Cursor: low E
+545      ($0221)  1         15.5     17.8   Cursor: A
+546      ($0222)  2         15.5     17.8   Cursor: A
+547      ($0223)  3         15.5     17.8   Cursor: A
+548      ($0224)  1         14.2     16.3   Cursor: B
+549      ($0225)  2         14.2     16.3   Cursor: B
+550      ($0226)  3         14.2     16.3   Cursor: B
+551      ($0227)  1         16.7     19.2   Cursor: high D
+552      ($0228)  2         16.7     19.2   Cursor: high D
+553      ($0229)  3         16.7     19.2   Cursor: high D
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 11
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+554      ($022a)  1         16.7     19.2   Cursor: high E
+555      ($022b)  2         16.7     19.2   Cursor: high E
+556      ($022c)  3         16.7     19.2   Cursor: high E
+557      ($022d)  1         17.6     20.2   Cursor: F#
+558      ($022e)  2         17.6     20.2   Cursor: F#
+559      ($022f)  3         17.6     20.2   Cursor: F#
+560      ($0230)  1         17.6     20.2   Cursor: C#
+561      ($0231)  2         17.6     20.2   Cursor: C#
+562      ($0232)  3         17.6     20.2   Cursor: C#
+563      ($0233)  1         53.6     61.4   Distant Thunder #1
+564      ($0234)  2         53.6     61.4   Distant Thunder #1
+565      ($0235)  3         53.6     61.4   Distant Thunder #1
+566      ($0236)  1         48.6     55.7   Distant Thunder #2
+567      ($0237)  2         48.6     55.7   Distant Thunder #2
+568      ($0238)  3         48.6     55.7   Distant Thunder #2
+569      ($0239)  1        115.1    132.0   Big Lightning bolt
+570      ($023a)  2        115.1    132.0   Big Lightning bolt
+571      ($023b)  3        115.1    132.0   Big Lightning bolt
+572      ($023c)  1        239.4    274.6   FX: Quick low drone
+573      ($023d)  2        239.4    274.6   FX: Quick low drone
+574      ($023e)  3        239.4    274.6   FX: Quick low drone
+575      ($023f)  1        134.4    154.1   FX: Reverse cymbal
+576      ($0240)  2        134.4    154.1   FX: Reverse cymbal
+577      ($0241)  2        134.4    154.1   FX: Reverse cymbal
+578      ($0242)  1        204.7    234.7   FX: Flawless Victory tone
+579      ($0243)  2        204.7    234.7   FX: Flawless Victory tone
+580      ($0244)  3        204.7    234.7   FX: Flawless Victory tone
+581      ($0245)  1        169.9    194.9   FX: Fatality Blood Drips
+582      ($0246)  2        169.9    194.9   FX: Fatality Blood Drips
+583      ($0247)  3        169.9    194.9   FX: Fatality Blood Drips
+584      ($0248)  1         46.0     52.8   FX: Player 2 Start
+585      ($0249)  2         46.0     52.8   FX: Player 2 Start
+586      ($024a)  3         46.0     52.8   FX: Player 2 Start
+587      ($024b)  1         99.2    113.8   Crowd "oooh"
+588      ($024c)  2         99.2    113.8   Crowd "oooh"
+589      ($024d)  3         99.2    113.8   Crowd "oooh"
+590      ($024e)  1         81.6     93.6   Big crunch/step/bang
+591      ($024f)  2         81.6     93.6   Big crunch/step/bang
+592      ($0250)  3         81.6     93.6   Big crunch/step/bang
+593      ($0251)  1         66.1     75.8   Goro foot step
+594      ($0252)  2         66.1     75.8   Goro foot step
+595      ($0253)  3         66.1     75.8   Goro foot step
+596      ($0254)  1         57.3     65.8   Fall into pit
+597      ($0255)  2         57.3     65.8   Fall into pit
+598      ($0256)  3         57.3     65.8   Fall into pit
+
+600      ($0258)  1         23.9     27.4   DF: attack 1
+601      ($0259)  2         23.9     27.4   DF: attack 1
+602      ($025a)  3         23.9     27.4   DF: attack 1
+603      ($025b)  1         18.4     21.1   DF: attack 2
+604      ($025c)  2         18.4     21.1   DF: attack 2
+605      ($025d)  3         18.4     21.1   DF: attack 2
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 12
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+606      ($025e)  1         19.7     22.6   DF: jump
+607      ($025f)  2         19.7     22.6   DF: jump
+608      ($0260)  3         19.7     22.6   DF: jump
+609      ($0261)  1         28.9     33.1   DF: trip
+610      ($0262)  2         28.9     33.1   DF: trip
+611      ($0263)  3         28.9     33.1   DF: trip
+612      ($0264)  1         16.3     18.7   DF: grab
+613      ($0265)  2         16.3     18.7   DF: grab
+614      ($0266)  3         16.3     18.7   DF: grab
+615      ($0267)  1         42.3     48.5   DF: throw
+616      ($0268)  2         42.3     48.5   DF: throw
+617      ($0269)  3         42.3     48.5   DF: throw
+618      ($026a)  1         30.6     35.0   DF: react 1
+619      ($026b)  2         30.6     35.0   DF: react 1
+620      ($026c)  3         30.6     35.0   DF: react 1
+621      ($026d)  1         38.1     43.7   DF: react 2
+622      ($026e)  2         38.1     43.7   DF: react 2
+623      ($026f)  3         38.1     43.7   DF: react 2
+624      ($0270)  1         36.4     41.8   DF: react 3
+625      ($0271)  2         36.4     41.8   DF: react 3
+626      ($0272)  3         36.4     41.8   DF: react 3
+627      ($0273)  1         89.2    102.2   DF: wast 1
+628      ($0274)  2         89.2    102.2   DF: wast 1
+629      ($0275)  3         89.2    102.2   DF: wast 1
+630      ($0276)  1         47.3     54.2   DF: wast 2
+631      ($0277)  2         47.3     54.2   DF: wast 2
+632      ($0278)  3         47.3     54.2   DF: wast 2
+633      ($0279)  1         66.6     76.3   DF: death 1
+634      ($027a)  2         66.6     76.3   DF: death 1
+635      ($027b)  3         66.6     76.3   DF: death 1
+636      ($027c)  1        128.5    147.4   DF: fall/death scream
+637      ($027d)  2        128.5    147.4   DF: fall/death scream
+638      ($027e)  3        128.5    147.4   DF: fall/death scream
+
+642      ($0282)  1         38.9     44.6   DF: Yeah!
+643      ($0283)  2         38.9     44.6   DF: Yeah!
+644      ($0284)  3         38.9     44.6   DF: Yeah!
+645      ($0285)  1         37.7     43.2   DF: Tosty!
+646      ($0286)  2         37.7     43.2   DF: Tosty!
+647      ($0287)  3         37.7     43.2   DF: Tosty!
+
+650      ($028a)  1         28.5     32.6   JH: attack 1
+651      ($028b)  2         28.5     32.6   JH: attack 1
+652      ($028c)  3         28.5     32.6   JH: attack 1
+653      ($028d)  1         28.5     32.6   JH: attack 2
+654      ($028e)  2         28.5     32.6   JH: attack 2
+655      ($028f)  3         28.5     32.6   JH: attack 2
+656      ($0290)  1         21.3     24.5   JH: jump
+657      ($0291)  2         21.3     24.5   JH: jump
+658      ($0292)  3         21.3     24.5   JH: jump
+659      ($0293)  1         31.4     36.0   JH: trip
+660      ($0294)  2         31.4     36.0   JH: trip
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 13
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+661      ($0295)  3         31.4     36.0   JH: trip
+662      ($0296)  1         23.0     26.4   JH: grab
+663      ($0297)  2         23.0     26.4   JH: grab
+664      ($0298)  3         23.0     26.4   JH: grab
+665      ($0299)  1         52.7     60.5   JH: throw
+666      ($029a)  2         52.7     60.5   JH: throw
+667      ($029b)  3         52.7     60.5   JH: throw
+668      ($029c)  1         40.6     46.6   JH: react 1
+669      ($029d)  2         40.6     46.6   JH: react 1
+670      ($029e)  3         40.6     46.6   JH: react 1
+671      ($029f)  1         34.7     39.8   JH: react 2
+672      ($02a0)  2         34.7     39.8   JH: react 2
+673      ($02a1)  3         34.7     39.8   JH: react 2
+674      ($02a2)  1         32.2     37.0   JH: react 3
+675      ($02a3)  2         32.2     37.0   JH: react 3
+676      ($02a4)  3         32.2     37.0   JH: react 3
+677      ($02a5)  1         95.4    109.4   JH: wast 1
+678      ($02a6)  2         95.4    109.4   JH: wast 1
+679      ($02a7)  3         95.4    109.4   JH: wast 1
+680      ($02a8)  1         93.8    107.5   JH: wast 2
+681      ($02a9)  2         93.8    107.5   JH: wast 2
+682      ($02aa)  3         93.8    107.5   JH: wast 2
+683      ($02ab)  1        180.0    206.4   JH: death 1
+684      ($02ac)  2        180.0    206.4   JH: death 1
+685      ($02ad)  3        180.0    206.4   JH: death 1
+686      ($02ae)  1         72.8     83.5   JH: gibberish #1
+687      ($02af)  2         72.8     83.5   JH: gibberish #1
+688      ($02b0)  3         72.8     83.5   JH: gibberish #1
+689      ($02b1)  1         78.7     90.2   JH: gibberish #2
+690      ($02b2)  2         78.7     90.2   JH: gibberish #2
+691      ($02b3)  3         78.7     90.2   JH: gibberish #2
+692      ($02b4)  1         64.0     73.4   JH: gibberish #3
+693      ($02b5)  2         64.0     73.4   JH: gibberish #3
+694      ($02b6)  3         64.0     73.4   JH: gibberish #3
+695      ($02b7)  1        110.1    126.2   JH: gibberish #4
+696      ($02b8)  2        110.1    126.2   JH: gibberish #4
+697      ($02b9)  3        110.1    126.2   JH: gibberish #4
+
+700      ($02bc)  1         29.3     33.6   Ninja Girl 1: attack 1
+701      ($02bd)  2         29.3     33.6   Ninja Girl 1: attack 1
+702      ($02be)  3         29.3     33.6   Ninja Girl 1: attack 1
+703      ($02bf)  1         23.4     26.9   Ninja Girl 1: attack 2
+704      ($02c0)  2         23.4     26.9   Ninja Girl 1: attack 2
+705      ($02c1)  3         23.4     26.9   Ninja Girl 1: attack 2
+706      ($02c2)  1         15.1     17.3   Ninja Girl 1: jump
+707      ($02c3)  2         15.1     17.3   Ninja Girl 1: jump
+708      ($02c4)  3         15.1     17.3   Ninja Girl 1: jump
+709      ($02c5)  1         20.1     23.0   Ninja Girl 1: trip
+710      ($02c6)  2         20.1     23.0   Ninja Girl 1: trip
+711      ($02c7)  3         20.1     23.0   Ninja Girl 1: trip
+712      ($02c8)  1         18.8     21.6   Ninja Girl 1: grab
+713      ($02c9)  2         18.8     21.6   Ninja Girl 1: grab
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 14
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+714      ($02ca)  3         18.8     21.6   Ninja Girl 1: grab
+715      ($02cb)  1         33.9     38.9   Ninja Girl 1: throw
+716      ($02cc)  2         33.9     38.9   Ninja Girl 1: throw
+717      ($02cd)  3         33.9     38.9   Ninja Girl 1: throw
+718      ($02ce)  1         25.1     28.8   Ninja Girl 1: react 1
+719      ($02cf)  2         25.1     28.8   Ninja Girl 1: react 1
+720      ($02d0)  3         25.1     28.8   Ninja Girl 1: react 1
+721      ($02d1)  1         26.4     30.2   Ninja Girl 1: react 2
+722      ($02d2)  2         26.4     30.2   Ninja Girl 1: react 2
+723      ($02d3)  3         26.4     30.2   Ninja Girl 1: react 2
+724      ($02d4)  1         25.1     28.8   Ninja Girl 1: react 3
+725      ($02d5)  2         25.1     28.8   Ninja Girl 1: react 3
+726      ($02d6)  3         25.1     28.8   Ninja Girl 1: react 3
+727      ($02d7)  1         37.3     42.7   Ninja Girl 1: wast 1
+728      ($02d8)  2         37.3     42.7   Ninja Girl 1: wast 1
+729      ($02d9)  3         37.3     42.7   Ninja Girl 1: wast 1
+730      ($02da)  1         92.5    106.1   Ninja Girl 1: wast 2
+731      ($02db)  2         92.5    106.1   Ninja Girl 1: wast 2
+732      ($02dc)  3         92.5    106.1   Ninja Girl 1: wast 2
+733      ($02dd)  1        154.9    177.6   Ninja Girl 1: death 1
+734      ($02de)  2        154.9    177.6   Ninja Girl 1: death 1
+735      ($02df)  3        154.9    177.6   Ninja Girl 1: death 1
+736      ($02e0)  1        161.1    184.8   Ninja Girl 1: death 2
+737      ($02e1)  2        161.1    184.8   Ninja Girl 1: death 2
+738      ($02e2)  3        161.1    184.8   Ninja Girl 1: death 2
+739      ($02e3)  1        209.7    240.5   Ninja Girl 1: fall down pit
+740      ($02e4)  2        209.7    240.5   Ninja Girl 1: fall down pit
+741      ($02e5)  3        209.7    240.5   Ninja Girl 1: fall down pit
+742      ($02e6)  1         41.9     48.0   Ninja Girl 1: hit bottom of pit
+743      ($02e7)  2         41.9     48.0   Ninja Girl 1: hit bottom of pit
+744      ($02e8)  3         41.9     48.0   Ninja Girl 1: hit bottom of pit
+745      ($02e9)  1        126.4    145.0   Ninja Girl 1: about to explode
+746      ($02ea)  2        126.4    145.0   Ninja Girl 1: about to explode
+747      ($02eb)  3        126.4    145.0   Ninja Girl 1: about to explode
+
+750      ($02ee)  1         27.2     31.2   Liu Kang: attack 1
+751      ($02ef)  2         27.2     31.2   Liu Kang: attack 1
+752      ($02f0)  3         27.2     31.2   Liu Kang: attack 1
+753      ($02f1)  1         24.7     28.3   Liu Kang: attack 2
+754      ($02f2)  2         24.7     28.3   Liu Kang: attack 2
+755      ($02f3)  3         24.7     28.3   Liu Kang: attack 2
+756      ($02f4)  1         73.2     84.0   Liu Kang: bicycle kicks
+757      ($02f5)  2         73.2     84.0   Liu Kang: bicycle kicks
+758      ($02f6)  3         73.2     84.0   Liu Kang: bicycle kicks
+759      ($02f7)  1         75.3     86.4   Liu Kang: flying kick #1
+760      ($02f8)  2         75.3     86.4   Liu Kang: flying kick #1
+761      ($02f9)  3         75.3     86.4   Liu Kang: flying kick #1
+762      ($02fa)  1         87.5    100.3   Liu Kang: flying kick #2
+763      ($02fb)  2         87.5    100.3   Liu Kang: flying kick #2
+764      ($02fc)  3         87.5    100.3   Liu Kang: flying kick #2
+765      ($02fd)  1         33.5     38.4   Liu Kang: spiked
+766      ($02fe)  2         33.5     38.4   Liu Kang: spiked
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 15
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+767      ($02ff)  3         33.5     38.4   Liu Kang: spiked
+768      ($0300)  1         43.1     49.4   Liu Kang: throw #1
+769      ($0301)  2         43.1     49.4   Liu Kang: throw #1
+770      ($0302)  3         43.1     49.4   Liu Kang: throw #1
+771      ($0303)  1         38.9     44.6   Liu Kang: react 1
+772      ($0304)  2         38.9     44.6   Liu Kang: react 1
+773      ($0305)  3         38.9     44.6   Liu Kang: react 1
+774      ($0306)  1         24.7     28.3   Liu Kang: react 2
+775      ($0307)  2         24.7     28.3   Liu Kang: react 2
+776      ($0308)  3         24.7     28.3   Liu Kang: react 2
+777      ($0309)  1         84.1     96.5   Liu Kang: wast 1
+778      ($030a)  2         84.1     96.5   Liu Kang: wast 1
+779      ($030b)  3         84.1     96.5   Liu Kang: wast 1
+780      ($030c)  1         91.2    104.6   Liu Kang: wast 2
+781      ($030d)  2         91.2    104.6   Liu Kang: wast 2
+782      ($030e)  3         91.2    104.6   Liu Kang: wast 2
+783      ($030f)  1        122.6    140.6   Liu Kang: death
+784      ($0310)  2        122.6    140.6   Liu Kang: death
+785      ($0311)  3        122.6    140.6   Liu Kang: death
+786      ($0312)  1         19.7     22.6   Liu Kang: jump
+787      ($0313)  2         19.7     22.6   Liu Kang: jump
+788      ($0314)  3         19.7     22.6   Liu Kang: jump
+789      ($0315)  1         41.4     47.5   Liu Kang: throw #2
+790      ($0316)  2         41.4     47.5   Liu Kang: throw #2
+791      ($0317)  3         41.4     47.5   Liu Kang: throw #2
+
+800      ($0320)  1         87.1     99.8   JH: gibberish #5
+801      ($0321)  2         87.1     99.8   JH: gibberish #5
+802      ($0322)  3         87.1     99.8   JH: gibberish #5
+803      ($0323)  1        162.4    186.2   JH: hmmmm
+804      ($0324)  2        162.4    186.2   JH: hmmmm
+805      ($0325)  3        162.4    186.2   JH: hmmmm
+806      ($0326)  1         57.3     65.8   Johnny Cage: victory kiss
+807      ($0327)  2         57.3     65.8   Johnny Cage: victory kiss
+808      ($0328)  3         57.3     65.8   Johnny Cage: victory kiss
+809      ($0329)  1         93.8    107.5   Kid Thunder: Kid Thunder
+810      ($032a)  2         93.8    107.5   Kid Thunder: Kid Thunder
+811      ($032b)  3         93.8    107.5   Kid Thunder: Kid Thunder
+812      ($032c)  1         30.6     35.0   Jax: Aahhhh! (gotcha)
+813      ($032d)  2         30.6     35.0   Jax: Aahhhh! (gotcha)
+814      ($032e)  3         30.6     35.0   Jax: Aahhhh! (gotcha)
+815      ($032f)  1         36.0     41.3   Jax: Gotcha
+816      ($0330)  2         36.0     41.3   Jax: Gotcha
+817      ($0331)  3         36.0     41.3   Jax: Gotcha
+818      ($0332)  1        117.2    134.4   Jax: Victory yeah
+819      ($0333)  2        117.2    134.4   Jax: Victory yeah
+820      ($0334)  3        117.2    134.4   Jax: Victory yeah
+821      ($0335)  1         40.2     46.1   DF: oh maw
+822      ($0336)  2         40.2     46.1   DF: oh maw
+823      ($0337)  3         40.2     46.1   DF: oh maw
+824      ($0338)  1         95.9    109.9   Scorpion: Come Here!
+825      ($0339)  2         95.9    109.9   Scorpion: Come Here!
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 16
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+826      ($033a)  3         95.9    109.9   Scorpion: Come Here!
+827      ($033b)  1        111.3    127.7   Scorpion: Get over here!
+828      ($033c)  2        111.3    127.7   Scorpion: Get over here!
+829      ($033d)  3        111.3    127.7   Scorpion: Get over here!
+830      ($033e)  1        141.5    162.2   Trees: roar
+831      ($033f)  2        141.5    162.2   Trees: roar
+832      ($0340)  3        141.5    162.2   Trees: roar
+
+836      ($0344)  1        210.1    241.0   EB: fall down pit
+837      ($0345)  2        210.1    241.0   EB: fall down pit
+838      ($0346)  3        210.1    241.0   EB: fall down pit
+839      ($0347)  1         37.7     43.2   EB: hit bottom of pit
+840      ($0348)  2         37.7     43.2   EB: hit bottom of pit
+841      ($0349)  3         37.7     43.2   EB: hit bottom of pit
+842      ($034a)  1         86.6     99.4   Kung Lao: flip throw
+843      ($034b)  2         86.6     99.4   Kung Lao: flip throw
+844      ($034c)  3         86.6     99.4   Kung Lao: flip throw
+
+850      ($0352)  1         26.4     30.2   Vince: attack #1
+851      ($0353)  2         26.4     30.2   Vince: attack #1
+852      ($0354)  3         26.4     30.2   Vince: attack #1
+853      ($0355)  1         25.5     29.3   Vince: attack #2
+854      ($0356)  2         25.5     29.3   Vince: attack #2
+855      ($0357)  3         25.5     29.3   Vince: attack #2
+856      ($0358)  1         16.3     18.7   Vince: jump
+857      ($0359)  2         16.3     18.7   Vince: jump
+858      ($035a)  3         16.3     18.7   Vince: jump
+859      ($035b)  1         30.1     34.6   Vince: trip
+860      ($035c)  2         30.1     34.6   Vince: trip
+861      ($035d)  3         30.1     34.6   Vince: trip
+862      ($035e)  1         26.8     30.7   Vince: grab
+863      ($035f)  2         26.8     30.7   Vince: grab
+864      ($0360)  3         26.8     30.7   Vince: grab
+865      ($0361)  1         41.4     47.5   Vince: throw
+866      ($0362)  2         41.4     47.5   Vince: throw
+867      ($0363)  3         41.4     47.5   Vince: throw
+868      ($0364)  1         23.9     27.4   Vince: react #1
+869      ($0365)  2         23.9     27.4   Vince: react #1
+870      ($0366)  3         23.9     27.4   Vince: react #1
+871      ($0367)  1         25.1     28.8   Vince: react #2
+872      ($0368)  2         25.1     28.8   Vince: react #2
+873      ($0369)  3         25.1     28.8   Vince: react #2
+874      ($036a)  1         29.7     34.1   Vince: react #3
+875      ($036b)  2         29.7     34.1   Vince: react #3
+876      ($036c)  3         29.7     34.1   Vince: react #3
+877      ($036d)  1         43.9     50.4   Vince: wast #1
+878      ($036e)  2         43.9     50.4   Vince: wast #1
+879      ($036f)  3         43.9     50.4   Vince: wast #1
+880      ($0370)  1         60.3     69.1   Vince: wast #2
+881      ($0371)  2         60.3     69.1   Vince: wast #2
+882      ($0372)  3         60.3     69.1   Vince: wast #2
+883      ($0373)  1        124.7    143.0   Vince: death
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 17
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+884      ($0374)  2        124.7    143.0   Vince: death
+885      ($0375)  3        124.7    143.0   Vince: death
+886      ($0376)  1         82.0     94.1   Shang Tsung: inside body noise
+887      ($0377)  2         82.0     94.1   Shang Tsung: inside body noise
+888      ($0378)  3         82.0     94.1   Shang Tsung: inside body noise
+889      ($0379)  1         85.8     98.4   Shang Tsung: green goo cloud
+890      ($037a)  2         85.8     98.4   Shang Tsung: green goo cloud
+891      ($037b)  3         85.8     98.4   Shang Tsung: green goo cloud
+892      ($037c)  1         56.5     64.8   Shang Tsung: cloud goes into hand
+893      ($037d)  2         56.5     64.8   Shang Tsung: cloud goes into hand
+894      ($037e)  3         56.5     64.8   Shang Tsung: cloud goes into hand
+
+900      ($0384)  1        116.8    133.9   Shao Kahn: Liu Kang wins
+901      ($0385)  2        116.8    133.9   Shao Kahn: Liu Kang wins
+902      ($0386)  3        116.8    133.9   Shao Kahn: Liu Kang wins
+903      ($0387)  1        121.0    138.7   Shao Kahn: Kung Lao wins
+904      ($0388)  2        121.0    138.7   Shao Kahn: Kung Lao wins
+905      ($0389)  3        121.0    138.7   Shao Kahn: Kung Lao wins
+906      ($038a)  1        132.7    152.2   Shao Kahn: Johnny Cage wins
+907      ($038b)  2        132.7    152.2   Shao Kahn: Johnny Cage wins
+908      ($038c)  3        132.7    152.2   Shao Kahn: Johnny Cage wins
+909      ($038d)  1        113.8    130.6   Shao Kahn: Reptile wins
+910      ($038e)  2        113.8    130.6   Shao Kahn: Reptile wins
+911      ($038f)  3        113.8    130.6   Shao Kahn: Reptile wins
+912      ($0390)  1        123.5    141.6   Shao Kahn: Sub-Zero wins
+913      ($0391)  2        123.5    141.6   Shao Kahn: Sub-Zero wins
+914      ($0392)  3        123.5    141.6   Shao Kahn: Sub-Zero wins
+915      ($0393)  1        132.3    151.7   Shao Kahn: Shang Tsung wins
+916      ($0394)  2        132.3    151.7   Shao Kahn: Shang Tsung wins
+917      ($0395)  3        132.3    151.7   Shao Kahn: Shang Tsung wins
+918      ($0396)  1        109.2    125.3   Shao Kahn: Kitana wins
+919      ($0397)  2        109.2    125.3   Shao Kahn: Kitana wins
+920      ($0398)  3        109.2    125.3   Shao Kahn: Kitana wins
+921      ($0399)  1        113.4    130.1   Shao Kahn: Jax wins
+922      ($039a)  2        113.4    130.1   Shao Kahn: Jax wins
+923      ($039b)  3        113.4    130.1   Shao Kahn: Jax wins
+924      ($039c)  1        114.3    131.0   Shao Kahn: Malena wins
+925      ($039d)  2        114.3    131.0   Shao Kahn: Malena wins
+926      ($039e)  3        114.3    131.0   Shao Kahn: Malena wins
+927      ($039f)  1        118.9    136.3   Shao Kahn: Baraka wins
+928      ($03a0)  2        118.9    136.3   Shao Kahn: Baraka wins
+929      ($03a1)  3        118.9    136.3   Shao Kahn: Baraka wins
+930      ($03a2)  1        125.1    143.5   Shao Kahn: Scorpion wins
+931      ($03a3)  2        125.1    143.5   Shao Kahn: Scorpion wins
+932      ($03a4)  3        125.1    143.5   Shao Kahn: Scorpion wins
+933      ($03a5)  1        108.8    124.8   Shao Kahn: Raiden wins
+934      ($03a6)  2        108.8    124.8   Shao Kahn: Raiden wins
+935      ($03a7)  3        108.8    124.8   Shao Kahn: Raiden wins
+936      ($03a8)  1        110.1    126.2   Shao Kahn: Smoke wins
+937      ($03a9)  2        110.1    126.2   Shao Kahn: Smoke wins
+938      ($03aa)  3        110.1    126.2   Shao Kahn: Smoke wins
+939      ($03ab)  1        110.1    126.2   Shao Kahn: Jade wins
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 18
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+940      ($03ac)  2        110.1    126.2   Shao Kahn: Jade wins
+941      ($03ad)  3        110.1    126.2   Shao Kahn: Jade wins
+942      ($03ae)  1         82.9     95.0   Shao Kahn: Finish Him!
+943      ($03af)  2         82.9     95.0   Shao Kahn: Finish Him!
+944      ($03b0)  3         82.9     95.0   Shao Kahn: Finish Him!
+945      ($03b1)  1         68.2     78.2   Shao Kahn: Finish Her!
+946      ($03b2)  2         68.2     78.2   Shao Kahn: Finish Her!
+947      ($03b3)  3         68.2     78.2   Shao Kahn: Finish Her!
+948      ($03b4)  1         77.0     88.3   Shao Kahn: Fatality
+949      ($03b5)  2         77.0     88.3   Shao Kahn: Fatality
+950      ($03b6)  3         77.0     88.3   Shao Kahn: Fatality
+951      ($03b7)  1         98.8    113.3   Shao Kahn: Flawless Victory
+952      ($03b8)  2         98.8    113.3   Shao Kahn: Flawless Victory
+953      ($03b9)  3         98.8    113.3   Shao Kahn: Flawless Victory
+954      ($03ba)  1         49.4     56.6   Shao Kahn: Excellent!
+955      ($03bb)  2         49.4     56.6   Shao Kahn: Excellent!
+956      ($03bc)  3         49.4     56.6   Shao Kahn: Excellent!
+957      ($03bd)  1        116.8    133.9   Shao Kahn: Kintaro wins
+958      ($03be)  2        116.8    133.9   Shao Kahn: Kintaro wins
+959      ($03bf)  3        116.8    133.9   Shao Kahn: Kintaro wins
+960      ($03c0)  1         72.4     83.0   Shao Kahn: Outstanding!
+961      ($03c1)  2         72.4     83.0   Shao Kahn: Outstanding!
+962      ($03c2)  3         72.4     83.0   Shao Kahn: Outstanding!
+963      ($03c3)  1         64.9     74.4   Shao Kahn: Well done
+964      ($03c4)  2         64.9     74.4   Shao Kahn: Well done
+965      ($03c5)  3         64.9     74.4   Shao Kahn: Well done
+966      ($03c6)  1         72.8     83.5   Shao Kahn: Superb
+967      ($03c7)  2         72.8     83.5   Shao Kahn: Superb
+968      ($03c8)  3         72.8     83.5   Shao Kahn: Superb
+969      ($03c9)  1         71.6     82.1   Shao Kahn: Babality
+970      ($03ca)  2         71.6     82.1   Shao Kahn: Babality
+971      ($03cb)  3         71.6     82.1   Shao Kahn: Babality
+972      ($03cc)  1         61.1     70.1   Shao Kahn: Fight! (#1)
+973      ($03cd)  2         61.1     70.1   Shao Kahn: Fight! (#1)
+974      ($03ce)  3         61.1     70.1   Shao Kahn: Fight! (#1)
+975      ($03cf)  1         69.5     79.7   Shao Kahn: Friendship (#1)
+976      ($03d0)  2         69.5     79.7   Shao Kahn: Friendship (#1)
+977      ($03d1)  3         69.5     79.7   Shao Kahn: Friendship (#1)
+
+980      ($03d4)  1        179.6    205.9   Male Slippery when frozen #1
+981      ($03d5)  2        179.6    205.9   Male Slippery when frozen #1
+982      ($03d6)  3        179.6    205.9   Male Slippery when frozen #1
+983      ($03d7)  1        203.0    232.8   Male Slippery when frozen #2
+984      ($03d8)  2        203.0    232.8   Male Slippery when frozen #2
+985      ($03d9)  3        203.0    232.8   Male Slippery when frozen #2
+986      ($03da)  1         77.4     88.8   Male Slippery when frozen #3
+987      ($03db)  2         77.4     88.8   Male Slippery when frozen #3
+988      ($03dc)  3         77.4     88.8   Male Slippery when frozen #3
+
+995      ($03e3)  0          0.0      0.0   SYSTEM          Kill sound on track 0
+996      ($03e4)  1          0.0      0.0   SYSTEM          Kill sound on track 1
+997      ($03e5)  2          0.0      0.0   SYSTEM          Kill sound on track 2
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 19
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+998      ($03e6)  3          0.0      0.0   SYSTEM          Kill sound on track 3
+999      ($03e7)  0          2.1      2.4   SYSTEM      send version # as a signal
+1000     ($03e8)  1         35.2     40.3   Death: Cage - Rip in half [1 2]
+1001     ($03e9)  1         62.8     72.0   Death: Jax - Clap yer head off [1 2]
+
+1020     ($03fc)  1         23.9     27.4   Death: Kitana - Kiss #1
+1021     ($03fd)  2         23.9     27.4   Death: Kitana - Kiss #1
+1022     ($03fe)  3         23.9     27.4   Death: Kitana - Kiss #1
+1023     ($03ff)  1         46.5     53.3   Death: Kitana - Kiss #2
+1024     ($0400)  2         46.5     53.3   Death: Kitana - Kiss #2
+1025     ($0401)  3         46.5     53.3   Death: Kitana - Kiss #2
+1026     ($0402)  1         46.0     52.8   Death: Kitana - Body inflates
+1027     ($0403)  2         46.0     52.8   Death: Kitana - Body inflates
+1028     ($0404)  3         46.0     52.8   Death: Kitana - Body inflates
+1029     ($0405)  1        134.4    154.1   Death: Kitana - Body rumbles/shakes
+1030     ($0406)  2        134.4    154.1   Death: Kitana - Body rumbles/shakes
+1031     ($0407)  3        134.4    154.1   Death: Kitana - Body rumbles/shakes
+1032     ($0408)  1         69.1     79.2   Death: Kitana - male about to explode
+1033     ($0409)  2         69.1     79.2   Death: Kitana - male about to explode
+1034     ($040a)  3         69.1     79.2   Death: Kitana - male about to explode
+1035     ($040b)  1        139.8    160.3   Death: Kitana - victum explodes
+1036     ($040c)  2        139.8    160.3   Death: Kitana - victum explodes
+1037     ($040d)  3        139.8    160.3   Death: Kitana - victum explodes
+1038     ($040e)  1         34.7     39.8   Death: Reptile - 'Yum!'
+1039     ($040f)  2         34.7     39.8   Death: Reptile - 'Yum!'
+1040     ($0410)  3         34.7     39.8   Death: Reptile - 'Yum!'
+1041     ($0411)  1         13.4     15.4   Death: Reptile - tongue sticks
+1042     ($0412)  2         13.4     15.4   Death: Reptile - tongue sticks
+1043     ($0413)  3         13.4     15.4   Death: Reptile - tongue sticks
+1044     ($0414)  1         31.8     36.5   Death: Reptile - tongue whip
+1045     ($0415)  2         31.8     36.5   Death: Reptile - tongue whip
+1046     ($0416)  3         31.8     36.5   Death: Reptile - tongue whip
+1047     ($0417)  1         50.2     57.6   Death: hat cuts in two
+1048     ($0418)  2         50.2     57.6   Death: hat cuts in two
+1049     ($0419)  3         50.2     57.6   Death: hat cuts in two
+1050     ($041a)  1         16.3     18.7   Slipping on ice #1
+1051     ($041b)  2         16.3     18.7   Slipping on ice #1
+1052     ($041c)  3         16.3     18.7   Slipping on ice #1
+1053     ($041d)  1         16.7     19.2   Slipping on ice #2
+1054     ($041e)  2         16.7     19.2   Slipping on ice #2
+1055     ($041f)  3         16.7     19.2   Slipping on ice #2
+1056     ($0420)  1         19.7     22.6   Slipping on ice #3
+1057     ($0421)  2         19.7     22.6   Slipping on ice #3
+1058     ($0422)  3         19.7     22.6   Slipping on ice #3
+1059     ($0423)  1         24.3     27.8   Slipping on ice #4
+1060     ($0424)  2         24.3     27.8   Slipping on ice #4
+1061     ($0425)  3         24.3     27.8   Slipping on ice #4
+1062     ($0426)  1         79.9     91.7   Jax projectile
+1063     ($0427)  2         79.9     91.7   Jax projectile
+1064     ($0428)  3         79.9     91.7   Jax projectile
+1065     ($0429)  1         66.6     76.3   Mileena spinning ball
+1066     ($042a)  2         66.6     76.3   Mileena spinning ball
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 20
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+1067     ($042b)  3         66.6     76.3   Mileena spinning ball
+1068     ($042c)  1         44.4     50.9   Reptile flying move
+1069     ($042d)  2         44.4     50.9   Reptile flying move
+1070     ($042e)  3         44.4     50.9   Reptile flying move
+
+1100     ($044c)  1         69.5     79.7   Shao Kahn: Friendship (#2)
+1101     ($044d)  2         69.5     79.7   Shao Kahn: Friendship (#2)
+1102     ($044e)  3         69.5     79.7   Shao Kahn: Friendship (#2)
+1103     ($044f)  1         86.2     98.9   Shao Kahn: Round One
+1104     ($0450)  2         86.2     98.9   Shao Kahn: Round One
+1105     ($0451)  3         86.2     98.9   Shao Kahn: Round One
+1106     ($0452)  1         90.4    103.7   Shao Kahn: Round Two
+1107     ($0453)  2         90.4    103.7   Shao Kahn: Round Two
+1108     ($0454)  3         90.4    103.7   Shao Kahn: Round Two
+1109     ($0455)  1         86.2     98.9   Shao Kahn: Round Three
+1110     ($0456)  2         86.2     98.9   Shao Kahn: Round Three
+1111     ($0457)  3         86.2     98.9   Shao Kahn: Round Three
+1112     ($0458)  1         86.2     98.9   Shao Kahn: Round Four
+1113     ($0459)  2         86.2     98.9   Shao Kahn: Round Four
+1114     ($045a)  3         86.2     98.9   Shao Kahn: Round Four
+1115     ($045b)  1         56.9     65.3   Shao Kahn: Liu Kang
+1116     ($045c)  2         56.9     65.3   Shao Kahn: Liu Kang
+1117     ($045d)  3         56.9     65.3   Shao Kahn: Liu Kang
+1118     ($045e)  1         60.7     69.6   Shao Kahn: Kung Lao
+1119     ($045f)  2         60.7     69.6   Shao Kahn: Kung Lao
+1120     ($0460)  3         60.7     69.6   Shao Kahn: Kung Lao
+1121     ($0461)  1         72.4     83.0   Shao Kahn: Johnny Cage
+1122     ($0462)  2         72.4     83.0   Shao Kahn: Johnny Cage
+1123     ($0463)  3         72.4     83.0   Shao Kahn: Johnny Cage
+1124     ($0464)  1         53.6     61.4   Shao Kahn: Reptile
+1125     ($0465)  2         53.6     61.4   Shao Kahn: Reptile
+1126     ($0466)  3         53.6     61.4   Shao Kahn: Reptile
+1127     ($0467)  1         63.2     72.5   Shao Kahn: Sub-Zero
+1128     ($0468)  2         63.2     72.5   Shao Kahn: Sub-Zero
+1129     ($0469)  3         63.2     72.5   Shao Kahn: Sub-Zero
+1130     ($046a)  1         72.0     82.6   Shao Kahn: Shang-Tsung
+1131     ($046b)  2         72.0     82.6   Shao Kahn: Shang-Tsung
+1132     ($046c)  3         72.0     82.6   Shao Kahn: Shang-Tsung
+1133     ($046d)  1         49.0     56.2   Shao Kahn: Kitana
+1134     ($046e)  2         49.0     56.2   Shao Kahn: Kitana
+1135     ($046f)  3         49.0     56.2   Shao Kahn: Kitana
+1136     ($0470)  1         53.2     61.0   Shao Kahn: Jax
+1137     ($0471)  2         53.2     61.0   Shao Kahn: Jax
+1138     ($0472)  3         53.2     61.0   Shao Kahn: Jax
+1139     ($0473)  1         54.0     61.9   Shao Kahn: Malena
+1140     ($0474)  2         54.0     61.9   Shao Kahn: Malena
+1141     ($0475)  3         54.0     61.9   Shao Kahn: Malena
+1142     ($0476)  1         58.6     67.2   Shao Kahn: Baraka
+1143     ($0477)  2         58.6     67.2   Shao Kahn: Baraka
+1144     ($0478)  3         58.6     67.2   Shao Kahn: Baraka
+1145     ($0479)  1         58.6     67.2   Shao Kahn: Scorpion
+1146     ($047a)  2         58.6     67.2   Shao Kahn: Scorpion
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 21
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+1147     ($047b)  3         58.6     67.2   Shao Kahn: Scorpion
+1148     ($047c)  1         48.6     55.7   Shao Kahn: Raiden
+1149     ($047d)  2         48.6     55.7   Shao Kahn: Raiden
+1150     ($047e)  3         48.6     55.7   Shao Kahn: Raiden
+1151     ($047f)  1        187.9    215.5   Shao Kahn: I'm SK, bow to me
+1152     ($0480)  2        187.9    215.5   Shao Kahn: I'm SK, bow to me
+1153     ($0481)  3        187.9    215.5   Shao Kahn: I'm SK, bow to me
+1154     ($0482)  1        145.2    166.6   Shao Kahn: Feel the wrath ...
+1155     ($0483)  2        145.2    166.6   Shao Kahn: Feel the wrath ...
+1156     ($0484)  3        145.2    166.6   Shao Kahn: Feel the wrath ...
+1157     ($0485)  1        137.3    157.4   Shao Kahn: Feel the power ...
+1158     ($0486)  2        137.3    157.4   Shao Kahn: Feel the power ...
+1159     ($0487)  3        137.3    157.4   Shao Kahn: Feel the power ...
+1160     ($0488)  1        119.7    137.3   Shao Kahn: I rule ...
+1161     ($0489)  2        119.7    137.3   Shao Kahn: I rule ...
+1162     ($048a)  3        119.7    137.3   Shao Kahn: I rule ...
+
+1166     ($048e)  1        105.9    121.4   Shao Kahn: Prepare to die
+1167     ($048f)  2        105.9    121.4   Shao Kahn: Prepare to die
+1168     ($0490)  3        105.9    121.4   Shao Kahn: Prepare to die
+
+1172     ($0494)  1        128.1    146.9   Shao Kahn: You will die
+1173     ($0495)  2        128.1    146.9   Shao Kahn: You will die
+1174     ($0496)  3        128.1    146.9   Shao Kahn: You will die
+1175     ($0497)  1         95.0    109.0   Shao Kahn: You are nothing
+1176     ($0498)  2         95.0    109.0   Shao Kahn: You are nothing
+1177     ($0499)  3         95.0    109.0   Shao Kahn: You are nothing
+1178     ($049a)  1        110.9    127.2   Shao Kahn: laugh #1
+1179     ($049b)  2        117.2    134.4   Shao Kahn: laugh #1
+1180     ($049c)  3        117.2    134.4   Shao Kahn: laugh #1
+1181     ($049d)  1        119.7    137.3   Shao Kahn: laugh #2
+1182     ($049e)  2        119.7    137.3   Shao Kahn: laugh #2
+1183     ($049f)  3        119.7    137.3   Shao Kahn: laugh #2
+1184     ($04a0)  1         54.4     62.4   Shao Kahn: laugh #3
+1185     ($04a1)  2         54.4     62.4   Shao Kahn: laugh #3
+1186     ($04a2)  3         54.4     62.4   Shao Kahn: laugh #3
+1187     ($04a3)  1        164.9    189.1   Shao Kahn: <laugh> ... yer best?
+1188     ($04a4)  2        164.9    189.1   Shao Kahn: <laugh> ... yer best?
+1189     ($04a5)  3        164.9    189.1   Shao Kahn: <laugh> ... yer best?
+1190     ($04a6)  1         94.2    108.0   Shao Kahn: Is that yer best?
+1191     ($04a7)  2         94.2    108.0   Shao Kahn: Is that yer best?
+1192     ($04a8)  3         94.2    108.0   Shao Kahn: Is that yer best?
+1193     ($04a9)  1         97.5    111.8   Shao Kahn: All too easy
+1194     ($04aa)  2         97.5    111.8   Shao Kahn: All too easy
+1195     ($04ab)  3         97.5    111.8   Shao Kahn: All too easy
+1196     ($04ac)  1        158.6    181.9   Shao Kahn: You weak pathetic ...
+1197     ($04ad)  2        158.6    181.9   Shao Kahn: You weak pathetic ...
+1198     ($04ae)  3        158.6    181.9   Shao Kahn: You weak pathetic ...
+
+1200     ($04b0)  1         89.2    102.2   Goro: Growl #1
+1201     ($04b1)  2         89.2    102.2   Goro: Growl #1
+1202     ($04b2)  3         89.2    102.2   Goro: Growl #1
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 22
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+1203     ($04b3)  1        130.2    149.3   Goro: Growl #2
+1204     ($04b4)  2        130.2    149.3   Goro: Growl #2
+1205     ($04b5)  3        130.2    149.3   Goro: Growl #2
+1206     ($04b6)  1        115.1    132.0   Goro: Roar
+1207     ($04b7)  2        115.1    132.0   Goro: Roar
+1208     ($04b8)  3        115.1    132.0   Goro: Roar
+1209     ($04b9)  1         70.3     80.6   Goro: Stomp roar
+1210     ($04ba)  2         70.3     80.6   Goro: Stomp roar
+1211     ($04bb)  3         70.3     80.6   Goro: Stomp roar
+1212     ($04bc)  1         39.3     45.1   Goro: react #1
+1213     ($04bd)  2         39.3     45.1   Goro: react #1
+1214     ($04be)  3         39.3     45.1   Goro: react #1
+1215     ($04bf)  1         34.3     39.4   Goro: react #2
+1216     ($04c0)  2         34.3     39.4   Goro: react #2
+1217     ($04c1)  3         34.3     39.4   Goro: react #2
+1218     ($04c2)  1        115.5    132.5   Goro: crazy scary roar
+1219     ($04c3)  2        115.5    132.5   Goro: crazy scary roar
+1220     ($04c4)  3        115.5    132.5   Goro: crazy scary roar
+
+1250     ($04e2)  1         34.7     39.8   Shao Kahn: attack #1
+1251     ($04e3)  2         34.7     39.8   Shao Kahn: attack #1
+1252     ($04e4)  3         34.7     39.8   Shao Kahn: attack #1
+1253     ($04e5)  1         37.3     42.7   Shao Kahn: attack #2
+1254     ($04e6)  2         37.3     42.7   Shao Kahn: attack #2
+1255     ($04e7)  3         37.3     42.7   Shao Kahn: attack #2
+1256     ($04e8)  1         26.4     30.2   Shao Kahn: react #1
+1257     ($04e9)  2         26.4     30.2   Shao Kahn: react #1
+1258     ($04ea)  3         26.4     30.2   Shao Kahn: react #1
+1259     ($04eb)  1         31.0     35.5   Shao Kahn: react #2
+1260     ($04ec)  2         31.0     35.5   Shao Kahn: react #2
+1261     ($04ed)  3         31.0     35.5   Shao Kahn: react #2
+1262     ($04ee)  1         38.5     44.2   Shao Kahn: react #3
+1263     ($04ef)  2         38.5     44.2   Shao Kahn: react #3
+1264     ($04f0)  3         38.5     44.2   Shao Kahn: react #3
+1265     ($04f1)  1         49.4     56.6   Shao Kahn: react #4
+1266     ($04f2)  2         49.4     56.6   Shao Kahn: react #4
+1267     ($04f3)  3         49.4     56.6   Shao Kahn: react #4
+1268     ($04f4)  1         54.8     62.9   Shao Kahn: wast #1
+1269     ($04f5)  2         54.8     62.9   Shao Kahn: wast #1
+1270     ($04f6)  3         54.8     62.9   Shao Kahn: wast #1
+1271     ($04f7)  1         61.5     70.6   Shao Kahn: wast #2
+1272     ($04f8)  2         61.5     70.6   Shao Kahn: wast #2
+1273     ($04f9)  3         61.5     70.6   Shao Kahn: wast #2
+
+1288     ($0508)  1         22.2     25.4   bones fall #1
+1289     ($0509)  2         22.2     25.4   bones fall #1
+1290     ($050a)  3         22.2     25.4   bones fall #1
+1291     ($050b)  1         28.9     33.1   bones fall #2
+1292     ($050c)  2         28.9     33.1   bones fall #2
+1293     ($050d)  3         28.9     33.1   bones fall #2
+1294     ($050e)  1         25.5     29.3   bones fall #3
+1295     ($050f)  2         25.5     29.3   bones fall #3
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 23
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+1296     ($0510)  3         25.5     29.3   bones fall #3
+1297     ($0511)  1         23.9     27.4   bones fall #4
+1298     ($0512)  2         23.9     27.4   bones fall #4
+1299     ($0513)  3         23.9     27.4   bones fall #4
+1300     ($0514)  1         23.4     26.9   Ed: Slippery #1
+1301     ($0515)  2         23.4     26.9   Ed: Slippery #1
+1302     ($0516)  3         23.4     26.9   Ed: Slippery #1
+1303     ($0517)  1         23.9     27.4   Ed: Slippery #2
+1304     ($0518)  2         23.9     27.4   Ed: Slippery #2
+1305     ($0519)  3         23.9     27.4   Ed: Slippery #2
+1306     ($051a)  1         28.0     32.2   Ed: Slippery #3
+1307     ($051b)  2         28.0     32.2   Ed: Slippery #3
+1308     ($051c)  3         28.0     32.2   Ed: Slippery #3
+1309     ($051d)  1         34.7     39.8   Ed: Slippery #4
+1310     ($051e)  2         34.7     39.8   Ed: Slippery #4
+1311     ($051f)  3         34.7     39.8   Ed: Slippery #4
+1312     ($0520)  1         40.2     46.1   Ed: Slippery #5
+1313     ($0521)  2         40.2     46.1   Ed: Slippery #5
+1314     ($0522)  3         40.2     46.1   Ed: Slippery #5
+1315     ($0523)  1         29.3     33.6   Ed: Slippery #6
+1316     ($0524)  2         29.3     33.6   Ed: Slippery #6
+1317     ($0525)  3         29.3     33.6   Ed: Slippery #6
+1318     ($0526)  1         98.8    113.3   Ed: Big Slippery Whoa
+1319     ($0527)  2         98.8    113.3   Ed: Big Slippery Whoa
+1320     ($0528)  3         98.8    113.3   Ed: Big Slippery Whoa
+1321     ($0529)  1         19.3     22.1   Dan: Slippery #1
+1322     ($052a)  2         19.3     22.1   Dan: Slippery #1
+1323     ($052b)  3         19.3     22.1   Dan: Slippery #1
+1324     ($052c)  1         20.1     23.0   Dan: Slippery #2
+1325     ($052d)  2         20.1     23.0   Dan: Slippery #2
+1326     ($052e)  3         20.1     23.0   Dan: Slippery #2
+1327     ($052f)  1         20.5     23.5   Dan: Slippery #3
+1328     ($0530)  2         20.5     23.5   Dan: Slippery #3
+1329     ($0531)  3         20.5     23.5   Dan: Slippery #3
+1330     ($0532)  1         20.5     23.5   Dan: Slippery #4
+1331     ($0533)  2         20.5     23.5   Dan: Slippery #4
+1332     ($0534)  3         20.5     23.5   Dan: Slippery #4
+1333     ($0535)  1         29.3     33.6   Dan: Slippery #5
+1334     ($0536)  2         29.3     33.6   Dan: Slippery #5
+1335     ($0537)  3         29.3     33.6   Dan: Slippery #5
+1336     ($0538)  1         43.9     50.4   Dan: Slippery #6
+1337     ($0539)  2         43.9     50.4   Dan: Slippery #6
+1338     ($053a)  3         43.9     50.4   Dan: Slippery #6
+
+1350     ($0546)  1         33.1     37.9   Girl: Slippery #1
+1351     ($0547)  2         33.1     37.9   Girl: Slippery #1
+1352     ($0548)  3         33.1     37.9   Girl: Slippery #1
+1353     ($0549)  1         18.4     21.1   Girl: Slippery #2
+1354     ($054a)  2         18.4     21.1   Girl: Slippery #2
+1355     ($054b)  3         18.4     21.1   Girl: Slippery #2
+1356     ($054c)  1         37.3     42.7   Girl: Slippery #3
+1357     ($054d)  2         37.3     42.7   Girl: Slippery #3
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 24
+
+
+Sound Call Table (continued)
+
+Decimal  Hex      Track  Video    Pinball   Description
+-------  -------  -----  -------  -------   -----------
+1358     ($054e)  3         37.3     42.7   Girl: Slippery #3
+1359     ($054f)  1         18.8     21.6   Girl: Slippery #4
+1360     ($0550)  2         18.8     21.6   Girl: Slippery #4
+1361     ($0551)  3         18.8     21.6   Girl: Slippery #4
+1362     ($0552)  1         30.1     34.6   Girl: Slippery #5
+1363     ($0553)  2         30.1     34.6   Girl: Slippery #5
+1364     ($0554)  3         30.1     34.6   Girl: Slippery #5
+1365     ($0555)  1         55.7     63.8   Girl: Big slip
+1366     ($0556)  2         55.7     63.8   Girl: Big slip
+1367     ($0557)  3         55.7     63.8   Girl: Big slip
+
+1377     ($0561)  1        244.0    279.8   Shao Kahn: destruction rumble #1
+1378     ($0562)  2        244.0    279.8   Shao Kahn: destruction rumble #1
+1379     ($0563)  3        244.0    279.8   Shao Kahn: destruction rumble #1
+1380     ($0564)  1        274.6    314.9   Shao Kahn: destruction rumble #2
+1381     ($0565)  2        274.6    314.9   Shao Kahn: destruction rumble #2
+1382     ($0566)  3        274.6    314.9   Shao Kahn: destruction rumble #2
+1383     ($0567)  1         40.2     46.1   Shao Kahn: No! #1
+1384     ($0568)  2         40.2     46.1   Shao Kahn: No! #1
+1385     ($0569)  3         40.2     46.1   Shao Kahn: No! #1
+1386     ($056a)  1         42.3     48.5   Shao Kahn: No! #2
+1387     ($056b)  2         42.3     48.5   Shao Kahn: No! #2
+1388     ($056c)  3         42.3     48.5   Shao Kahn: No! #2
+1389     ($056d)  1        239.4    274.6   Shao Kahn: Nooooo! with noise
+1390     ($056e)  2        239.4    274.6   Shao Kahn: Nooooo! with noise
+1391     ($056f)  3        239.4    274.6   Shao Kahn: Nooooo! with noise
+1392     ($0570)  1         32.6     37.4   Shao Kahn: turn to stone
+1393     ($0571)  2         32.6     37.4   Shao Kahn: turn to stone
+1394     ($0572)  3         32.6     37.4   Shao Kahn: turn to stone
+1395     ($0573)  1        642.1    736.3   Shao Kahn: destruction sequence example
+
+1400     ($0578)  1        112.2    128.6   Feel the power of ????
+1401     ($0579)  2        112.2    128.6   Feel the power of ????
+1402     ($057a)  3        112.2    128.6   Feel the power of ????
+
+Total 1190 Sound Calls
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 25
+
+
+Region Table (EPROM) 
+
+File                    Length    Length    Length   Bitrate   Compression
+Name        Address     bytes     frames    seconds  kbit/sec  Type
+--------    --------    ------    ------    -------- --------  -------
+ARC3        0x00C518      2484        66    0:00.507  39.205   HENRY[5.00] -vb63 -vi23 -vt1 
+ATTRCT2A    0x00CECC     21710       522    0:04.009  43.323   HENRY[3.50] -vb79 -vi7 -vr63 -vt3 
+ATTRCT2B    0x01239A     23580       521    0:04.001  47.145   HENRY[3.50] -vb79 -vi7 -vr63 -vt3 
+BABYTUNE    0x017FB6     11350       400    0:03.072  29.557   HENRY[4.00] -vb63 -vi15 -vt3 
+BONES1      0x01AC0C      1222        53    0:00.407  24.017   HENRY[5.00] -vb63 -vi15 -vt3 
+BONES2      0x01B0D2      1604        69    0:00.530  24.215   HENRY[5.00] -vb63 -vi15 -vt3 
+BONES3      0x01B716      1098        61    0:00.468  18.750   HENRY[5.00] -vb63 -vi15 -vt3 
+BONES4      0x01BB60       948        57    0:00.438  17.325   HENRY[5.00] -vb63 -vi15 -vt3 
+COINDROP    0x01BF14      4508       101    0:00.776  46.493   HENRY[5.00] -vb63 -vi15 -vt3 
+CROWD1      0x01D0B0     23938       397    0:03.049  62.810   HENRY[4.00] -vb79 -vi15 -vt3 
+CZGOROAR    0x022E32      7426       276    0:02.120  28.027   HENRY[5.00] -vb47 -vi15 -vt3 
+DISCO       0x024B34     16056       281    0:02.158  59.520   HENRY[4.00] -vb79 -vi15 -vt3 
+DUMBFRND    0x0289EC     10526       433    0:03.325  25.322   HENRY[4.50] -vb79 -vi15 -vr63 -vt3 
+FATAL1      0x02B30A     23102       520    0:03.994  46.278   HENRY[4.00] -vb79 -vi7 -vt3 
+FATAL2      0x030D48     20014       503    0:03.863  41.447   HENRY[4.00] -vb79 -vi7 -vt3 
+FBONE1      0x035B76     20908       441    0:03.387  49.386   HENRY[4.00] -vb79 -vi15 -vt3 
+GBIGSLIP    0x03AD22      3730       133    0:01.021  29.214   HENRY[6.00] -vb47 -vi15 -vt3 
+GEXPLODE    0x03BBB4      9704       302    0:02.319  33.471   HENRY[6.00] -vb47 -vi15 -vt3 
+GPIT        0x03E19C     15738       501    0:03.848  32.722   HENRY[6.00] -vb47 -vi15 -vt3 
+GPITHIT     0x041F16      1890       100    0:00.768  19.688   HENRY[6.00] -vb47 -vi15 -vt3 
+GSLIP1      0x042678      1600        79    0:00.607  21.097   HENRY[6.00] -vb47 -vi15 -vt3 
+GSLIP2      0x042CB8       760        44    0:00.338  17.992   HENRY[6.00] -vb47 -vi15 -vt3 
+GSLIP3      0x042FB0      2184        89    0:00.684  25.562   HENRY[6.00] -vb47 -vi15 -vt3 
+GSLIP4      0x043838      1074        45    0:00.346  24.861   HENRY[6.00] -vb47 -vi15 -vt3 
+GSLIP5      0x043C6A      1826        72    0:00.553  26.418   HENRY[6.00] -vb47 -vi15 -vt3 
+HHSAWCUT    0x04438C      8766       120    0:00.922  76.094   HENRY[4.00] -vb79 -vi15 -vt3 
+JAXPROJ     0x0465CA      6464       191    0:01.467  35.253   HENRY[5.00] -vb79 -vi15 -vr63 -vt1 
+JETFX       0x047F0A      5572        90    0:00.691  64.491   HENRY[3.00] -vb79 -vi7 -vt3 
+LKENDF      0x0494CE      4866       182    0:01.398  27.850   HENRY[5.00] -vb47 -vi15 -vt3 
+MILEBALL    0x04A7D0      6348       159    0:01.221  41.588   HENRY[5.00] -vb79 -vi15 -vr63 -vt1 
+MILESPIT    0x04C09C      1614        77    0:00.591  21.834   HENRY[6.00] -vb79 -vi15 -vt3 
+MILESUCK    0x04C6EA     12932       204    0:01.567  66.033   HENRY[4.00] -vb79 -vi15 -vr63 -vt3 
+N1DEATH2    0x04F96E     12590       385    0:02.957  34.064   HENRY[6.00] -vb47 -vi15 -vt3 
+OHMAW       0x052A9C      1996        96    0:00.737  21.658   HENRY[6.00] -vb47 -vi15 -vt3 
+RAIDWIN1    0x053268     10600       196    0:01.505  56.335   HENRY[5.00] -vb63 -vi15 -vt3 
+RAIDWIN2    0x055BD0      1390        53    0:00.407  27.319   HENRY[4.00] -vb63 -vi15 -vt3 
+REPFLY      0x05613E      4344       106    0:00.814  42.689   HENRY[5.00] -vb79 -vi15 -vr63 -vt1 
+REPTHOCK    0x057236      1618        48    0:00.369  35.113   HENRY[4.50] -vb63 -vi15 -vt1 
+REPTPOOF    0x057888      6122       150    0:01.152  42.514   HENRY[4.00] -vb79 -vi15 -vt3 
+SKB1L       0x059072      4528        81    0:00.622  58.230   HENRY[4.00] -vb79 -vi15 -vt3 
+SKB2L       0x05A222      4590        97    0:00.745  49.291   HENRY[4.00] -vb79 -vi15 -vt3 
+SKBEST      0x05B410      5412       217    0:01.667  25.979   HENRY[5.75] -vb47 -vi7 -vt3 
+SKBYEBYE    0x05C934     38150       572    0:04.393  69.475   HENRY[4.00] -vb79 -vi15 -vt3 
+SKCRACKL    0x065E3A      5180        78    0:00.599  69.177   HENRY[4.00] -vb79 -vi15 -vt3 
+SKFEELPR    0x067276      9766       327    0:02.511  31.110   HENRY[5.75] -vb47 -vi7 -vt3 
+SKLAUGH3    0x06989C      3824       168    0:01.290  23.710   HENRY[5.75] -vb47 -vi7 -vt3 
+SKNO1       0x06A78C      1508        96    0:00.737  16.363   HENRY[5.75] -vb47 -vi7 -vt3 
+SKNO2       0x06AD70      2054       101    0:00.776  21.184   HENRY[5.75] -vb47 -vi7 -vt3 
+SLIP1       0x06B576       728        39    0:00.300  19.444   HENRY[5.00] -vb63 -vi15 -vt3 
+SLIP2       0x06B84E       704        40    0:00.307  18.333   HENRY[5.00] -vb63 -vi15 -vt3 
+SLIP3       0x06BB0E       954        47    0:00.361  21.144   HENRY[5.00] -vb63 -vi15 -vt3 
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 26
+
+
+Region Table (EPROM) (continued)
+
+File                    Length    Length    Length   Bitrate   Compression
+Name        Address     bytes     frames    seconds  kbit/sec  Type
+--------    --------    ------    ------    -------- --------  -------
+SLIP4       0x06BEC8      1288        58    0:00.445  23.132   HENRY[5.00] -vb63 -vi15 -vt3 
+SLIPDAN5    0x06C3D0      1186        70    0:00.538  17.649   HENRY[6.00] -vb47 -vi15 -vt3 
+SLIPDAN6    0x06C872      1876       105    0:00.806  18.611   HENRY[6.00] -vb47 -vi15 -vt3 
+STCLDWN     0x06CFC6      5730       135    0:01.037  44.213   HENRY[4.00] -vb63 -vi15 -vt3 
+STCLOUD     0x06E628     11380       205    0:01.574  57.825   HENRY[4.00] -vb63 -vi15 -vt3 
+STGROSS1    0x07129C     11096       196    0:01.505  58.971   HENRY[4.00] -vb63 -vi15 -vt3 
+SZAUTOFZ    0x073DF4      6812       202    0:01.551  35.128   HENRY[5.00] -vb79 -vi15 -vr63 -vt3 
+SZSHATTR    0x075890     15552       235    0:01.805  68.936   HENRY[4.00] -vb79 -vi15 -vt1 
+VPATTAK1    0x079550      1176        63    0:00.484  19.444   HENRY[6.00] -vb47 -vi15 -vt3 
+VPATTAK2    0x0799E8      1042        61    0:00.468  17.794   HENRY[6.00] -vb47 -vi15 -vt3 
+VPDEATH     0x079DFA      6052       298    0:02.289  21.155   HENRY[6.00] -vb47 -vi15 -vt3 
+VPGRAB      0x07B59E      1238        64    0:00.492  20.150   HENRY[6.00] -vb47 -vi15 -vt3 
+VPJUMP      0x07BA74       546        39    0:00.300  14.583   HENRY[6.00] -vb47 -vi15 -vt3 
+VPREACT1    0x07BC96       822        57    0:00.438  15.022   HENRY[6.00] -vb47 -vi15 -vt3 
+VPREACT2    0x07BFCC      1058        60    0:00.461  18.368   HENRY[6.00] -vb47 -vi15 -vt3 
+VPREACT3    0x07C3EE      1460        71    0:00.545  21.420   HENRY[6.00] -vb47 -vi15 -vt3 
+VPTHROW     0x07C9A2      1970        99    0:00.760  20.728   HENRY[6.00] -vb47 -vi15 -vt3 
+VPTRIP      0x07D154      1176        72    0:00.553  17.014   HENRY[6.00] -vb47 -vi15 -vt3 
+VPWAST1     0x07D5EC      2412       105    0:00.806  23.929   HENRY[6.00] -vb47 -vi15 -vt3 
+VPWAST2     0x07DF58      3512       144    0:01.106  25.405   HENRY[6.00] -vb47 -vi15 -vt3 
+WELLDONE    0x07ED10      3592       155    0:01.190  24.140   HENRY[5.75] -vb47 -vi7 -vt3 
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 27
+
+
+Summary (EPROM)
+
+ JOEY avg bitrate: 000.0 kbits/sec (0 regions, 0 bytes, 0 frames)
+HENRY avg bitrate: 039.4 kbits/sec (72 regions, 472576 bytes, 12480 frames)
+
+
+Total Average Bitrate:  39.4 kbits/sec
+           Total Time: 1:35.846 minutes
+ Total Number Regions: 72
+ Total Size of .CMP's: 461 kbytes
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 28
+
+
+Region Table (MASKED) 
+
+File                    Length    Length    Length   Bitrate   Compression
+Name        Address     bytes     frames    seconds  kbit/sec  Type
+--------    --------    ------    ------    -------- --------  -------
+ACID        0x20000E     11896       365    0:02.803  33.950   HENRY[6.00] -vb47 -vi7 -vt3 
+ARC1        0x50000E       688        15    0:00.115  47.778   HENRY[5.00] -vb63 -vi23 -vt1 
+ARC2        0x5002BE      1230        27    0:00.207  47.454   HENRY[5.00] -vb63 -vi23 -vt1 
+ATTRCT1A    0x202E86      4926        97    0:00.745  52.899   HENRY[4.50] -vb79 -vi7 -vr63 -vt3 
+ATTRCT1B    0x30000E      5232        98    0:00.753  55.612   HENRY[4.50] -vb79 -vi7 -vr63 -vt3 
+ATTRCT1C    0x50078C      2018        34    0:00.261  61.826   HENRY[4.50] -vb79 -vi7 -vr63 -vt3 
+ATTRCT1D    0x30147E      4870        96    0:00.737  52.843   HENRY[4.50] -vb79 -vi7 -vr63 -vt3 
+ATTRCT1E    0x10000E      7264       129    0:00.991  58.656   HENRY[4.50] -vb79 -vi7 -vr63 -vt3 
+ATTRCT1F    0x302784      7090       196    0:01.505  37.681   HENRY[4.50] -vb79 -vi15 -vr63 -vt3 
+BABALITY    0x40000E      4330       171    0:01.313  26.377   HENRY[5.75] -vb47 -vi7 -vt3 
+BABY1       0x304336      4878       142    0:01.091  35.783   HENRY[5.00] -vb47 -vi15 -vt1 
+BABY2       0x305644      9878       282    0:02.166  36.488   HENRY[5.00] -vb47 -vi15 -vt1 
+BARAKA      0x500F6E      2628       140    0:01.075  19.554   HENRY[5.75] -vb47 -vi7 -vt3 
+BARTHROW    0x2041C4      7632       127    0:00.975  62.598   HENRY[5.00] -vb95 -vi23 -vr63 -vt1 
+BIGBLOCK    0x4010F8      3378        51    0:00.392  68.995   HENRY[2.00] -vb79 -vi15 -vt1 
+BIGCRNCH    0x205F94      8436       195    0:01.498  45.064   HENRY[4.00] -vb79 -vi15 -vt1 
+BIGFALL1    0x307CDA      7086       124    0:00.952  59.526   HENRY[3.00] -vb79 -vi15 -vt1 
+BIGHIT1     0x5019B2      3864        59    0:00.453  68.220   HENRY[2.00] -vb79 -vi15 -vt1 
+BIGHIT2     0x5028CA      3558        52    0:00.399  71.274   HENRY[2.00] -vb79 -vi15 -vt1 
+BIGHIT3     0x208088      7408       121    0:00.929  63.774   HENRY[2.00] -vb79 -vi15 -vt1 
+BIGSTAB1    0x5036B0      4094        60    0:00.461  71.076   HENRY[3.00] -vb95 -vi15 -vr79 -vt1 
+BIGSTAB2    0x309888      7462       109    0:00.837  71.311   HENRY[3.00] -vb95 -vi15 -vr79 -vt1 
+BIGSTAB3    0x401E2A      4396        71    0:00.545  64.495   HENRY[3.00] -vb95 -vi15 -vr79 -vt1 
+BITEHEAD    0x5046AE      4214        71    0:00.545  61.825   HENRY[4.00] -vb79 -vi15 -vr63 
+BLOCK1      0x505724      1870        35    0:00.269  55.655   HENRY[2.00] -vb79 -vi15 -vt1 
+BODINFLT    0x30B5AE      6682       110    0:00.845  63.277   HENRY[5.00] -vb79 -vi15 -vr63 -vt1 
+BODRUMBL    0x505E72      5288       321    0:02.465  17.160   HENRY[5.00] -vb79 -vi7 -vr63 -vt1 
+BODY1       0x50731A      3534        52    0:00.399  70.793   HENRY[2.00] -vb79 -vi15 -vt1 
+BODY2       0x5080E8      2788        50    0:00.384  58.083   HENRY[2.00] -vb79 -vi15 -vt1 
+BODYXPLD    0x402F56     13064       334    0:02.565  40.744   HENRY[4.00] -vb79 -vi15 -vt0 
+BOUTXPLD    0x209D78      4832       165    0:01.267  30.505   HENRY[6.00] -vb47 -vi23 -vt1 
+BUBBLE      0x508BCC      2416       102    0:00.783  24.673   HENRY[5.00] -vb63 -vi15 -vt3 
+BUYIN       0x20B058     27902       920    0:07.066  31.592   HENRY[4.00] -vb79 -vi15 -vr63 -vt3 
+BWHOOSH1    0x50953C      2622        61    0:00.468  44.775   HENRY[2.00] -vb79 -vi15 -vt1 
+BWHOOSH2    0x509F7A      1974        44    0:00.338  46.733   HENRY[2.00] -vb79 -vi15 -vt1 
+BWHOOSH3    0x50A730      1972        49    0:00.376  41.922   HENRY[2.00] -vb79 -vi7 -vr63 -vt1 
+BWHOOSH4    0x101C6E      1914        48    0:00.369  41.536   HENRY[4.00] -vb95 -vi15 -vr63 -vt1 
+CAGEKCK1    0x50AEE4      1266        25    0:00.192  52.750   HENRY[4.00] -vb63 -vi15 -vt1 
+CAGEKCK2    0x40625E      5130       127    0:00.975  42.077   HENRY[4.00] -vb63 -vi15 -vt1 
+CAGEKISS    0x50B3D6      3348       137    0:01.052  25.456   HENRY[6.00] -vb47 -vi15 -vt3 
+CRUNCH1     0x50C0EA      4202        76    0:00.584  57.593   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+CRUNCH2     0x1023E8      4612        84    0:00.645  57.192   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+DANGER      0x407668      4374       127    0:00.975  35.876   HENRY[5.00] -vb63 -vi23 -vt3 
+DFATAK1     0x1035EC      1140        57    0:00.438  20.833   HENRY[6.00] -vb47 -vi15 -vt3 
+DFATAK2     0x50D154       670        44    0:00.338  15.862   HENRY[6.00] -vb47 -vi15 -vt3 
+DFDEATH1    0x103A60      3978       159    0:01.221  26.061   HENRY[6.00] -vb47 -vi15 -vt3 
+DFGRAB      0x50D3F2       826        39    0:00.300  22.062   HENRY[6.00] -vb47 -vi15 -vt3 
+DFJUMP      0x50D72C       664        47    0:00.361  14.716   HENRY[6.00] -vb47 -vi15 -vt3 
+DFREACT1    0x50D9C4      1362        73    0:00.561  19.435   HENRY[6.00] -vb47 -vi15 -vt3 
+DFREACT2    0x50DF16      2556        91    0:00.699  29.258   HENRY[6.00] -vb47 -vi15 -vt3 
+DFREACT3    0x1049EA      1546        87    0:00.668  18.511   HENRY[6.00] -vb47 -vi15 -vt3 
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 29
+
+
+Region Table (MASKED) (continued)
+
+File                    Length    Length    Length   Bitrate   Compression
+Name        Address     bytes     frames    seconds  kbit/sec  Type
+--------    --------    ------    ------    -------- --------  -------
+DFSKREAM    0x40877E      8304       289    0:02.220  29.931   HENRY[6.00] -vb47 -vi15 -vt3 
+DFTHROW     0x50E912      2138       101    0:00.776  22.050   HENRY[6.00] -vb47 -vi15 -vt3 
+DFTRIP      0x50F16C      1272        69    0:00.530  19.203   HENRY[6.00] -vb47 -vi15 -vt3 
+DFWAST1     0x30CFC8      5632       213    0:01.636  27.543   HENRY[6.00] -vb47 -vi15 -vt3 
+DFWAST2     0x50F664      2504       113    0:00.868  23.083   HENRY[6.00] -vb47 -vi15 -vt3 
+DFYEA       0x104FFE      1980        93    0:00.714  22.177   HENRY[6.00] -vb47 -vi15 -vt3 
+DOORCLOS    0x1057BA      5470       238    0:01.828  23.941   HENRY[4.00] -vb63 -vi15 -vt1 
+DOORSLID    0x211D56      5500       231    0:01.774  24.802   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+DTHUN1      0x106D18      1750       128    0:00.983  14.242   HENRY[4.00] -vb63 -vi15 -vt1 
+DTHUN2      0x51002C      2024       116    0:00.891  18.175   HENRY[4.00] -vb63 -vi15 -vt1 
+EBPIT       0x30E5C8     18400       502    0:03.855  38.181   HENRY[6.00] -vb47 -vi15 -vt3 
+EBPITHIT    0x510814      2238        90    0:00.691  25.903   HENRY[6.00] -vb47 -vi15 -vt3 
+END1A       0x40A7EE     21336       488    0:03.748  45.543   HENRY[4.50] -vb79 -vi15 -vr63 -vt1 
+END1BL      0x40FB46      4684       259    0:01.989  18.838   HENRY[4.50] -vb79 -vi15 -vr63 -vt1 
+END2A       0x5110D2       292         8    0:00.061  38.021   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+END2B       0x410D92     13156       338    0:02.596  40.545   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+END2CL      0x5111F6      3728       158    0:01.213  24.578   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+END3A       0x4140F6     16998       508    0:03.901  34.855   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+END3BL      0x512086      2238       120    0:00.922  19.427   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+END4A       0x312DA8     14284       277    0:02.127  53.715   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+END4BL      0x512944      3822       133    0:01.021  29.934   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+END5A       0x316574     18370       369    0:02.834  51.857   JOEY[4.50] -vb63 -vi7 
+END5B       0x513832      3132       183    0:01.405  17.828   JOEY[4.50] -vb63 -vi7 
+END6A       0x31AD36     14076       416    0:03.195  35.246   JOEY[5.00] -vb63 -vi15 
+END6BL      0x1073EE      5046       232    0:01.782  22.656   JOEY[5.00] -vb63 -vi15 
+END7A       0x2132D2     14172       298    0:02.289  49.539   HENRY[4.00] -vb95 -vi7 -vr79 -vt0 
+END7B       0x51446E       934        59    0:00.453  16.490   HENRY[4.00] -vb95 -vi7 -vr79 -vt0 
+ENDGUY      0x31E432      8130       258    0:01.981  32.825   HENRY[4.00] -vb79 -vi7 -vr63 -vt3 
+ENDSHO1     0x514814      3260        56    0:00.430  60.640   HENRY[3.50] -vb79 -vi7 -vr63 -vt3 
+ENDSHO2     0x216A2E     23358       432    0:03.318  56.322   HENRY[3.50] -vb79 -vi7 -vr63 -vt3 
+ENDSHO3     0x1087A4     51472       869    0:06.674  61.699   HENRY[3.50] -vb79 -vi7 -vr63 -vt3 
+EXCELENT    0x5154D0      3424       118    0:00.906  30.226   HENRY[5.75] -vb47 -vi7 -vt3 
+FACE2       0x516230      2558        44    0:00.338  60.559   HENRY[2.00] -vb79 -vi15 -vt1 
+FANHIT      0x21C56C     13612       239    0:01.836  59.327   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+FATALDRP    0x41835C      8916       406    0:03.118  22.876   HENRY[5.00] -vb47 -vi7 -vt1 
+FATALITY    0x41A630      4736       184    0:01.413  26.812   HENRY[5.75] -vb47 -vi7 -vt3 
+FBALLHIT    0x21FA98      6970       141    0:01.083  51.492   HENRY[4.50] -vb79 -vi15 -vr63 -vt1 
+FIGHT1      0x516C2E      3696       139    0:01.068  27.698   HENRY[5.75] -vb47 -vi7 -vt3 
+FINISH1A    0x2215D2     13240       222    0:01.705  62.125   HENRY[4.50] -vb79 -vi15 -vr63 -vt1 
+FINISH1B    0x41B8B0     26966       446    0:03.425  62.981   HENRY[4.50] -vb79 -vi15 -vr63 -vt1 
+FINISH2     0x422206     13554       232    0:01.782  60.857   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+FINISH3     0x4256F8     15104       247    0:01.897  63.698   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+FINISH4     0x1150B4     11688       196    0:01.505  62.117   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+FINISH5     0x517A9E     16056       253    0:01.943  66.107   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+FINISH6     0x22498A     12670       263    0:02.020  50.182   HENRY[5.00] -vb63 -vi15 -vt0 
+FINISH7     0x51B956     13450       207    0:01.590  67.683   HENRY[4.00] -vb95 -vi7 -vr79 -vt0 
+FINISHER    0x4291F8      4668       163    0:01.252  29.831   HENRY[5.75] -vb47 -vi7 -vt3 
+FINISHIM    0x51EDE0      5084       198    0:01.521  26.747   HENRY[5.75] -vb47 -vi7 -vt3 
+FLAMTHRO    0x117E5C      4736       108    0:00.829  45.679   HENRY[4.00] -vb79 -vi15 -vt3 
+FLAWLESS    0x1190DC      6042       236    0:01.812  26.668   HENRY[5.75] -vb47 -vi7 -vt3 
+FLAWTONE    0x11A876      8444       489    0:03.756  17.987   HENRY[5.00] -vb47 -vi7 -vt0 
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 30
+
+
+Region Table (MASKED) (continued)
+
+File                    Length    Length    Length   Bitrate   Compression
+Name        Address     bytes     frames    seconds  kbit/sec  Type
+--------    --------    ------    ------    -------- --------  -------
+FRIEND1     0x11C972      3820       156    0:01.198  25.507   HENRY[5.75] -vb47 -vi7 -vt3 
+FRIEND2     0x227B08      3148       141    0:01.083  23.257   HENRY[5.75] -vb47 -vi7 -vt3 
+GIB1        0x228754      4800       174    0:01.336  28.736   HENRY[6.00] -vb47 -vi15 -vt3 
+GIB2        0x5201BC      4912       188    0:01.444  27.216   HENRY[6.00] -vb47 -vi15 -vt3 
+GIB3        0x5214EC      3668       153    0:01.175  24.973   HENRY[6.00] -vb47 -vi15 -vt3 
+GIB4        0x42A434      7362       263    0:02.020  29.159   HENRY[6.00] -vb47 -vi15 -vt3 
+GIB5        0x42C0F6      5270       208    0:01.597  26.392   HENRY[6.00] -vb47 -vi15 -vt3 
+GIRLTRAP    0x3203F4      7902       175    0:01.344  47.036   HENRY[4.00] -vb63 -vi15 -vt1 
+GONG1       0x3222D2     15242       333    0:02.557  47.679   HENRY[3.00] -vb79 -vi7 -vt1 
+GOODBOD1    0x522340      3096        61    0:00.468  52.869   HENRY[2.00] -vb79 -vi15 -vt1 
+GORATTK     0x229A14      5010       168    0:01.290  31.064   HENRY[5.00] -vb47 -vi15 -vt3 
+GORGRWL1    0x11D85E      7050       213    0:01.636  34.478   HENRY[5.00] -vb47 -vi15 -vt3 
+GORGRWL2    0x11F3E8      9616       311    0:02.388  32.208   HENRY[5.00] -vb47 -vi15 -vt3 
+GOROFOOT    0x325E5C      5052       158    0:01.213  33.307   HENRY[5.00] -vb63 -vi7 
+GOROROAR    0x42D58C      8886       275    0:02.112  33.659   HENRY[5.00] -vb47 -vi15 -vt3 
+GOROUNG1    0x522F58      2614        94    0:00.722  28.967   HENRY[5.00] -vb47 -vi15 -vt3 
+GOROUNG2    0x52398E      2576        82    0:00.630  32.724   HENRY[5.00] -vb47 -vi15 -vt3 
+GUDBLOCK    0x52439E      3460        78    0:00.599  46.207   HENRY[2.00] -vb79 -vi15 -vt1 
+GUDFALL1    0x525122      2744        76    0:00.584  37.610   HENRY[4.00] -vb79 -vi15 -vt1 
+GUDFALL2    0x525BDA      1492        53    0:00.407  29.324   HENRY[4.00] -vb79 -vi15 -vt1 
+GUDFALL3    0x5261AE      3988        95    0:00.730  43.728   HENRY[5.00] -vb79 -vi15 -vt1 
+GUDFALL4    0x527142      2488        83    0:00.637  31.225   HENRY[5.00] -vb79 -vi15 -vt1 
+GUDHIT1     0x121978      2772        40    0:00.307  72.188   HENRY[2.00] -vb79 -vi15 -vt1 
+HHSAW       0x327218      8196       152    0:01.167  56.168   HENRY[4.00] -vb63 -vi15 -vt1 
+HHSAWBLK    0x527AFA      4492        91    0:00.699  51.419   HENRY[4.00] -vb63 -vi15 -vt1 
+HHSAWHIT    0x528C86      6546        82    0:00.630  83.155   HENRY[2.00] -vb79 -vi15 -vt1 
+IGNITE      0x52A618     22880       387    0:02.972  61.585   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+INTROA      0x42F842     11048       261    0:02.004  44.093   HENRY[4.00] -vb79 -vi15 -vr63 -vt3 
+INTROB      0x12244C     10308       261    0:02.004  41.140   HENRY[4.50] -vb79 -vi15 -vr63 -vt3 
+JADE        0x52FF78      2320       119    0:00.914  20.308   HENRY[5.75] -vb47 -vi7 -vt3 
+JAX         0x124C90      3416       127    0:00.975  28.018   HENRY[5.75] -vb47 -vi7 -vt3 
+JAXAHH      0x530888      1296        73    0:00.561  18.493   HENRY[6.00] -vb47 -vi15 -vt3 
+JAXGOTCH    0x530D98      1352        86    0:00.660  16.376   HENRY[6.00] -vb47 -vi15 -vt3 
+JAXYEAH     0x1259E8      8178       280    0:02.150  30.424   HENRY[6.00] -vb47 -vi15 
+JHATTAK1    0x5312E0      1226        68    0:00.522  18.781   HENRY[6.00] -vb47 -vi15 -vt3 
+JHATTAK2    0x1279DA      1210        68    0:00.522  18.536   HENRY[6.00] -vb47 -vi15 -vt3 
+JHDEATH1    0x127E94     10078       430    0:03.302  24.414   HENRY[6.00] -vb47 -vi15 -vt3 
+JHFELCH     0x12A5F2      5846       388    0:02.980  15.695   HENRY[6.00] -vb47 -vi15 -vt3 
+JHGRAB      0x12BCC8      1004        55    0:00.422  19.015   HENRY[6.00] -vb47 -vi15 -vt3 
+JHJUMP      0x5317AA       646        51    0:00.392  13.194   HENRY[6.00] -vb47 -vi15 -vt3 
+JHREACT1    0x531A30      2094        97    0:00.745  22.487   HENRY[6.00] -vb47 -vi15 -vt3 
+JHREACT2    0x53225E      1744        83    0:00.637  21.888   HENRY[6.00] -vb47 -vi15 -vt3 
+JHREACT3    0x53292E      1316        77    0:00.591  17.803   HENRY[6.00] -vb47 -vi15 -vt3 
+JHTHROW     0x12C0B4      2898       126    0:00.968  23.958   HENRY[6.00] -vb47 -vi15 -vt3 
+JHTRIP      0x532E52      1396        75    0:00.576  19.389   HENRY[6.00] -vb47 -vi15 -vt3 
+JHWAST1     0x43236A      5880       228    0:01.751  26.864   HENRY[6.00] -vb47 -vi15 -vt3 
+JHWAST2     0x22ADA6      5876       224    0:01.720  27.325   HENRY[6.00] -vb47 -vi15 -vt3 
+JHYUM       0x5333C6      1562        83    0:00.637  19.603   HENRY[6.00] -vb47 -vi15 -vt3 
+JONCAGE     0x433A62      4438       173    0:01.329  26.722   HENRY[5.75] -vb47 -vi7 -vt3 
+KIDTHUND    0x434BB8      5654       224    0:01.720  26.293   HENRY[6.00] -vb47 -vi15 -vt3 
+KINTARO     0x5339E0      2746       135    0:01.037  21.188   HENRY[5.75] -vb47 -vi7 -vt3 
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 31
+
+
+Region Table (MASKED) (continued)
+
+File                    Length    Length    Length   Bitrate   Compression
+Name        Address     bytes     frames    seconds  kbit/sec  Type
+--------    --------    ------    ------    -------- --------  -------
+KISS        0x12CC06      2182        57    0:00.438  39.876   HENRY[5.00] -vb63 -vi15 -vt1 
+KISS2       0x22C49A      6596       111    0:00.852  61.899   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+KITANA      0x53449A      2584       117    0:00.899  23.006   HENRY[5.75] -vb47 -vi7 -vt3 
+KLFLIP      0x534EB2      3408       157    0:01.206  22.611   HENRY[6.00] -vb47 -vi15 -vt3 
+KNIFEJEC    0x12D48C      3278        95    0:00.730  35.943   HENRY[4.50] -vb63 -vi23 -vr47 -vt1 
+KNIFPLNG    0x535C02      3124        94    0:00.722  34.619   HENRY[4.50] -vb63 -vi23 -vr47 -vt1 
+KOTOA       0x12E15A      1358        45    0:00.346  31.435   HENRY[5.00] -vb63 -vi15 -vt1 
+KOTOB       0x536836      1666        49    0:00.376  35.417   HENRY[5.00] -vb63 -vi15 -vt1 
+KOTOCS      0x536EB8      1184        37    0:00.284  33.333   HENRY[5.00] -vb63 -vi15 -vt1 
+KOTOD1      0x537358      1342        48    0:00.369  29.123   HENRY[5.00] -vb63 -vi15 -vt1 
+KOTOD2      0x537896      1418        39    0:00.300  37.874   HENRY[5.00] -vb63 -vi15 -vt1 
+KOTOE1      0x537E20      1322        47    0:00.361  29.300   HENRY[5.00] -vb63 -vi15 -vt1 
+KOTOE2      0x53834A      1578        44    0:00.338  37.358   HENRY[5.00] -vb63 -vi15 -vt1 
+KOTOFS      0x538974      1230        42    0:00.323  30.506   HENRY[5.00] -vb63 -vi15 -vt1 
+KOTOG       0x538E42      1386        46    0:00.353  31.386   HENRY[5.00] -vb63 -vi15 -vt1 
+KUNGLAO     0x5393AC      2638       145    0:01.114  18.951   HENRY[5.75] -vb47 -vi7 -vt3 
+KUNGSPIN    0x22DE5E      8378       131    0:01.006  66.619   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+KUNGTELE    0x12E6A8      4880       119    0:00.914  42.717   HENRY[5.00] -vb95 -vi15 -vr63 -vt1 
+LIGHTNG     0x539DFA     11780       279    0:02.143  43.981   HENRY[4.00] -vb63 -vi15 -vt1 
+LILSTAB1    0x12F9B8      3082        64    0:00.492  50.163   HENRY[4.00] -vb79 -vi7 -vr63 -vt1 
+LILSTAB2    0x1305C2      2676        54    0:00.415  51.620   HENRY[4.00] -vb79 -vi7 -vr63 -vt1 
+LILSTAB3    0x53CBFE      2894        60    0:00.461  50.243   HENRY[4.00] -vb79 -vi7 -vr63 -vt1 
+LIUKANG     0x53D74C      2732       136    0:01.044  20.925   HENRY[5.75] -vb47 -vi7 -vt3 
+LKATTAK1    0x53E1F8      1234        65    0:00.499  19.776   HENRY[6.00] -vb47 -vi15 -vt3 
+LKATTAK2    0x53E6CA       878        59    0:00.453  15.501   HENRY[6.00] -vb47 -vi15 -vt3 
+LKCYCLE     0x131036      5828       225    0:01.728  26.981   HENRY[6.00] -vb47 -vi15 -vt3 
+LKDEATH     0x32921C      8190       293    0:02.250  29.117   HENRY[6.00] -vb47 -vi15 -vt3 
+LKFBALL     0x53EA38      5660       120    0:00.922  49.132   HENRY[4.00] -vb63 -vi7 -vt1 
+LKFLYK1     0x22FF18      4974       180    0:01.382  28.785   HENRY[5.00] -vb47 -vi15 -vt3 
+LKFLYK2     0x32B21A      6396       209    0:01.605  31.878   HENRY[5.00] -vb47 -vi15 -vt3 
+LKFLYKCK    0x32CB16      7548       158    0:01.213  49.763   HENRY[5.00] -vb63 -vi15 -vt1 
+LKJUMP      0x540054       584        47    0:00.361  12.943   HENRY[6.00] -vb47 -vi15 -vt3 
+LKMORPH     0x4361CE     16388       346    0:02.657  49.338   HENRY[5.00] -vb79 -vi15 -vr63 -vt3 
+LKREACT1    0x54029C      2264        93    0:00.714  25.358   HENRY[6.00] -vb47 -vi15 -vt3 
+LKREACT2    0x540B74      1094        59    0:00.453  19.315   HENRY[6.00] -vb47 -vi15 -vt3 
+LKSPIKED    0x540FBA      1908        80    0:00.614  24.844   HENRY[6.00] -vb47 -vi15 -vt3 
+LKSPINK     0x1326FA      7160       240    0:01.843  31.076   HENRY[5.00] -vb47 -vi15 -vt3 
+LKSPKCK1    0x54172E      1484        74    0:00.568  20.890   HENRY[5.00] -vb47 -vi15 -vt3 
+LKSPKCK2    0x541CFA      3818       133    0:01.021  29.903   HENRY[5.00] -vb47 -vi15 -vt3 
+LKTHROW1    0x542BE4      1968       103    0:00.791  19.903   HENRY[6.00] -vb47 -vi15 -vt3 
+LKTHROW2    0x543394      1664        99    0:00.760  17.508   HENRY[6.00] -vb47 -vi15 -vt3 
+LKUNMRPH    0x543A14      3724       138    0:01.060  28.110   HENRY[5.00] -vb79 -vi15 -vr63 -vt3 
+LKUPPER     0x5448A0      2162       114    0:00.876  19.755   HENRY[5.00] -vb47 -vi15 -vt3 
+LKWAST1     0x231286      5946       201    0:01.544  30.815   HENRY[6.00] -vb47 -vi15 -vt3 
+LKWAST2     0x545112      6274       218    0:01.674  29.979   HENRY[6.00] -vb47 -vi15 -vt3 
+MAIN1A      0x32E892     12196       445    0:03.418  28.549   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN1B      0x1342F2     44860       892    0:06.851  52.387   HENRY[4.50] -vb79 -vi15 -vr63 -vt1 
+MAIN1C      0x2329C0     53566       890    0:06.835  62.694   HENRY[4.50] -vb79 -vi15 -vr63 -vt1 
+MAIN1D      0x43A1D2     48330       890    0:06.835  56.566   HENRY[4.50] -vb79 -vi15 -vr63 -vt1 
+MAIN1E      0x331836     13454       222    0:01.705  63.129   HENRY[4.50] -vb79 -vi15 -vr63 -vt1 
+MAIN1F      0x13F22E     27370       445    0:03.418  64.068   HENRY[4.50] -vb79 -vi15 -vr63 -vt1 
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 32
+
+
+Region Table (MASKED) (continued)
+
+File                    Length    Length    Length   Bitrate   Compression
+Name        Address     bytes     frames    seconds  kbit/sec  Type
+--------    --------    ------    ------    -------- --------  -------
+MAIN2A      0x23FAFE     14428       430    0:03.302  34.952   HENRY[4.00] -vb79 -vi7 -vr63 -vt1 
+MAIN2B      0x145D18      3280        67    0:00.515  50.995   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+MAIN2C1     0x334CC4      9230       159    0:01.221  60.469   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+MAIN2C2     0x445E9C     13266       269    0:02.066  51.371   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+MAIN2D1     0x546994      8248       159    0:01.221  54.036   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+MAIN2E      0x24335A     23760       430    0:03.302  57.558   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+MAIN2F      0x24902A     24274       430    0:03.302  58.803   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+MAIN2G      0x44926E     24312       430    0:03.302  58.895   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+MAIN2G1     0x1469E8      1924        34    0:00.261  58.946   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+MAIN3A      0x44F166     26434       496    0:03.809  55.515   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN3B      0x4558A8     26194       495    0:03.802  55.122   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN3C      0x3370D2     28974       495    0:03.802  60.972   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN3D      0x24EEFC     15210       248    0:01.905  63.886   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN4A      0x45BEFA     13166       262    0:02.012  52.346   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN4B      0x252A66     14514       259    0:01.989  58.374   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN4C      0x33E200     29222       521    0:04.001  58.425   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN4D      0x345426     15084       260    0:01.997  60.433   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN4E      0x45F268     14816       258    0:01.981  59.819   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN5A      0x348F12     21196       505    0:03.878  43.721   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN5B      0x462C48     29414       504    0:03.871  60.793   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN5C      0x256318     15282       250    0:01.920  63.675   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN5D      0x34E1DE     14314       252    0:01.935  59.168   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN5E      0x5489CC     14670       250    0:01.920  61.125   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN5F      0x3519C8     30794       504    0:03.871  63.645   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN6A      0x359212     10480       261    0:02.004  41.826   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN6B      0x35BB02     13952       258    0:01.981  56.331   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN6C      0x35F182     10310       261    0:02.004  41.148   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN6D      0x259ECA     12814       259    0:01.989  51.536   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN6E      0x3619C8     12184       260    0:01.997  48.814   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN6F      0x54C31A     13250       261    0:02.004  52.882   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN6G      0x14716C     13886       259    0:01.989  55.848   HENRY[4.50] -vb79 -vi15 -vr63 -vt0 
+MAIN7A      0x25D0D8     20960       386    0:02.964  56.563   HENRY[4.00] -vb95 -vi7 -vr79 -vt0 
+MAIN7B      0x14A7AA     22576       356    0:02.734  66.058   HENRY[4.00] -vb95 -vi7 -vr79 -vt0 
+MAIN7C      0x14FFDA     21498       355    0:02.726  63.081   HENRY[4.00] -vb95 -vi7 -vr79 -vt0 
+MAIN7D      0x469F2E     17584       266    0:02.043  68.860   HENRY[4.00] -vb95 -vi7 -vr79 -vt0 
+MAIN7E      0x364960     16120       235    0:01.805  71.454   HENRY[4.00] -vb95 -vi7 -vr79 -vt0 
+MAIN7F      0x46E3DE     16244       237    0:01.820  71.396   HENRY[4.00] -vb95 -vi7 -vr79 -vt0 
+MAIN7G      0x2622B8     13874       238    0:01.828  60.723   HENRY[4.00] -vb95 -vi7 -vr79 -vt0 
+MALENA      0x1553D4      2680       129    0:00.991  21.641   HENRY[5.75] -vb47 -vi7 -vt3 
+MASK        0x2658EA     11222       334    0:02.565  34.999   HENRY[5.00] -vb47 -vi7 -vt3 
+MESSAGE     0x368858      5828       148    0:01.137  41.019   HENRY[4.00] -vb79 -vi15 -vt3 
+MLENATEL    0x369F1C      5332       128    0:00.983  43.392   HENRY[5.00] -vb95 -vi15 -vr63 -vt1 
+MRTLSANS    0x2684C0     13912       328    0:02.519  44.182   HENRY[4.00] -vb79 -vi7 -vt3 
+MUNCH       0x54F6DC      4024        70    0:00.538  59.881   HENRY[3.00] -vb79 -vi15 
+N1ATTAK1    0x550694      1496        70    0:00.538  22.262   HENRY[6.00] -vb47 -vi15 -vt3 
+N1ATTAK2    0x155E4C      1214        56    0:00.430  22.582   HENRY[6.00] -vb47 -vi15 -vt3 
+N1DEATH1    0x550C6C      9884       370    0:02.842  27.827   HENRY[6.00] -vb47 -vi15 -vt3 
+N1GRAB      0x553308       872        45    0:00.346  20.185   HENRY[6.00] -vb47 -vi15 -vt3 
+N1JUMP      0x553670       518        36    0:00.276  14.988   HENRY[6.00] -vb47 -vi15 -vt3 
+N1REACT1    0x15630A      1052        60    0:00.461  18.264   HENRY[6.00] -vb47 -vi15 -vt3 
+N1REACT2    0x553876      1198        63    0:00.484  19.808   HENRY[6.00] -vb47 -vi15 -vt3 
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 33
+
+
+Region Table (MASKED) (continued)
+
+File                    Length    Length    Length   Bitrate   Compression
+Name        Address     bytes     frames    seconds  kbit/sec  Type
+--------    --------    ------    ------    -------- --------  -------
+N1REACT3    0x553D24      1204        60    0:00.461  20.903   HENRY[6.00] -vb47 -vi15 -vt3 
+N1THRFAN    0x5541D8      1454        35    0:00.269  43.274   HENRY[4.50] -vb63 -vi15 -vt1 
+N1THROW     0x554786      1728        81    0:00.622  22.222   HENRY[6.00] -vb47 -vi15 -vt3 
+N1TRIP      0x554E46       872        48    0:00.369  18.924   HENRY[6.00] -vb47 -vi15 -vt3 
+N1WAST1     0x5551AE      2038        89    0:00.684  23.853   HENRY[6.00] -vb47 -vi15 -vt3 
+N1WAST2     0x156726      5646       221    0:01.697  26.612   HENRY[6.00] -vb47 -vi15 -vt3 
+NFANHIT     0x472352     15942       246    0:01.889  67.505   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+OLDRIP      0x157D34      3284        64    0:00.492  53.451   HENRY[4.00] -vb79 -vi23 -vr63 -vt1 
+ONEGUY      0x26BB18     20058       522    0:04.009  40.026   HENRY[4.50] -vb79 -vi15 -vr63 -vt3 
+OOOH        0x36B3F0      6524       237    0:01.820  28.674   HENRY[5.00] -vb47 -vi15 -vt3 
+OUTSTAND    0x5559A4      4724       173    0:01.329  28.444   HENRY[5.75] -vb47 -vi7 -vt3 
+PEEL1       0x270972      5208       155    0:01.190  35.000   HENRY[5.00] -vb79 -vi15 -vt3 
+PICKED1     0x158A08      4832        96    0:00.737  52.431   HENRY[4.00] -vb63 -vi15 -vt1 
+PICKED2     0x159CE8      5668       126    0:00.968  46.858   HENRY[4.00] -vb63 -vi15 -vt1 
+PITFALL     0x271DCA      5536       137    0:01.052  42.092   HENRY[4.00] -vb79 -vi7 -vr63 
+PLAYER2     0x556C18      4850       110    0:00.845  45.928   HENRY[5.00] -vb63 -vi15 -vt1 
+QDRONE      0x15B30C     11280       572    0:04.393  20.542   HENRY[4.00] -vb47 -vi7 -vt0 
+RAIDEN      0x557F0A      1850       116    0:00.891  16.613   HENRY[5.75] -vb47 -vi7 -vt3 
+RAIDKILL    0x27336A      9944       142    0:01.091  72.946   HENRY[5.00] -vb79 -vi15 -vt3 
+RDIVE       0x558644      7798       147    0:01.129  55.258   HENRY[4.00] -vb63 -vi15 -vt1 
+REPBLOW     0x55A4BA      5662       149    0:01.144  39.583   HENRY[4.50] -vb63 -vi15 -vt1 
+REPORB4L    0x55BAD8       600        14    0:00.108  44.643   HENRY[4.50] -vb63 -vi15 -vt1 
+REPTILE     0x55BD30      2592       128    0:00.983  21.094   HENRY[5.75] -vb47 -vi7 -vt3 
+REPTSPIT    0x476198     10860       220    0:01.690  51.420   HENRY[4.50] -vb63 -vi15 -vt1 
+REVCYM      0x36CD6C     16788       321    0:02.465  54.478   HENRY[4.00] -vb63 -vi23 -vt1 
+RFOUR       0x55C750      2276       108    0:00.829  21.952   HENRY[5.75] -vb47 -vi7 -vt3 
+RGETUP      0x15DF1C      6368       132    0:01.014  50.253   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+RIP1A       0x55D034      1088        21    0:00.161  53.968   HENRY[5.00] -vb63 -vi23 -vt1 
+RIP1B       0x55D474      2018        63    0:00.484  33.366   HENRY[5.00] -vb63 -vi23 -vt1 
+RIPARMS     0x55DC56      3606        71    0:00.545  52.905   HENRY[3.00] -vb79 -vi15 
+ROLDBIG1    0x478C04      7902        98    0:00.753  83.992   HENRY[1.00] -vb79 -vi7 -vt0 
+ROLDBIG2    0x370F00      6850        96    0:00.737  74.327   HENRY[1.00] -vb79 -vi7 -vt0 
+RONE        0x55EA6C      1342        98    0:00.753  14.264   HENRY[5.75] -vb47 -vi7 -vt3 
+ROUND       0x55EFAA      2156       113    0:00.868  19.875   HENRY[5.75] -vb47 -vi7 -vt3 
+RSMAK       0x55F816      3728        77    0:00.591  50.433   HENRY[5.00] -vb79 -vi15 -vr63 -vt1 
+RSPARK1     0x5606A6      3760        65    0:00.499  60.256   HENRY[4.50] -vb63 -vi15 -vt1 
+RSPRKEND    0x15F7FC      2350        49    0:00.376  49.957   HENRY[4.50] -vb63 -vi15 -vt1 
+RSPRKSTR    0x561556      2918        57    0:00.438  53.326   HENRY[4.50] -vb63 -vi15 -vt1 
+RTELE       0x47AAE2      4412        97    0:00.745  47.380   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+RTHREE      0x5620BC      2218       107    0:00.822  21.593   HENRY[5.75] -vb47 -vi7 -vt3 
+RTONGUE     0x562966      1458        76    0:00.584  19.984   HENRY[5.00] -vb79 -vi23 -vr63 -vt1 
+RTWO        0x16012A      1536        83    0:00.637  19.277   HENRY[5.75] -vb47 -vi7 -vt3 
+SCORCOME    0x3729C2      5576       229    0:01.759  25.364   HENRY[6.00] -vb47 -vi15 -vt3 
+SCORGET     0x16072A      6534       266    0:02.043  25.587   HENRY[6.00] -vb47 -vi15 -vt3 
+SCORPION    0x1620B0      2982       155    0:01.190  20.040   HENRY[5.75] -vb47 -vi7 -vt3 
+SCORTELE    0x162C56      1954        83    0:00.637  24.523   HENRY[5.00] -vb95 -vi15 -vr63 -vt1 
+SCORTHR1    0x275A42      9482       228    0:01.751  43.321   HENRY[4.50] -vb63 -vi15 -vt1 
+SHANGTSG    0x562F18      3982       172    0:01.321  24.116   HENRY[5.75] -vb47 -vi7 -vt3 
+SHNGMRPH    0x47BC1E      4860       103    0:00.791  49.150   HENRY[5.00] -vb95 -vi23 -vr63 -vt1 
+SKATT1      0x563EA6      1732        83    0:00.637  21.737   HENRY[5.75] -vb47 -vi7 -vt3 
+SKATT2      0x56456A      1964        89    0:00.684  22.987   HENRY[5.75] -vb47 -vi7 -vt3 
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 34
+
+
+Region Table (MASKED) (continued)
+
+File                    Length    Length    Length   Bitrate   Compression
+Name        Address     bytes     frames    seconds  kbit/sec  Type
+--------    --------    ------    ------    -------- --------  -------
+SKBOW2ME    0x277F4C      4950       204    0:01.567  25.276   HENRY[5.75] -vb47 -vi7 -vt3 
+SKEASY      0x2792A2      5676       233    0:01.789  25.376   HENRY[5.75] -vb47 -vi7 -vt3 
+SKFEELWR    0x373F8A      9702       347    0:02.665  29.125   HENRY[5.75] -vb47 -vi7 -vt3 
+SKFOOL      0x564D16      8402       379    0:02.911  23.093   HENRY[5.75] -vb47 -vi7 -vt3 
+SKIMSK      0x376570      6148       245    0:01.882  26.139   HENRY[5.75] -vb47 -vi7 -vt3 
+SKIRULE     0x27A8CE      6546       286    0:02.196  23.842   HENRY[5.75] -vb47 -vi7 -vt3 
+SKLAUGH1    0x566DE8      6596       280    0:02.150  24.539   HENRY[5.75] -vb47 -vi7 -vt3 
+SKLAUGH2    0x27C260      7524       286    0:02.196  27.404   HENRY[5.75] -vb47 -vi7 -vt3 
+SKNUTHIN    0x1633F8      5022       227    0:01.743  23.045   HENRY[5.75] -vb47 -vi7 -vt3 
+SKPREPDI    0x47CF1A      7026       253    0:01.943  28.928   HENRY[5.75] -vb47 -vi7 -vt3 
+SKREACT1    0x5687AC      1528        63    0:00.484  25.265   HENRY[5.75] -vb47 -vi7 -vt3 
+SKREACT2    0x164796      1042        74    0:00.568  14.668   HENRY[5.75] -vb47 -vi7 -vt3 
+SKREACT3    0x164BA8      2152        92    0:00.707  24.366   HENRY[5.75] -vb47 -vi7 -vt3 
+SKREACT4    0x568DA4      2622       118    0:00.906  23.146   HENRY[5.75] -vb47 -vi7 -vt3 
+SKWAST1     0x5697E2      3168       131    0:01.006  25.191   HENRY[5.75] -vb47 -vi7 -vt3 
+SKWAST2     0x56A442      3874       147    0:01.129  27.452   HENRY[5.75] -vb47 -vi7 -vt3 
+SKWILLDI    0x56B364      7436       306    0:02.350  25.313   HENRY[5.75] -vb47 -vi7 -vt3 
+SLIPBIG     0x377D74      7218       236    0:01.812  31.859   HENRY[6.00] -vb47 -vi15 -vt3 
+SLIPDAN1    0x56D070       758        46    0:00.353  17.165   HENRY[6.00] -vb47 -vi15 -vt3 
+SLIPDAN2    0x56D366      1002        48    0:00.369  21.745   HENRY[6.00] -vb47 -vi15 -vt3 
+SLIPDAN3    0x165410       932        49    0:00.376  19.813   HENRY[6.00] -vb47 -vi15 -vt3 
+SLIPDAN4    0x56D750      1058        42    0:00.323  26.240   HENRY[6.00] -vb47 -vi15 -vt3 
+SLIPED1     0x56DB72      1052        56    0:00.430  19.568   HENRY[6.00] -vb47 -vi15 -vt3 
+SLIPED2     0x56DF8E      1196        57    0:00.438  21.857   HENRY[6.00] -vb47 -vi15 -vt3 
+SLIPED3     0x56E43A      1416        67    0:00.515  22.015   HENRY[6.00] -vb47 -vi15 -vt3 
+SLIPED4     0x1657B4      1914        83    0:00.637  24.021   HENRY[6.00] -vb47 -vi15 -vt3 
+SLIPED5     0x165F2E      2314        96    0:00.737  25.109   HENRY[6.00] -vb47 -vi15 -vt3 
+SLIPED6     0x56E9C2      1778        70    0:00.538  26.458   HENRY[6.00] -vb47 -vi15 -vt3 
+SMOKE       0x166838      2636       119    0:00.914  23.074   HENRY[5.75] -vb47 -vi7 -vt3 
+SNOTHIT     0x56F0B4      4078        81    0:00.622  52.443   HENRY[4.50] -vb63 -vi15 -vr47 -vt1 
+SNOTUP      0x27DFC4      7482       177    0:01.359  44.032   HENRY[4.50] -vb63 -vi15 -vr47 -vt1 
+SPLASH      0x167284     15568       286    0:02.196  56.702   HENRY[5.00] -vb79 -vi15 
+SPLISH1     0x5700A2      2286        42    0:00.323  56.696   HENRY[4.00] -vb79 -vi15 -vt1 
+SPLISH2     0x570990      1918        34    0:00.261  58.762   HENRY[4.00] -vb79 -vi15 -vt1 
+SPLISH3     0x57110E      3756        93    0:00.714  42.070   HENRY[4.00] -vb79 -vi15 -vt1 
+SPOOGE      0x16AF54      4804       123    0:00.945  40.684   HENRY[5.00] -vb79 -vi23 -vr63 -vt3 
+SPRKTHRO    0x571FBA     12678       253    0:01.943  52.199   HENRY[5.00] -vb63 -vi15 -vt1 
+STAB1       0x575140      3000        59    0:00.453  52.966   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+STSKULLS    0x3799A6     11332       195    0:01.498  60.534   HENRY[4.00] -vb63 -vi15 -vt1 
+SUBZERO     0x575CF8      3502       151    0:01.160  24.158   HENRY[5.75] -vb47 -vi7 -vt3 
+SUPERB      0x576AA6      3960       174    0:01.336  23.707   HENRY[5.75] -vb47 -vi7 -vt3 
+SWRDSCRP    0x577A1E      4182       107    0:00.822  40.713   HENRY[4.50] -vb63 -vi15 -vt1 
+SZFREEZE    0x16C218      5198        83    0:00.637  65.236   HENRY[4.00] -vb79 -vi15 -vr63 -vt1 
+SZICE1      0x578A74       482        11    0:00.084  45.644   HENRY[4.50] -vb63 -vi15 -vt1 
+SZICE2      0x578C56      3504        60    0:00.461  60.833   HENRY[4.50] -vb63 -vi15 -vt1 
+SZICE3      0x47EA8C      4862       111    0:00.852  45.627   HENRY[4.50] -vb63 -vi15 -vt1 
+SZSLIDE     0x579A06      7084       146    0:01.121  50.542   HENRY[4.50] -vb63 -vi15 -vt1 
+THEEND1     0x16D666     23100       521    0:04.001  46.185   HENRY[4.50] -vb79 -vi7 -vr63 -vt3 
+THEEND2     0x1730A2     22770       457    0:03.510  51.901   HENRY[4.50] -vb79 -vi7 -vr63 -vt3 
+THEEND3     0x178994     26464       521    0:04.001  52.911   HENRY[4.50] -vb79 -vi7 -vr63 -vt3 
+THROTSAI    0x37C5EA      7354       152    0:01.167  50.397   HENRY[4.50] -vb63 -vi15 -vt1 
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 35
+
+
+Region Table (MASKED) (continued)
+
+File                    Length    Length    Length   Bitrate   Compression
+Name        Address     bytes     frames    seconds  kbit/sec  Type
+--------    --------    ------    ------    -------- --------  -------
+TIMEOUT1    0x57B5B2       892        27    0:00.207  34.414   HENRY[3.00] -vb63 -vi15 -vt1 
+TNGUESTK    0x57B92E      1242        32    0:00.246  40.430   HENRY[5.00] -vb63 -vi15 -vt1 
+TOSTY       0x57BE08      1828        90    0:00.691  21.157   HENRY[6.00] -vb47 -vi15 -vt3 
+TREEROAR    0x37E2A4      6764       338    0:02.596  20.846   HENRY[6.00] -vb47 -vi15 -vt3 
+VSPRK1      0x57C52C      2906        73    0:00.561  41.467   HENRY[5.00] -vb63 -vi15 -vt3 
+VSPRK2      0x57D086      1940        58    0:00.445  34.842   HENRY[5.00] -vb63 -vi15 -vt3 
+WHOOSH1     0x57D81A      2428        39    0:00.300  64.850   HENRY[2.00] -vb79 -vi15 -vt1 
+WHOOSH2     0x17F0F4      2686        55    0:00.422  50.871   HENRY[2.00] -vb79 -vi15 -vt1 
+WHOOSH3     0x57E196      2134        48    0:00.369  46.311   HENRY[2.00] -vb79 -vi15 -vt1 
+WINS1       0x57E9EC      2286       144    0:01.106  16.536   HENRY[5.75] -vb47 -vi7 -vt3 
+ 
+Mortal Kombat II (c) 1993 Williams - DWF (07/22/94 20:00:00) page 36
+
+
+Summary (MASKED)
+
+ JOEY avg bitrate: 035.3 kbits/sec (4 regions, 40624 bytes, 1200 frames)
+HENRY avg bitrate: 041.6 kbits/sec (363 regions, 2574052 bytes, 64512 frames)
+
+
+Total Average Bitrate:  41.4 kbits/sec
+           Total Time: 8:24.668 minutes
+ Total Number Regions: 367
+ Total Size of .CMP's: 2553 kbytes
+
+
+Summary (EPROM and MASKED)
+
+ JOEY avg bitrate: 035.3 kbits/sec (4 regions, 40624 bytes, 1200 frames)
+HENRY avg bitrate: 041.2 kbits/sec (435 regions, 3046628 bytes, 76992 frames)
+
+
+Total Average Bitrate:  41.1 kbits/sec
+           Total Time: 10:00.515 minutes
+ Total Number Regions: 439
+ Total Size of .CMP's: 3014 kbytes

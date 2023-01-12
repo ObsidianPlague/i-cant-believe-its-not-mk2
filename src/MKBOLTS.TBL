@@ -1,0 +1,1167 @@
+	.DATA
+RN1BOLT1A:
+	.word   14,6,12,-19
+	.long   05400f66H
+	.word   06080H
+RN1BOLT2A:
+	.word   14,8,12,-20
+	.long   054010feH
+	.word   06080H
+RN1BOLT2B:
+	.word   13,9,-2,-19
+	.long   0540131eH
+	.word   06080H
+RN1BOLT3A:
+	.word   14,5,12,-20
+	.long   05401582H
+	.word   06080H
+RN1BOLT3B:
+	.word   13,6,-2,-19
+	.long   054016e8H
+	.word   06080H
+RN1BOLT4A:
+	.word   27,6,13,-17
+	.long   05401880H
+	.word   06480H
+RN1BOLT5A:
+	.word   15,7,13,-16
+	.long   05401b2cH
+	.word   06080H
+RN1BOLT5B:
+	.word   12,6,-2,-16
+	.long   05401d08H
+	.word   06080H
+RN1BOLT6A:
+	.word   13,6,13,-17
+	.long   05401ea0H
+	.word   06080H
+RN1BOLT6B:
+	.word   11,4,-3,-18
+	.long   05402038H
+	.word   06000H
+RN1BOLT7A:
+	.word   6,4,13,-19
+	.long   05402140H
+	.word   06000H
+RN1BOLT7B:
+	.word   7,3,-8,-19
+	.long   054021d0H
+	.word   06000H
+RN2BOLT1A:
+	.word   12,10,23,-32
+	.long   0540224eH
+	.word   06080H
+RN2BOLT1B:
+	.word   7,22,11,-23
+	.long   054024f6H
+	.word   06000H
+RN2BOLT2A:
+	.word   13,10,22,-34
+	.long   05402892H
+	.word   06080H
+RN2BOLT2B:
+	.word   21,41,9,-21
+	.long   05402b3aH
+	.word   06080H
+RN2BOLT3A:
+	.word   11,12,7,-22
+	.long   0540362aH
+	.word   06000H
+RN2BOLT3B:
+	.word   18,14,20,-35
+	.long   05403942H
+	.word   06080H
+RN2BOLT3C:
+	.word   19,36,2,-34
+	.long   05403cfaH
+	.word   06080H
+RN2BOLT4A:
+	.word   8,11,12,-42
+	.long   0540468aH
+	.word   06000H
+RN2BOLT4B:
+	.word   21,60,4,-25
+	.long   0540489aH
+	.word   06080H
+RN2BOLT5A:
+	.word   19,53,17,-56
+	.long   0540595cH
+	.word   06080H
+RN2BOLT5B:
+	.word   22,33,5,-42
+	.long   05406770H
+	.word   06080H
+RN2BOLT6A:
+	.word   31,59,28,-53
+	.long   054071c0H
+	.word   06580H
+RN2BOLT6B:
+	.word   16,22,-3,-51
+	.long   054082e6H
+	.word   06080H
+RN2BOLT7A:
+	.word   22,19,21,-52
+	.long   054088d6H
+	.word   06080H
+RN2BOLT7B:
+	.word   12,13,-8,-58
+	.long   05408e00H
+	.word   06080H
+RN2BOLT7C:
+	.word   23,36,28,-75
+	.long   05409174H
+	.word   06080H
+RN2BOLT8A:
+	.word   21,19,21,-52
+	.long   05409bc4H
+	.word   06080H
+RN2BOLT8B:
+	.word   10,8,-10,-63
+	.long   0540a118H
+	.word   06000H
+RN2BOLT8C:
+	.word   18,36,28,-77
+	.long   0540a2f8H
+	.word   06080H
+RN2BOLT9A:
+	.word   14,16,21,-52
+	.long   0540ad06H
+	.word   06080H
+RN2BOLT9B:
+	.word   4,3,-14,-66
+	.long   0540b146H
+	.word   06000H
+RN2BOLT9C:
+	.word   17,27,28,-88
+	.long   0540b18eH
+	.word   06080H
+RN3BOLT1A:
+	.word   10,14,-10,-35
+	.long   0540b91aH
+	.word   06000H
+RN3BOLT2A:
+	.word   18,20,-10,-29
+	.long   0540bc62H
+	.word   06080H
+RN3BOLT3A:
+	.word   14,24,-10,-25
+	.long   0540c20cH
+	.word   06080H
+RN3BOLT3B:
+	.word   8,10,-24,-24
+	.long   0540c884H
+	.word   06000H
+RN3BOLT4A:
+	.word   9,25,-10,-24
+	.long   0540ca64H
+	.word   06000H
+RN3BOLT4B:
+	.word   18,13,-19,-23
+	.long   0540cfaaH
+	.word   06080H
+RN3BOLT5A:
+	.word   16,23,-10,-26
+	.long   0540d378H
+	.word   06080H
+RN3BOLT5B:
+	.word   12,10,-26,-26
+	.long   0540d9d0H
+	.word   06080H
+RN3BOLT6A:
+	.word   13,19,-10,-29
+	.long   0540dc8aH
+	.word   06080H
+RN3BOLT6B:
+	.word   13,15,-23,-26
+	.long   0540e19cH
+	.word   06080H
+RN3BOLT7A:
+	.word   15,17,-10,-31
+	.long   0540e5d4H
+	.word   06080H
+RN3BOLT7B:
+	.word   11,17,-25,-27
+	.long   0540eabeH
+	.word   06000H
+RN3BOLT8A:
+	.word   13,15,-11,-33
+	.long   0540ef20H
+	.word   06080H
+RN3BOLT8B:
+	.word   13,19,-24,-27
+	.long   0540f31cH
+	.word   06080H
+RN3BOLT9A:
+	.word   10,13,-16,-35
+	.long   0540f870H
+	.word   06000H
+RN3BOLT9B:
+	.word   10,16,-27,-27
+	.long   0540fb7cH
+	.word   06000H
+RN3BOLT10A:
+	.word   9,10,-28,-27
+	.long   0540ff3cH
+	.word   06000H
+RN4BOLT1A:
+	.word   13,10,1,-93
+	.long   05410158H
+	.word   06080H
+RN4BOLT2A:
+	.word   6,12,6,-86
+	.long   05410400H
+	.word   06000H
+RN4BOLT2B:
+	.word   12,16,0,-87
+	.long   054105b0H
+	.word   06080H
+RN4BOLT3A:
+	.word   15,23,17,-72
+	.long   054109f0H
+	.word   06080H
+RN4BOLT3B:
+	.word   14,26,2,-77
+	.long   0541100cH
+	.word   06080H
+RN4BOLT4A:
+	.word   13,26,27,-55
+	.long   054116f4H
+	.word   06080H
+RN4BOLT4B:
+	.word   11,36,14,-60
+	.long   05411ddcH
+	.word   06000H
+RN4BOLT4C:
+	.word   23,32,3,-71
+	.long   05412724H
+	.word   06480H
+RN4BOLT5A:
+	.word   12,24,28,-57
+	.long   05413064H
+	.word   06080H
+RN4BOLT5B:
+	.word   11,34,16,-61
+	.long   054136c4H
+	.word   06000H
+RN4BOLT5C:
+	.word   24,32,5,-72
+	.long   05413f88H
+	.word   06480H
+RN4BOLT6A:
+	.word   12,25,29,-57
+	.long   05414874H
+	.word   06080H
+RN4BOLT6B:
+	.word   13,34,17,-61
+	.long   05414f18H
+	.word   06080H
+RN4BOLT6C:
+	.word   23,32,4,-72
+	.long   05415826H
+	.word   06580H
+RN4BOLT7A:
+	.word   11,22,30,-57
+	.long   0541624aH
+	.word   06000H
+RN4BOLT7B:
+	.word   17,24,19,-61
+	.long   054167f6H
+	.word   06080H
+RN4BOLT7C:
+	.word   20,32,1,-72
+	.long   05416e74H
+	.word   06180H
+RN5BOLT1A:
+	.word   8,14,-22,-42
+	.long   0541779cH
+	.word   06000H
+RN5BOLT2A:
+	.word   6,9,-13,-49
+	.long   05417a3cH
+	.word   06000H
+RN5BOLT2B:
+	.word   11,26,-19,-42
+	.long   05417b80H
+	.word   06000H
+RN5BOLT3A:
+	.word   12,13,-9,-49
+	.long   05418234H
+	.word   06080H
+RN5BOLT3B:
+	.word   13,35,-17,-42
+	.long   054185a8H
+	.word   06080H
+RN5BOLT4A:
+	.word   18,20,-5,-49
+	.long   05418ef4H
+	.word   06080H
+RN5BOLT4B:
+	.word   15,50,-16,-42
+	.long   05419444H
+	.word   06080H
+RN5BOLT5A:
+	.word   22,26,-5,-43
+	.long   0541a18cH
+	.word   06180H
+RN5BOLT5B:
+	.word   16,51,-16,-42
+	.long   0541a89eH
+	.word   06080H
+RN5BOLT6A:
+	.word   23,26,-5,-43
+	.long   0541b62aH
+	.word   06180H
+RN5BOLT6B:
+	.word   17,50,-16,-43
+	.long   0541bd66H
+	.word   06080H
+RN5BOLT7A:
+	.word   22,16,-4,-53
+	.long   0541cadeH
+	.word   06180H
+RN5BOLT7B:
+	.word   18,45,-15,-48
+	.long   0541cf4eH
+	.word   06080H
+RN5BOLT8A:
+	.word   19,13,-4,-57
+	.long   0541db72H
+	.word   06080H
+RN5BOLT8B:
+	.word   17,28,-15,-65
+	.long   0541dee6H
+	.word   06080H
+RN5BOLT9A:
+	.word   14,6,-4,-65
+	.long   0541e680H
+	.word   06080H
+RN5BOLT9B:
+	.word   14,14,-15,-79
+	.long   0541e848H
+	.word   06080H
+RN6BOLT1A:
+	.word   6,10,25,-107
+	.long   0541ec36H
+	.word   06000H
+RN6BOLT2A:
+	.word   10,15,25,-102
+	.long   0541ed9eH
+	.word   06000H
+RN6BOLT3A:
+	.word   17,19,25,-99
+	.long   0541f122H
+	.word   06080H
+RN6BOLT4A:
+	.word   11,19,25,-98
+	.long   0541f63aH
+	.word   06000H
+RN6BOLT4B:
+	.word   11,10,14,-97
+	.long   0541fb20H
+	.word   06000H
+RN6BOLT5A:
+	.word   22,18,25,-99
+	.long   0541fdb4H
+	.word   06480H
+RN6BOLT6A:
+	.word   22,18,25,-99
+	.long   054203a2H
+	.word   06480H
+RN6BOLT7A:
+	.word   22,18,25,-99
+	.long   05420906H
+	.word   06480H
+RN6BOLT8A:
+	.word   13,10,25,-107
+	.long   05420e5eH
+	.word   06080H
+RN6BOLT8B:
+	.word   10,15,12,-99
+	.long   05421118H
+	.word   06000H
+RN6BOLT9A:
+	.word   15,11,25,-106
+	.long   0542149cH
+	.word   06080H
+RN6BOLT9B:
+	.word   7,17,10,-99
+	.long   054217d0H
+	.word   06000H
+RN6BOLT10A:
+	.word   13,11,20,-105
+	.long   05421a9aH
+	.word   06080H
+RN6BOLT10B:
+	.word   5,16,7,-99
+	.long   05421db6H
+	.word   06000H
+RN6BOLT11A:
+	.word   7,11,14,-105
+	.long   05421f96H
+	.word   06000H
+RN6BOLT11B:
+	.word   5,16,7,-99
+	.long   05422164H
+	.word   06000H
+RN6BOLT12A:
+	.word   6,13,8,-99
+	.long   05422344H
+	.word   06000H
+RNFLYBOLT1B:
+	.word   12,22,-22,-14
+	.long   05422518H
+	.word   05000H
+RNFLYBOLT2A:
+	.word   16,30,12,-26
+	.long   05422a40H
+	.word   05080H
+RNFLYBOLT2B:
+	.word   7,29,-4,-26
+	.long   05423111H
+	.word   05000H
+RNFLYBOLT3A:
+	.word   17,35,10,-28
+	.long   05423508H
+	.word   05080H
+RNFLYBOLT3B:
+	.word   18,48,-7,-23
+	.long   05423d64H
+	.word   05180H
+RNFLYBOLT4A:
+	.word   15,38,-1,-28
+	.long   054249c0H
+	.word   05080H
+RNFLYBOLT4B:
+	.word   9,40,-16,-28
+	.long   054252bbH
+	.word   05000H
+RNFLYBOLT5A:
+	.word   9,41,-11,-29
+	.long   054259c3H
+	.word   05000H
+RNFLYBOLT5B:
+	.word   15,42,-20,-28
+	.long   054260f8H
+	.word   05080H
+RNFLYBOLT6A:
+	.word   11,41,-17,-28
+	.long   05426aaeH
+	.word   05000H
+RNFLYBOLT6B:
+	.word   23,39,-28,-30
+	.long   0542737dH
+	.word   05480H
+RNFLYBOLT6C:
+	.word   17,11,-51,-41
+	.long   05427ea1H
+	.word   05080H
+RNFLYBOLT7A:
+	.word   34,40,-22,-29
+	.long   05428160H
+	.word   05580H
+RNFLYBOLT7B:
+	.word   6,10,-56,-40
+	.long   05429010H
+	.word   05000H
+RNFLYBOLT7C:
+	.word   26,14,-62,-38
+	.long   0542913cH
+	.word   05180H
+RNFLYBOLT7D:
+	.word   15,13,-88,-37
+	.long   054296b6H
+	.word   05080H
+RNFLYBOLT8A:
+	.word   32,24,-33,-37
+	.long   054299dfH
+	.word   05580H
+RNFLYBOLT8B:
+	.word   24,14,-65,-37
+	.long   0542a14dH
+	.word   05080H
+RNFLYBOLT8C:
+	.word   31,13,-89,-37
+	.long   0542a69aH
+	.word   05080H
+RNFLYBOLT9A:
+	.word   54,13,-67,-38
+	.long   0542acfcH
+	.word   05280H
+RNFLYBOLT9B:
+	.word   14,9,-121,-42
+	.long   0542b73cH
+	.word   05080H
+RNFLYBOLT10A:
+	.word   38,12,-67,-38
+	.long   0542b978H
+	.word   05180H
+RNFLYBOLT10B:
+	.word   28,13,-105,-36
+	.long   0542bf7dH
+	.word   05080H
+RNFLYBOLT11A:
+	.word   41,15,-68,-37
+	.long   0542c4c2H
+	.word   05580H
+RNFLYBOLT11B:
+	.word   26,9,-109,-40
+	.long   0542cc6fH
+	.word   05080H
+RNFLYBOLT12A:
+	.word   29,13,-67,-40
+	.long   0542cfffH
+	.word   05080H
+RNFLYBOLT12B:
+	.word   40,13,-96,-38
+	.long   0542d521H
+	.word   05480H
+RNFLYBOLT13A:
+	.word   28,13,-76,-39
+	.long   0542dbf6H
+	.word   05080H
+RNFLYBOLT13B:
+	.word   23,56,-104,-13
+	.long   0542e17cH
+	.word   05180H
+RNFLYBOLT13C:
+	.word   16,79,-127,-5
+	.long   0542f219H
+	.word   06080H
+RNFLYBOLT13D:
+	.word   17,17,-143,-28
+	.long   05430a4bH
+	.word   05080H
+RNFLYBOLT14A:
+	.word   36,58,-80,-7
+	.long   05430e9dH
+	.word   05680H
+RNFLYBOLT14B:
+	.word   15,80,-116,0
+	.long   054320dfH
+	.word   06080H
+RNFLYBOLT14C:
+	.word   12,87,-131,-2
+	.long   05433979H
+	.word   05080H
+RNFLYBOLT14D:
+	.word   13,89,-143,-1
+	.long   05434dcfH
+	.word   06080H
+RNFLYBOLT14E:
+	.word   17,28,-156,-11
+	.long   05436663H
+	.word   05180H
+RNFLYBOLT15A:
+	.word   10,66,-100,-2
+	.long   05436d79H
+	.word   05000H
+RNFLYBOLT15B:
+	.word   20,84,-110,3
+	.long   05437a5dH
+	.word   05080H
+RNFLYBOLT15C:
+	.word   15,98,-130,5
+	.long   054390fdH
+	.word   05080H
+RNFLYBOLT15D:
+	.word   21,102,-145,7
+	.long   0543a8e4H
+	.word   05180H
+RNFLYBOLT15E:
+	.word   17,40,-166,-3
+	.long   0543c573H
+	.word   05180H
+RNFLYBOLT16A:
+	.word   10,72,-96,1
+	.long   0543cf7dH
+	.word   05000H
+RNFLYBOLT16B:
+	.word   21,90,-106,5
+	.long   0543dd8dH
+	.word   05180H
+RNFLYBOLT16C:
+	.word   19,102,-127,7
+	.long   0543f4fdH
+	.word   05080H
+RNFLYBOLT16D:
+	.word   12,112,-146,13
+	.long   05440f39H
+	.word   05080H
+RNFLYBOLT16E:
+	.word   30,112,-158,13
+	.long   0544291bH
+	.word   05580H
+RNFLYBOLT17A:
+	.word   11,77,-93,2
+	.long   0544489dH
+	.word   05000H
+RNFLYBOLT17B:
+	.word   22,95,-104,7
+	.long   05445928H
+	.word   05580H
+RNFLYBOLT17C:
+	.word   19,109,-130,8
+	.long   05447034H
+	.word   05180H
+RNFLYBOLT17D:
+	.word   8,114,-149,12
+	.long   05448af8H
+	.word   06000H
+RNFLYBOLT17E:
+	.word   34,115,-157,13
+	.long   0544a058H
+	.word   06580H
+RNFLYBOLT18A:
+	.word   3,4,-90,-74
+	.long   0544ca84H
+	.word   05000H
+RNFLYBOLT18B:
+	.word   28,102,-95,10
+	.long   0544cac0H
+	.word   05580H
+RNFLYBOLT18C:
+	.word   15,109,-136,10
+	.long   0544e240H
+	.word   05080H
+RNFLYBOLT18D:
+	.word   18,115,-151,14
+	.long   0544faf2H
+	.word   05180H
+RNFLYBOLT18E:
+	.word   20,111,-169,14
+	.long   054517bcH
+	.word   05180H
+RNFLYBOLT19A:
+	.word   34,108,-89,11
+	.long   054531faH
+	.word   03680H
+RNFLYBOLT19B:
+	.word   40,114,-151,13
+	.long   05454250H
+	.word   05680H
+RN1DETHBOLT1A:
+	.word   20,69,-45,2
+	.long   05456282H
+	.word   06180H
+RN1DETHBOLT1B:
+	.word   22,78,-65,2
+	.long   0545772eH
+	.word   06180H
+RN1DETHBOLT2A:
+	.word   36,71,-32,35
+	.long   05458efeH
+	.word   06580H
+RN1DETHBOLT2B:
+	.word   16,56,-68,17
+	.long   0545b07aH
+	.word   06180H
+RN1DETHBOLT3A:
+	.word   26,60,-26,44
+	.long   0545bffcH
+	.word   06080H
+RN1DETHBOLT3B:
+	.word   37,52,-52,44
+	.long   0545dc16H
+	.word   06480H
+RN1DETHBOLT4A:
+	.word   17,49,16,60
+	.long   0545f664H
+	.word   06080H
+RN1DETHBOLT4B:
+	.word   18,67,-1,68
+	.long   0546046aH
+	.word   06080H
+RN1DETHBOLT4C:
+	.word   12,50,-19,66
+	.long   054619ccH
+	.word   06080H
+RN1DETHBOLT4D:
+	.word   18,71,-31,72
+	.long   054627aaH
+	.word   06080H
+RN1DETHBOLT4E:
+	.word   29,65,-49,70
+	.long   0546407aH
+	.word   06480H
+RN1DETHBOLT5A:
+	.word   9,32,62,51
+	.long   05465ab8H
+	.word   06000H
+RN1DETHBOLT5B:
+	.word   21,52,53,54
+	.long   05466178H
+	.word   06080H
+RN1DETHBOLT5C:
+	.word   27,51,32,55
+	.long   05467578H
+	.word   06480H
+RN1DETHBOLT5D:
+	.word   26,58,-7,56
+	.long   05468718H
+	.word   06180H
+RN1DETHBOLT5E:
+	.word   11,58,-33,53
+	.long   05469ae8H
+	.word   06000H
+RN1DETHBOLT5F:
+	.word   29,63,-44,56
+	.long   0546a9dcH
+	.word   06480H
+RN1DETHBOLT6A:
+	.word   25,59,53,58
+	.long   0546c1d0H
+	.word   06080H
+RN1DETHBOLT6B:
+	.word   29,45,28,59
+	.long   0546da3aH
+	.word   06480H
+RN1DETHBOLT6C:
+	.word   21,58,-2,58
+	.long   0546ea00H
+	.word   06180H
+RN1DETHBOLT6D:
+	.word   17,64,-23,61
+	.long   0546fc6eH
+	.word   06080H
+RN1DETHBOLT6E:
+	.word   12,47,-40,53
+	.long   05470ec4H
+	.word   06080H
+RN1DETHBOLT7A:
+	.word   10,64,57,61
+	.long   05471b40H
+	.word   06000H
+RN1DETHBOLT7B:
+	.word   13,64,47,60
+	.long   05472a40H
+	.word   06080H
+RN1DETHBOLT7C:
+	.word   23,62,34,61
+	.long   05473b8eH
+	.word   06480H
+RN1DETHBOLT7D:
+	.word   20,65,-3,66
+	.long   05474f0cH
+	.word   06180H
+RN1DETHBOLT7E:
+	.word   20,64,-23,64
+	.long   0547614cH
+	.word   06080H
+RN1DETHBOLT7F:
+	.word   11,43,-43,66
+	.long   05477636H
+	.word   06000H
+RN1DETHBOLT8A:
+	.word   19,71,49,68
+	.long   0547814cH
+	.word   06080H
+RN1DETHBOLT8B:
+	.word   9,59,30,58
+	.long   05479932H
+	.word   06000H
+RN1DETHBOLT8C:
+	.word   12,31,21,58
+	.long   0547a5a4H
+	.word   06080H
+RN1DETHBOLT8D:
+	.word   15,59,-10,66
+	.long   0547ade0H
+	.word   06080H
+RN1DETHBOLT8E:
+	.word   9,61,-25,63
+	.long   0547bdc2H
+	.word   06000H
+RN1DETHBOLT8F:
+	.word   23,65,-34,68
+	.long   0547caa0H
+	.word   06080H
+RN1DETHBOLT9A:
+	.word   24,58,54,59
+	.long   0547dfe6H
+	.word   06080H
+RN1DETHBOLT9B:
+	.word   25,63,30,62
+	.long   0547f368H
+	.word   06480H
+RN1DETHBOLT9C:
+	.word   25,59,-13,58
+	.long   0548086eH
+	.word   06180H
+RN1DETHBOLT9D:
+	.word   13,61,-38,59
+	.long   05481eb0H
+	.word   06080H
+RN1DETHBOLT9E:
+	.word   11,60,-51,61
+	.long   05482f92H
+	.word   06000H
+RN1DETHBOLT10A:
+	.word   14,48,51,61
+	.long   05483f0aH
+	.word   06080H
+RN1DETHBOLT10B:
+	.word   20,48,37,64
+	.long   05484c18H
+	.word   06080H
+RN1DETHBOLT10C:
+	.word   16,39,17,58
+	.long   05485c1aH
+	.word   06080H
+RN1DETHBOLT10D:
+	.word   20,35,-13,60
+	.long   0548674eH
+	.word   06080H
+RN1DETHBOLT10E:
+	.word   12,40,-33,59
+	.long   05487274H
+	.word   06080H
+RN1DETHBOLT10F:
+	.word   22,44,-45,60
+	.long   05487d50H
+	.word   06180H
+RN1DETHBOLT11A:
+	.word   24,25,51,60
+	.long   05488af2H
+	.word   06180H
+RN1DETHBOLT11B:
+	.word   29,25,26,64
+	.long   0548952cH
+	.word   06480H
+RN1DETHBOLT11C:
+	.word   25,22,-13,60
+	.long   05489f66H
+	.word   06180H
+RN1DETHBOLT11D:
+	.word   31,23,-38,60
+	.long   0548a85cH
+	.word   06580H
+RNSHORTBOLT1A:
+	.word   28,12,-61,-8
+	.long   0548b20eH
+	.word   05480H
+RNSHORTBOLT2A:
+	.word   19,18,-61,-6
+	.long   0548b5fcH
+	.word   05080H
+RNSHORTBOLT2B:
+	.word   19,18,-80,-6
+	.long   0548ba6aH
+	.word   05080H
+RNSHORTBOLT3A:
+	.word   10,15,-61,-10
+	.long   0548be7eH
+	.word   05000H
+RNSHORTBOLT3B:
+	.word   10,20,-71,-7
+	.long   0548c16cH
+	.word   05000H
+RNSHORTBOLT3C:
+	.word   21,25,-81,-6
+	.long   0548c554H
+	.word   05080H
+RNSHORTBOLT4A:
+	.word   14,18,-62,-10
+	.long   0548cbadH
+	.word   05080H
+RNSHORTBOLT4B:
+	.word   29,23,-76,-9
+	.long   0548cfd0H
+	.word   05480H
+RNSHORTBOLT5A:
+	.word   11,9,-66,-23
+	.long   0548d73bH
+	.word   05000H
+RNSHORTBOLT5B:
+	.word   15,26,-77,-10
+	.long   0548d92aH
+	.word   05080H
+RNSHORTBOLT5C:
+	.word   13,16,-92,-20
+	.long   0548df22H
+	.word   05080H
+RNSHORTBOLT6A:
+	.word   15,24,-78,-11
+	.long   0548e2f4H
+	.word   05080H
+RNSHORTBOLT6B:
+	.word   12,13,-93,-22
+	.long   0548e86eH
+	.word   05080H
+RNSHORTBOLT7A:
+	.word   19,19,-86,-17
+	.long   0548eb65H
+	.word   05180H
+RNSHORTBOLT8A:
+	.word   16,19,-94,-18
+	.long   0548f071H
+	.word   05080H
+RNSHORTBOLT9A:
+	.word   10,20,-91,-16
+	.long   0548f505H
+	.word   05000H
+RNSHORTBOLT9B:
+	.word   13,24,-101,-15
+	.long   0548f8edH
+	.word   05080H
+RNSHORTBOLT10A:
+	.word   12,25,-89,-13
+	.long   0548fe6cH
+	.word   05080H
+RNSHORTBOLT10B:
+	.word   17,29,-101,-12
+	.long   05490416H
+	.word   05080H
+RNSHORTBOLT11A:
+	.word   14,31,-86,-10
+	.long   05490ad5H
+	.word   05080H
+RNSHORTBOLT11B:
+	.word   20,36,-102,-8
+	.long   054911feH
+	.word   05580H
+RNSHORTBOLT12A:
+	.word   15,35,-85,-8
+	.long   05491a76H
+	.word   05080H
+RNSHORTBOLT12B:
+	.word   22,37,-103,-5
+	.long   05492264H
+	.word   05580H
+RNVICBOLT1A:
+	.word   19,27,115,91
+	.long   05492ac6H
+	.word   06080H
+RNVICBOLT1B:
+	.word   33,52,96,93
+	.long   054931f2H
+	.word   06580H
+RNVICBOLT2A:
+	.word   14,25,112,92
+	.long   0549426eH
+	.word   06080H
+RNVICBOLT2B:
+	.word   63,76,98,93
+	.long   05494912H
+	.word   06a80H
+RNVICBOLT3A:
+	.word   15,19,112,90
+	.long   05496132H
+	.word   06080H
+RNVICBOLT3B:
+	.word   59,88,97,93
+	.long   0549663eH
+	.word   06a80H
+RNVICBOLT4A:
+	.word   15,31,112,91
+	.long   05497fdeH
+	.word   06080H
+RNVICBOLT4B:
+	.word   39,76,97,93
+	.long   0549881aH
+	.word   06580H
+RNVICBOLT4C:
+	.word   20,34,58,37
+	.long   05499fb6H
+	.word   06080H
+RNVICBOLT5A:
+	.word   15,29,112,90
+	.long   0549a9a2H
+	.word   06080H
+RNVICBOLT5B:
+	.word   10,40,97,92
+	.long   0549b156H
+	.word   06000H
+RNVICBOLT5C:
+	.word   30,72,87,77
+	.long   0549bab6H
+	.word   06580H
+RNVICBOLT5D:
+	.word   26,34,57,33
+	.long   0549ce1eH
+	.word   06580H
+RNVICBOLT6A:
+	.word   17,25,107,82
+	.long   0549dac2H
+	.word   06080H
+RNVICBOLT6B:
+	.word   13,40,90,82
+	.long   0549e166H
+	.word   06080H
+RNVICBOLT6C:
+	.word   24,54,77,62
+	.long   0549ec5aH
+	.word   06580H
+RNVICBOLT6D:
+	.word   23,27,53,29
+	.long   0549fbd2H
+	.word   06480H
+RNVICBOLT7A:
+	.word   19,25,95,60
+	.long   054a04eaH
+	.word   06180H
+RNVICBOLT7B:
+	.word   11,36,76,58
+	.long   054a0be8H
+	.word   06000H
+RNVICBOLT7C:
+	.word   34,51,65,45
+	.long   054a1530H
+	.word   06580H
+RNVICBOLT8A:
+	.word   12,18,79,42
+	.long   054a25d4H
+	.word   06080H
+RNVICBOLT8B:
+	.word   33,50,66,44
+	.long   054a2a9cH
+	.word   06580H
+RN2DETHBOLT1A:
+	.word   58,48,-8,23
+	.long   054a3ba4H
+	.word   05a80H
+RN2DETHBOLT2A:
+	.word   11,22,-8,25
+	.long   054a48c8H
+	.word   05000H
+RN2DETHBOLT2B:
+	.word   23,28,-19,25
+	.long   054a4d82H
+	.word   05580H
+RN2DETHBOLT2C:
+	.word   12,27,-49,0
+	.long   054a551aH
+	.word   05080H
+RN2DETHBOLT2D:
+	.word   19,33,-61,-1
+	.long   054a5b5bH
+	.word   05080H
+RN2DETHBOLT3A:
+	.word   19,31,-7,27
+	.long   054a6334H
+	.word   05080H
+RN2DETHBOLT3B:
+	.word   22,50,-26,27
+	.long   054a6acbH
+	.word   05080H
+RN2DETHBOLT3C:
+	.word   17,41,-48,3
+	.long   054a77f0H
+	.word   05080H
+RN2DETHBOLT3D:
+	.word   35,47,-65,1
+	.long   054a82e3H
+	.word   05480H
+RN2DETHBOLT4A:
+	.word   16,33,-11,24
+	.long   054a9432H
+	.word   05080H
+RN2DETHBOLT4B:
+	.word   25,60,-27,20
+	.long   054a9bbbH
+	.word   05580H
+RN2DETHBOLT4C:
+	.word   19,52,-52,1
+	.long   054aad8bH
+	.word   05080H
+RN2DETHBOLT4D:
+	.word   38,59,-71,-2
+	.long   054abb8dH
+	.word   05480H
+RN2DETHBOLT5A:
+	.word   15,37,-25,12
+	.long   054ad093H
+	.word   05080H
+RN2DETHBOLT5B:
+	.word   17,49,-40,-2
+	.long   054ad8f5H
+	.word   05080H
+RN2DETHBOLT5C:
+	.word   23,60,-57,1
+	.long   054ae47dH
+	.word   05180H
+RN2DETHBOLT5D:
+	.word   50,47,-80,-13
+	.long   054af63eH
+	.word   05880H
+RN2DETHBOLT6A:
+	.word   15,19,-59,-45
+	.long   054b0b5cH
+	.word   05080H
+RN2DETHBOLT6B:
+	.word   20,52,-74,-12
+	.long   054b0faaH
+	.word   05180H
+RN2DETHBOLT6C:
+	.word   32,33,-94,-29
+	.long   054b1c53H
+	.word   05480H
+RN2DETHBOLT6D:
+	.word   38,17,-126,-43
+	.long   054b2a21H
+	.word   05480H
+RN2DETHBOLT7A:
+	.word   65,24,-89,-35
+	.long   054b314dH
+	.word   05980H
+RN2DETHBOLT7B:
+	.word   15,13,-154,-41
+	.long   054b438dH
+	.word   05080H
+RN2DETHBOLT8A:
+	.word   9,16,-99,-40
+	.long   054b46d9H
+	.word   05000H
+RN2DETHBOLT8B:
+	.word   46,18,-108,-40
+	.long   054b49a9H
+	.word   05480H
+RN2DETHBOLT8C:
+	.word   14,15,-154,-41
+	.long   054b58dfH
+	.word   05080H
+RN2DETHBOLT8D:
+	.word   11,14,-168,-41
+	.long   054b5cd6H
+	.word   05000H
+RN2DETHBOLT9A:
+	.word   16,17,-94,-41
+	.long   054b5fd8H
+	.word   05080H
+RN2DETHBOLT9B:
+	.word   21,18,-110,-39
+	.long   054b63fdH
+	.word   05080H
+RN2DETHBOLT9C:
+	.word   40,17,-131,-39
+	.long   054b69ceH
+	.word   05480H
+RN2DETHBOLT9D:
+	.word   10,14,-171,-41
+	.long   054b7424H
+	.word   05000H
+RN2DETHBOLT10A:
+	.word   24,14,-107,-41
+	.long   054b76e0H
+	.word   05080H
+RN2DETHBOLT10B:
+	.word   43,14,-131,-40
+	.long   054b7c0aH
+	.word   05180H
+RN2DETHBOLT11A:
+	.word   8,12,-121,-42
+	.long   054b85f8H
+	.word   05000H
+RN2DETHBOLT11B:
+	.word   16,12,-129,-42
+	.long   054b87d8H
+	.word   05080H
+RN2DETHBOLT11C:
+	.word   16,13,-145,-41
+	.long   054b8b3fH
+	.word   05080H
+RN2DETHBOLT12A:
+	.word   21,9,-133,-43
+	.long   054b8f03H
+	.word   05080H
+	.TEXT
+

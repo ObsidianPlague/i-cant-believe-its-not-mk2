@@ -1,0 +1,443 @@
+
+*------- macros for tms34010 assembly language programs ----------------
+
+* swap contents of two registers that reside in same file
+
+swap	$macro r1,r2
+	xor    :r1.s:,:r2.s:
+	xor    :r2.s:,:r1.s:
+	xor    :r1.s:,:r2.s:
+	$end
+
+* test a register for zero
+test	$macro r1
+	move	:r1.s:,:r1.s:
+	$end
+
+*equates for xy compares(motolora style)
+jrxeq	$macro	p1
+	jrxz	p1.s
+	$end
+jrxne	$macro	p1
+	jrxnz	p1.s
+	$end
+jrxge	$macro	p1
+	jrxnn	p1.s
+	$end
+jrxlt	$macro	p1
+	jrxn	p1.s
+	$end
+jryeq	$macro	p1
+	jryz	p1.s
+	$end
+jryne	$macro	p1
+	jrynz	p1.s
+	$end
+jryge	$macro	p1
+	jrynn	p1.s
+	$end
+jrylt	$macro	p1
+	jryn	p1.s
+	$end
+
+*
+* system lockup macro
+*
+lockup	$macro
+	calla	system_lockup
+	$end
+
+
+ermac	$macro p1
+;	move	a0,@trapram,l		; save a0 state
+;	movi	:p1:,a0 		; a0 = error code #
+;	calla	errort
+	jauc	$			; b_debug ---> bring attention !!!
+	$end	
+
+tsound	$macro offset
+	movi   :offset:,a0
+	calla  triple_sound
+	$end
+
+tsound2	$macro offset
+	movi   :offset:,a0
+	calla  triple_sound2
+	$end
+
+
+**********************
+
+*subtract register from memory
+*	subrm	reg,addr,field size
+*a14 destroyed, 'a' register type instructions only
+*
+subrm	$macro	p1,p2,p3
+	move	:p2:,a14,:p3:
+	sub	:p1:,a14
+	move	a14,:p2:,:p3:
+	$end
+*
+*add register to memory
+*	addrm	reg,addr,field size
+*a14 destroyed, 'a' register type instructions only
+*
+addrm	$macro	p1,p2,p3
+	move	:p2:,a14,:p3:
+	add	:p1:,a14
+	move	a14,:p2:,:p3:
+	$end
+
+*increment location
+*a14 destroyed, 'a' register type instructions only
+**
+incw	$macro	p1
+	move	:p1:,a14
+	inc	a14
+	move	a14,:p1:
+	$end
+
+*
+*decrement word
+*a14 destroyed, 'a' register type instructions only
+**
+decw	$macro	p1
+	move	:p1:,a14
+	dec	a14
+	move	a14,:p1:
+	$end
+
+*
+*increment memory
+*	incm	addr,field size
+*a14 destroyed
+**
+incm	$macro	p1,p2
+	move	:p1:,a14,:p2:
+	inc	a14
+	move	a14,:p1:,:p2:
+	$end
+
+*
+*decrement memory
+*	decm	addr,field size
+*a14 destroyed
+**
+decm	$macro	p1,p2
+	move	:p1:,a14,:p2:
+	dec	a14
+	move	a14,:p1:,:p2:
+	$end
+
+*
+*subtract memory
+*	subm	addr,reg,field size
+*subtracts address from register
+*a14 destroyed, 'a' register type instructions only
+*
+subm	$macro	p1,p2,p3
+	move	:p1:,a14,:p3:
+	sub	a14,:p2:
+	$end
+*
+*add memory
+*	addm	addr,reg,field size
+*adds address from register
+*a14 destroyed, 'a' register type instructions only
+*
+addm	$macro	p1,p2,p3
+	move	:p1:,a14,:p3:
+	add	a14,:p2:
+	$end
+*
+*negate memory
+*	negm	addr,field size
+*negates address contents
+*a14 destroyed, 'a' register type instructions only
+*
+negm	$macro	p1,p2
+	move	:p1:,a14,:p2:
+	neg	a14
+	move	a14,:p1:,:p2:
+	$end
+*
+*compare memory
+*	cmpm	addr,reg,field size
+*compares address to register
+*a14 destroyed, 'a' register type instructions only
+*
+cmpm	$macro	p1,p2,p3
+	move	:p1:,a14,:p3:
+	cmp	a14,:p2:
+	$end
+*
+*clear memory
+*	clrm	addr,field size
+*clears address contents
+*a14 destroyed, 'a' register type instructions only
+*
+clrm	$macro	p1,p2
+	clr	a14
+	move	a14,:p1:,:p2:
+	$end
+*
+*complement memory
+*	comm	addr,field size
+*complements address contents
+*a14 destroyed, 'a' register type instructions only
+*
+comm	$macro	p1,p2
+	move	:p1:,a14,:p2:
+	not	a14
+	move	a14,:p1:,:p2:
+	$end
+*
+*shift left memory
+*	sllm	shift count,addr,field size
+*shifts address contents
+*a14 destroyed, 'a' register type instructions only
+*
+sllm	$macro	p1,p2,p3
+	move	:p2:,a14,:p3:
+	sll	:p1:,a14
+	move	a14,:p2:,:p3:
+	$end
+*
+*shift right arithmetic memory
+*	sram	shift count,addr,field size
+*shifts address contents
+*a14 destroyed, 'a' register type instructions only
+*
+sram	$macro	p1,p2,p3
+	move	:p2:,a14,:p3:
+	sext	a14,:p3:
+	sra	:p1:,a14
+	move	a14,:p2:,:p3:
+	$end
+*
+*shift right logical memory
+*	srlm	shift count,addr,field size
+*shifts address contents
+*a14 destroyed, 'a' register type instructions only
+*
+srlm	$macro	p1,p2,p3
+	move	:p2:,a14,:p3:
+	zext	a14,:p3:
+	srl	:p1:,a14
+	move	a14,:p2:,:p3:
+	$end
+
+*
+*bit set
+*	bset	bit# 0-31(konstant or register),register to set bit in
+* note: a14 is destroyed, 'a' file registers only
+*
+bset	$macro	p1,r1
+	movk	1,a14
+	sll	:p1:,a14
+	or	a14,:r1:
+	$end
+
+*
+*bit clr
+*	bclr	bit# 0-31(konstant or register),register to clr bit in
+* note: a14 is destroyed, 'a' file registers only
+*
+bclr	$macro	p1,r1
+	movk	1,a14
+	sll	:p1:,a14
+	andn	a14,:r1:
+	$end
+
+*
+*set the z bit
+*	setz
+* status bits:
+*		n unaffected
+*		c unaffected
+*		z 1
+*		v unaffected
+* note: a14 is cleared
+*
+setz	$macro
+	clr	a14
+	$end
+
+*
+*clr the z bit
+*	clrz
+* status bits:
+*		n unaffected
+*		c unaffected
+*		z 0
+*		v unaffected
+* note: a14 is set to 1
+*
+clrz	$macro
+	clr	a14
+	not	a14
+	$end
+
+*
+*process sleep constant
+*p1=sleep time constant 1-ffff loaded into a0
+*ret addr on stack
+*
+sleep	$macro	p1
+	$if	p1 < 33
+	movk	:p1:,a0
+	$else	
+	movi	:p1:,a0
+	$endif
+	calla	prcslp
+	$end
+*
+*process sleep register
+*reg1=register that contains sleep time 1-ffff loaded into a0
+*ret addr on stack
+*
+sleepr	$macro	reg1
+	move	:reg1:,a0
+	calla	prcslp
+	$end
+
+*
+*process loop sleep
+*p1=sleep time -->a0, p2 =wakeup addr-->a7
+*
+sloop	$macro	p1,p2
+	$if	p1 < 33
+	movk	:p1:,a0
+	$else	
+	movi	:p1:,a0
+	$endif
+	movi	:p2:,a7,l
+	jauc	prclsp
+	$end
+	
+*
+*process loop sleep register
+*p1=register containing sleep time 1-ffff, p2 =wakeup addr-->a7
+*
+sloopr	$macro	p1,p2
+	move	:p1:,a0
+	movi	:p2:,a7,l
+	jauc	prclsp
+	$end
+
+*
+*process creation macro
+*p1=id-->a1, p2=pc-->a7
+*
+create	$macro	p1,p2
+	movi	:p1:,a1
+	movi	:p2:,a7,l
+	calla	getprc
+	$end
+
+*
+*kill process(es)
+*p1=id-->a0,p2=mask-->a1
+*
+killit	$macro	p1,p2
+	movi	:p1:,a0
+	movi	:p2:,a1
+	calla	kilall
+	$end
+
+*
+*call it quits
+*
+die	$macro
+	jauc	sucide
+	$end
+*
+*process jump subroutine
+*p1=address of sleeping process
+*a7 is used for pc storage
+*
+jsrp	$macro	p1
+	getpc	a7
+	addi	060h,a7
+	move	a7,-*a12,l	;push ret addr
+	jauc	:p1:
+	$end
+
+*
+*process jump subroutine on register
+*r1=register containing address of sleeping process
+*a7 is used for pc storage
+*
+jsrpr	$macro	r1
+	getpc	a7
+	addi	040h,a7
+	move	a7,-*a12,l	;push ret addr
+	jump	:r1:
+	$end
+
+*
+*return from sleeping subroutine
+*a7 is used for pc storage
+*status register is not affected
+*	
+retp	$macro	
+	mmfm	a12,a7		;pull return addr, w/o zapping stat
+	exgpc	a7
+	$end
+
+*find matching process(es), branch if one was found
+*p1=id-->a0,p2=mask-->a1,p3=branch label
+matchp	$macro	p1,p2,p3
+	movi	:p1:,a0
+	movi	:p2:,a1
+	calla	existp
+	janz	:p3:
+	$end
+
+*find matching process(es), branch if none were found
+*p1=id-->a0,p2=mask-->a1,p3=branch label
+nomatchp $macro	p1,p2,p3
+	 movi	:p1:,a0
+	 movi	:p2:,a1
+	 calla	existp
+	 jaz	:p3:
+	 $end
+
+*push register(s) onto the stack
+*usage: one operand -> push op	2 or more ops -> push (op1,op2,...,opn)
+push	$macro	reg
+	move :reg:,-*sp,1
+	$end
+
+*pull register(s) off of the stack
+*usage: one register -> pull reg   2 or more regs -> pull (reg1,reg2,...,regn)
+pull	$macro	reg
+	mmfm	sp,:reg:
+	$end
+
+*push register onto the process stack
+*usage: one operand -> push reg
+pushp	$macro	reg
+	move :reg:,-*a12,l
+	$end
+
+*pull register(s) off of the process stack
+*usage: one register -> pull reg 
+pullp	$macro	reg
+	mmfm	a12,:reg:
+	$end
+
+*push low word of register on to stack
+*one register only!
+*usage: pushw reg
+pushw	$macro	reg
+	move :reg:,-*sp,0
+	$end
+
+*pull low word of register off of stack
+*one register only!
+*usage: pullw reg
+pullw	$macro	reg
+	move *sp+,:reg:,0
+	$end
+

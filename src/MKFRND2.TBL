@@ -1,0 +1,144 @@
+	.DATA
+NJFSBONUS4B:
+	.word   25,144,30,5
+	.long   052851e0H
+	.word   06480H
+NJFSBONUS4C:
+	.word   38,137,5,-1
+	.long   05288030H
+	.word   06580H
+JXFSBONUS1A:
+	.word   39,57,19,-13
+	.long   0528bc40H
+	.word   06180H
+JXFSBONUS1B:
+	.word   11,60,-20,-31
+	.long   0528e490H
+	.word   06000H
+JXFSBONUS2A:
+	.word   26,43,39,-26
+	.long   0528f408H
+	.word   06180H
+JXFSBONUS2B:
+	.word   11,59,-19,-29
+	.long   052900a6H
+	.word   06000H
+JXFSBONUS2C:
+	.word   32,58,13,-12
+	.long   05290fdcH
+	.word   06080H
+JXFSBONUS3A:
+	.word   54,60,25,-10
+	.long   0529323aH
+	.word   06580H
+JXFSBONUS4A:
+	.word   48,60,21,-10
+	.long   05296312H
+	.word   06580H
+JXFSBONUS5A:
+	.word   50,60,23,-10
+	.long   05299186H
+	.word   06580H
+JXFSBONUS6A:
+	.word   39,74,21,-6
+	.long   0529c0baH
+	.word   06180H
+JXFSBONUS6B:
+	.word   12,51,-18,-29
+	.long   0529f442H
+	.word   06080H
+JXFSBONUS7A:
+	.word   24,46,38,-27
+	.long   052a01daH
+	.word   06180H
+JXFSBONUS7B:
+	.word   33,73,14,-4
+	.long   052a0ee4H
+	.word   06080H
+JXFSBONUS7C:
+	.word   29,47,-19,-28
+	.long   052a3856H
+	.word   06580H
+JXFSBONUS8A:
+	.word   34,22,49,-15
+	.long   052a46d0H
+	.word   06580H
+JXFSBONUS8B:
+	.word   35,68,15,-2
+	.long   052a535cH
+	.word   06080H
+JXFSBONUS8C:
+	.word   34,22,-20,-16
+	.long   052a79a6H
+	.word   06180H
+KIDTHUNDER1:
+	.word   116,167,-9,24
+	.long   052a86e0H
+	.word   06f80H
+KIDTHUNDER2:
+	.word   100,125,-49,-21
+	.long   052aed50H
+	.word   06a80H
+KIDTHUNDER3:
+	.word   68,92,-79,-55
+	.long   052b39f8H
+	.word   06980H
+KIDTHUNDER4:
+	.word   52,77,-94,-70
+	.long   052b7854H
+	.word   06080H
+KIDTHUNDER5:
+	.word   62,87,-89,-60
+	.long   052bb6aaH
+	.word   06580H
+KIDTHUNDER6:
+	.word   74,98,-82,-49
+	.long   052c08faH
+	.word   06580H
+KIDTHUNDER7:
+	.word   72,96,-83,-51
+	.long   052c7276H
+	.word   06580H
+KIDTHUNDER5A:
+	.word   30,87,-89,-60
+	.long   052cd456H
+	.word   06180H
+KIDTHUNDER5B:
+	.word   31,87,-119,-60
+	.long   052cf7f0H
+	.word   06480H
+KIDTHUNDER6A:
+	.word   19,33,-82,-49
+	.long   052d1e42H
+	.word   06080H
+KIDTHUNDER6B:
+	.word   24,93,-94,-54
+	.long   052d2736H
+	.word   06080H
+KIDTHUNDER6C:
+	.word   18,35,-138,-49
+	.long   052d462cH
+	.word   06080H
+KIDTHUNDER6D:
+	.word   28,92,-118,-55
+	.long   052d4f8aH
+	.word   06480H
+KIDTHUNDER7A:
+	.word   20,33,-83,-51
+	.long   052d7394H
+	.word   06480H
+	.long   KIDT_P
+KIDTHUNDER7B:
+	.word   24,91,-95,-56
+	.long   052d7c82H
+	.word   06080H
+KIDTHUNDER7C:
+	.word   15,30,-140,-51
+	.long   052d9994H
+	.word   06080H
+KIDTHUNDER7D:
+	.word   26,89,-119,-58
+	.long   052da18cH
+	.word   06080H
+	.TEXT
+

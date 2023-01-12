@@ -1,0 +1,107 @@
+.struct mkstruct.asm
+.tab 8
+.km @!F1 \ @J"HOME"@K*FGLISTS\ OBJ\ OLINK\ FGLISTS"CR"
+.km !f1 @J*objlst\ OBJ\ OLINK"CR"
+.km !f2 @J*objlst2\ OBJ\ OLINK"CR"
+.km !f3 @J*objlst3\ OBJ\ OLINK"CR"
+.km !F1 @J*baklst1\ BAK\ OLINK"CR"
+;.km !f1 @J*ACTIVE\ PRC\ PLINK"CR"
+;.km !F1 @J*ACTIVE\ PRCDATA\ PLINK"CR"
+.km !f4 @Jpalram\ PAL\ *"CR"
+.km !f5 @VMAINEQU.ASM"CR"
+.km !f6 @AG
+.km !f8 @J*active\ prc\ plink"CR"
+.km !f9 @J*ACTIVE\ PRCDATA\ PLINK"CR"
+.km !f10 @J*OFREE\ OBJ\ OLINK"CR"
+.km !f11 ^Rdpystrt=>FFFC"CR"
+.km !f12 ^Rdpystrt=>EFFC"CR"
+;**** display SOURCE when cursor on longword in struct or mem display ****
+.km S @M"CR"S"CR"
+;**** display WORDS when cursor on longword in struct or mem display ****
+.km W @M"CR"W"CR"
+;**** SET PC TO CURRENT LINE
+.km ^P ^RPC=AD1"CR"
+.km K @K>
+.km k @K>
+;******************************
+;
+; Velocities OFF
+;
+;******************************
+.km v ^Rf_novel=>01"CR"
+.km V ^Rf_novel=>01"CR"
+;******************************
+;
+; Collision box object ON/OFF
+;
+;******************************
+.km c ^Rf_colbox=1"CR"
+.km x ^Rf_colbox=0"CR"
+;******************************
+;
+; Pixel count OFF
+;
+;******************************
+.km ? ^Rf_countpix=1"CR"
+;******************************
+;
+; Player select screen = ON !
+;
+;******************************
+.km 1 ^Rf_do_psel=1"CR"
+;******************************
+;
+; Player 1 about to win
+;
+;******************************
+.km w ^Rp1_matchw=1"CR"^Rp2_bar=1"CR"
+.km W ^Rp1_matchw=1"CR"^Rp2_bar=1"CR"
+;******************************************************
+;
+;  RAM LOCATIONS IN "VIEW WINDOW"
+;
+;******************************************************
+.WP diff,uhw
+.WP f_colbox,uhw
+.WP f_novel,UHW
+.WP WORLDTLX,UHL
+.WP WORLDTLY,UHL
+;.WP CURBACK,UHW
+;.WP MAP_POSITION,UHW
+;.WP DIFF,UHW
+.WP DPYSTRT,UHW
+;.WP GSTATE,UHW
+.WP P1_OBJ,UHL
+.WP P2_OBJ,UHL
+.WP P1_PROC,UHL
+.WP P2_PROC,UHL
+.WP P1_MATCHW,UHW
+.WP P2_MATCHW,UHW
+.WP P1_BAR,UHW
+.WP P2_BAR,UHW
+.WP p1_rwon,uhw
+.WP p2_rwon,uhw
+.WP worldtlx,UHL
+.WP worldtlx2,UHL
+.WP worldtlx3,UHL
+.WP worldtlx4,UHL
+.WP worldtlx5,UHL
+.WP worldtlx6,UHL
+.WP worldtlx7,UHL
+.WP worldtlx8,UHL
+.WP BAKLST1,UHL
+.WP BAKLST2,UHL
+.WP BAKLST3,UHL
+.WP BAKLST4,UHL
+.WP BAKLST5,UHL
+.WP BAKLST6,UHL
+.WP BAKLST7,UHL
+.WP BAKLST8,UHL
+.wp f_countpix,uhw
+.wp pixel_count,uhl
+.WP SCROLLX,UHL
+.WP SCROLLX2,UHL
+.WP SCROLLX3,UHL
+.WP SCROLLX4,UHL
+.WP SCROLLX5,UHL
+

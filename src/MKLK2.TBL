@@ -1,0 +1,218 @@
+	.DATA
+LKDRAGON1A:
+	.word   31,136,30,-5
+	.long   04149159H
+	.word   06580H
+	.long   LKDRAG_P
+LKDRAGON1B:
+	.word   41,132,-1,-5
+	.long   0414ce39H
+	.word   06580H
+LKDRAGON2A:
+	.word   39,134,40,-8
+	.long   04150511H
+	.word   06580H
+LKDRAGON2B:
+	.word   37,132,1,-5
+	.long   04155099H
+	.word   06580H
+LKDRAGON3A:
+	.word   25,52,67,-65
+	.long   04158efdH
+	.word   06580H
+LKDRAGON3B:
+	.word   36,137,42,-5
+	.long   0415a2a9H
+	.word   06680H
+LKDRAGON3C:
+	.word   56,133,6,-2
+	.long   0415ebcdH
+	.word   06980H
+LKDRAGON4A:
+	.word   46,78,89,-62
+	.long   04164b2dH
+	.word   06a80H
+LKDRAGON4B:
+	.word   30,147,43,4
+	.long   04167515H
+	.word   06580H
+LKDRAGON4C:
+	.word   46,128,13,6
+	.long   0416ba39H
+	.word   06580H
+LKDRAGON4D:
+	.word   36,43,-33,1
+	.long   04172019H
+	.word   06580H
+LKDRAGON4E:
+	.word   44,15,5,-122
+	.long   04173851H
+	.word   06580H
+LKDRAGON5A:
+	.word   49,69,105,-62
+	.long   04173fd1H
+	.word   06980H
+	.long   LKDRAG_P
+LKDRAGON5B:
+	.word   80,157,56,9
+	.long   04176e63H
+	.word   06a80H
+LKDRAGON5C:
+	.word   15,85,-24,-53
+	.long   04182a7bH
+	.word   06080H
+LKDRAGON5D:
+	.word   64,47,-24,2
+	.long   041842e3H
+	.word   06a80H
+LKDRAGON6A:
+	.word   60,71,111,-61
+	.long   04186f4bH
+	.word   06980H
+	.long   DRAGN_P
+LKDRAGON6B:
+	.word   76,159,52,11
+	.long   0418aa5fH
+	.word   06a80H
+LKDRAGON6C:
+	.word   17,86,-24,-52
+	.long   041966ffH
+	.word   06180H
+LKDRAGON6D:
+	.word   68,49,-24,1
+	.long   041980ddH
+	.word   06a80H
+LKDRAGON7A:
+	.word   60,71,111,-60
+	.long   04186f4bH
+	.word   06980H
+LKDRAGON7B:
+	.word   62,169,52,21
+	.long   0419b30dH
+	.word   06a80H
+LKDRAGON7C:
+	.word   64,53,-10,19
+	.long   041a4db9H
+	.word   06680H
+LKDRAGON7D:
+	.word   31,100,-10,-38
+	.long   041a7dc9H
+	.word   06580H
+LKDRAGON8A:
+	.word   60,71,111,-58
+	.long   04186f4bH
+	.word   06980H
+LKDRAGON8B:
+	.word   52,181,52,33
+	.long   041ab029H
+	.word   06a80H
+LKDRAGON8C:
+	.word   58,53,0,35
+	.long   041b3b09H
+	.word   06580H
+LKDRAGON8D:
+	.word   41,108,0,-30
+	.long   041b6465H
+	.word   06580H
+LKDRAGON9A:
+	.word   60,71,111,-58
+	.long   04186f4bH
+	.word   06980H
+LKDRAGON9B:
+	.word   46,199,51,51
+	.long   041ba671H
+	.word   06680H
+LKDRAGON9C:
+	.word   48,193,5,55
+	.long   041c33b5H
+	.word   06a80H
+LKDRAGON10A:
+	.word   60,71,111,-57
+	.long   04186f4bH
+	.word   06980H
+LKDRAGON10B:
+	.word   51,226,58,78
+	.long   041cb145H
+	.word   06680H
+LKDRAGON10C:
+	.word   32,39,7,67
+	.long   041d60cdH
+	.word   06580H
+LKDRAGON10D:
+	.word   48,125,7,-13
+	.long   041d70e1H
+	.word   06980H
+LKDRAGON11A:
+	.word   60,71,111,-58
+	.long   04186f4bH
+	.word   06980H
+LKDRAGON11B:
+	.word   64,213,51,65
+	.long   041dc91dH
+	.word   06a80H
+LKDRAGON11C:
+	.word   30,34,-13,56
+	.long   041e8e8dH
+	.word   06480H
+LKDRAGON11D:
+	.word   28,115,-13,-23
+	.long   041e9c99H
+	.word   06580H
+LKDRAGON12A:
+	.word   60,71,111,-58
+	.long   04186f4bH
+	.word   06980H
+LKDRAGON12B:
+	.word   65,201,51,52
+	.long   041ed115H
+	.word   06a80H
+LKDRAGON12C:
+	.word   50,63,-14,53
+	.long   041f7333H
+	.word   06880H
+LKDRAGON12D:
+	.word   27,118,-14,-21
+	.long   041f9b29H
+	.word   06580H
+LKDRAGON13A:
+	.word   60,71,111,-58
+	.long   04186f4bH
+	.word   06980H
+LKDRAGON13B:
+	.word   82,195,51,47
+	.long   041fcf5dH
+	.word   06a80H
+LKDRAGON13C:
+	.word   54,64,-31,44
+	.long   04208c09H
+	.word   06880H
+LKDRAGON13D:
+	.word   10,113,-31,-25
+	.long   0420b6a7H
+	.word   06000H
+LKDRAGON14A:
+	.word   60,71,111,-59
+	.long   04186f4bH
+	.word   06980H
+LKDRAGON14B:
+	.word   93,179,51,31
+	.long   0420d123H
+	.word   06a80H
+LKDRAGON14C:
+	.word   48,66,-42,30
+	.long   042189ddH
+	.word   06480H
+LKDRAGON15A:
+	.word   60,71,111,-62
+	.long   04186f4bH
+	.word   06980H
+LKDRAGON15B:
+	.word   107,173,52,25
+	.long   0421b1d9H
+	.word   06b80H
+LKDRAGON15C:
+	.word   51,101,-55,22
+	.long   04227573H
+	.word   06980H
+	.TEXT
+

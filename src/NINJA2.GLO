@@ -1,0 +1,2 @@
+	.globl	ICE_P
+	.globl	BFLAME_P

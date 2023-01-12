@@ -1,0 +1,28 @@
+	.DATA
+mk2copyrgt:
+	.word   162,46,0,0
+	.long   040801eaH
+	.word   01000H
+	.long   copy_p
+thisver:
+	.word   93,8,0,0
+	.long   04081f06H
+	.word   01000H
+	.long   copy_p
+thesectest:
+	.word   123,8,0,0
+	.long   040821eeH
+	.word   01000H
+	.long   copy_p
+passed:
+	.word   46,8,0,0
+	.long   040825c6H
+	.word   01000H
+	.long   copy_p
+failed:
+	.word   45,8,0,0
+	.long   04082736H
+	.word   01000H
+	.long   copy_p
+	.TEXT
+

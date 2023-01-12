@@ -1,0 +1,196 @@
+	.DATA
+big3:
+	.word   135,99,0,0
+	.long   0566745aH
+	.word   05080H
+	.long   mk3_P
+MKRIGHT1:
+	.word   156,14,0,0
+	.long   0567636cH
+	.word   01f80H
+	.long   MKRITE_P
+CHALCOME:
+	.word   328,61,0,0
+	.long   0567685cH
+	.word   04f80H
+	.long   CHAL_P
+SUMMR94:
+	.word   244,25,0,0
+	.long   05683ca4H
+	.word   04c80H
+	.long   CHAL_P
+mkcomdisk:
+	.word   88,92,0,0
+	.long   0568972cH
+	.word   0580H
+	.long   mkcd_p
+LKRIPARM1:
+	.word   57,26,-31,-90
+	.long   056966acH
+	.word   06a80H
+	.long   LKARMS_P
+LKRIPARM2:
+	.word   64,15,6,-113
+	.long   056973d0H
+	.word   06a80H
+LKRIPARM3:
+	.word   46,48,44,-57
+	.long   05698060H
+	.word   06a80H
+LKRIPARM4:
+	.word   59,23,83,-91
+	.long   05698ff0H
+	.word   06a80H
+LKRIPARM5:
+	.word   57,10,97,-135
+	.long   05699cdeH
+	.word   06280H
+HHRIPARM1:
+	.word   53,32,-31,-88
+	.long   0569a7d8H
+	.word   06a80H
+	.long   KUNGAM_P
+HHRIPARM2:
+	.word   58,19,5,-111
+	.long   0569b7d8H
+	.word   06a80H
+HHRIPARM3:
+	.word   52,36,51,-58
+	.long   0569c584H
+	.word   06a80H
+HHRIPARM4:
+	.word   58,24,86,-91
+	.long   0569d49cH
+	.word   06a80H
+HHRIPARM5:
+	.word   63,10,104,-137
+	.long   0569e1a4H
+	.word   06280H
+NJGIRLARM1:
+	.word   53,37,-31,-76
+	.long   0569ed10H
+	.word   06680H
+	.long   fn1arm_p
+NJGIRLARM2:
+	.word   63,21,7,-107
+	.long   0569f9f6H
+	.word   06a80H
+NJGIRLARM3:
+	.word   50,40,50,-53
+	.long   056a04e8H
+	.word   06a80H
+NJGIRLARM4:
+	.word   58,25,85,-89
+	.long   056a1168H
+	.word   06a80H
+NJGIRLARM5:
+	.word   59,7,102,-138
+	.long   056a1b9cH
+	.word   06280H
+CAGERIPARM1:
+	.word   52,45,-34,-81
+	.long   056a240eH
+	.word   06a80H
+	.long   CGEARM_P
+CAGERIPARM2:
+	.word   63,27,12,-110
+	.long   056a35aeH
+	.word   06a80H
+CAGERIPARM3:
+	.word   56,43,55,-55
+	.long   056a446cH
+	.word   06a80H
+CAGERIPARM4:
+	.word   62,24,88,-92
+	.long   056a5524H
+	.word   06a80H
+CAGERIPARM5:
+	.word   61,11,104,-138
+	.long   056a628cH
+	.word   06a80H
+UGRIPARM1:
+	.word   40,53,-40,-71
+	.long   056a6dd6H
+	.word   06580H
+	.long   UGARMS_P
+UGRIPARM2:
+	.word   61,19,11,-112
+	.long   056a7ebaH
+	.word   06a80H
+UGRIPARM3:
+	.word   47,44,54,-53
+	.long   056a8decH
+	.word   06580H
+UGRIPARM4:
+	.word   57,26,84,-90
+	.long   056a9d68H
+	.word   06a80H
+UGRIPARM5:
+	.word   60,11,101,-137
+	.long   056aab34H
+	.word   06580H
+TSRIPARM1:
+	.word   39,54,-42,-74
+	.long   056ab774H
+	.word   06580H
+	.long   TSGARM_P
+TSRIPARM2:
+	.word   63,23,14,-112
+	.long   056ac74cH
+	.word   06a80H
+TSRIPARM3:
+	.word   51,43,56,-54
+	.long   056ad3f2H
+	.word   06a80H
+TSRIPARM4:
+	.word   60,25,88,-91
+	.long   056ae2b8H
+	.word   06a80H
+TSRIPARM5:
+	.word   59,10,101,-138
+	.long   056aefb0H
+	.word   06a80H
+JXRIPARM1:
+	.word   50,47,-35,-74
+	.long   056afb04H
+	.word   06a80H
+	.long   JAXARM_P
+JXRIPARM2:
+	.word   65,20,16,-111
+	.long   056b0c18H
+	.word   06a80H
+JXRIPARM3:
+	.word   48,47,53,-49
+	.long   056b1a38H
+	.word   06980H
+JXRIPARM4:
+	.word   61,27,88,-87
+	.long   056b2c18H
+	.word   06a80H
+JXRIPARM5:
+	.word   62,12,103,-134
+	.long   056b3b5aH
+	.word   06280H
+NJRIPARM1:
+	.word   35,39,-39,-85
+	.long   056b4784H
+	.word   06580H
+	.long   scarm_p
+NJRIPARM2:
+	.word   44,26,-1,-109
+	.long   056b53eaH
+	.word   06580H
+NJRIPARM3:
+	.word   37,36,56,-52
+	.long   056b5f2eH
+	.word   06580H
+NJRIPARM4:
+	.word   46,20,87,-91
+	.long   056b6ae6H
+	.word   06680H
+NJRIPARM5:
+	.word   47,12,99,-136
+	.long   056b7612H
+	.word   06480H
+	.TEXT
+

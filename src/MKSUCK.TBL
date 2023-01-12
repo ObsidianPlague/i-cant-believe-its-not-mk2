@@ -1,0 +1,367 @@
+	.DATA
+SUCK_JAX1A:
+	.word   29,86,125,-38
+	.long   04c55d8fH
+	.word   06580H
+SUCK_JAX1B:
+	.word   52,131,96,-11
+	.long   04c5786fH
+	.word   06880H
+SUCK_JAX2A:
+	.word   28,38,150,-28
+	.long   04c5c289H
+	.word   06580H
+SUCK_JAX2B:
+	.word   78,99,122,-8
+	.long   04c5cd3dH
+	.word   06d80H
+SUCK_JAX3A:
+	.word   96,58,140,-6
+	.long   04c61705H
+	.word   06d80H
+SUCK_JAX4A:
+	.word   64,39,109,-5
+	.long   04c64665H
+	.word   06980H
+SUCK_JAX5A:
+	.word   47,24,91,-5
+	.long   04c65e65H
+	.word   06980H
+SUCK_JAX6A:
+	.word   20,8,65,-15
+	.long   04c66b19H
+	.word   06080H
+SUCK_TSUNG1A:
+	.word   25,80,125,-42
+	.long   04c66e53H
+	.word   06580H
+SUCK_TSUNG1B:
+	.word   58,117,100,-14
+	.long   04c686e7H
+	.word   06980H
+SUCK_TSUNG2A:
+	.word   26,59,142,-32
+	.long   04c6ce0fH
+	.word   06580H
+SUCK_TSUNG2B:
+	.word   73,102,116,-12
+	.long   04c6dffbH
+	.word   06880H
+SUCK_TSUNG3A:
+	.word   24,37,140,-18
+	.long   04c72195H
+	.word   06580H
+SUCK_TSUNG3B:
+	.word   72,82,116,-8
+	.long   04c72bedH
+	.word   06880H
+SUCK_TSUNG4A:
+	.word   80,53,122,-8
+	.long   04c7613bH
+	.word   06980H
+SUCK_TSUNG5A:
+	.word   54,35,98,-8
+	.long   04c78707H
+	.word   06880H
+SUCK_TSUNG6A:
+	.word   35,15,78,-14
+	.long   04c799fbH
+	.word   06580H
+SUCK_TSUNG7A:
+	.word   23,9,67,-12
+	.long   04c7a175H
+	.word   06080H
+SUCK_RAIDEN1A:
+	.word   39,70,158,-43
+	.long   04c7a53bH
+	.word   06580H
+SUCK_RAIDEN1B:
+	.word   71,120,119,-10
+	.long   04c7beabH
+	.word   06980H
+SUCK_RAIDEN2A:
+	.word   36,46,171,-33
+	.long   04c818ffH
+	.word   06580H
+SUCK_RAIDEN2B:
+	.word   91,101,135,-9
+	.long   04c82a83H
+	.word   06d80H
+SUCK_RAIDEN3A:
+	.word   34,31,169,-10
+	.long   04c88829H
+	.word   06580H
+SUCK_RAIDEN3B:
+	.word   90,83,135,-4
+	.long   04c89509H
+	.word   06c80H
+SUCK_RAIDEN4A:
+	.word   100,66,146,6
+	.long   04c8e295H
+	.word   06e80H
+SUCK_RAIDEN5A:
+	.word   72,54,117,11
+	.long   04c922b5H
+	.word   06980H
+SUCK_RAIDEN6A:
+	.word   58,36,103,2
+	.long   04c94a75H
+	.word   06980H
+SUCK_RAIDEN7A:
+	.word   42,13,87,-10
+	.long   04c9613dH
+	.word   06180H
+SUCK_RAIDEN8A:
+	.word   19,10,64,-11
+	.long   04c96acfH
+	.word   06080H
+SUCK_NINJA1A:
+	.word   23,92,126,-24
+	.long   04c96e07H
+	.word   06180H
+SUCK_NINJA1B:
+	.word   58,127,103,-2
+	.long   04c98977H
+	.word   06880H
+SUCK_NINJA2A:
+	.word   26,59,149,-24
+	.long   04c9dc8fH
+	.word   06180H
+SUCK_NINJA2B:
+	.word   77,108,123,-1
+	.long   04c9eddfH
+	.word   06980H
+SUCK_NINJA3A:
+	.word   23,33,150,-11
+	.long   04ca3f93H
+	.word   06180H
+SUCK_NINJA3B:
+	.word   83,88,127,0
+	.long   04ca494dH
+	.word   06d80H
+SUCK_NINJA4A:
+	.word   32,69,145,-1
+	.long   04ca8cd5H
+	.word   06580H
+SUCK_NINJA4B:
+	.word   69,33,113,1
+	.long   04caa271H
+	.word   06880H
+SUCK_NINJA5A:
+	.word   78,48,123,7
+	.long   04cac2edH
+	.word   06e80H
+SUCK_NINJA6A:
+	.word   54,26,99,2
+	.long   04cae3a5H
+	.word   06980H
+SUCK_NINJA7A:
+	.word   32,12,77,-9
+	.long   04caf399H
+	.word   06580H
+SUCK_NINJA8A:
+	.word   15,8,60,-13
+	.long   04caf8cdH
+	.word   06080H
+SUCK_BARAKA1A:
+	.word   37,91,133,-15
+	.long   04cafb77H
+	.word   06580H
+SUCK_BARAKA1B:
+	.word   50,118,96,-7
+	.long   04cb1ee9H
+	.word   06880H
+SUCK_BARAKA2A:
+	.word   25,31,160,-30
+	.long   04cb618dH
+	.word   06580H
+SUCK_BARAKA2B:
+	.word   94,98,135,-2
+	.long   04cb6bd3H
+	.word   06d80H
+SUCK_BARAKA3A:
+	.word   125,72,167,0
+	.long   04cbc4e7H
+	.word   06e80H
+SUCK_BARAKA4A:
+	.word   95,48,139,11
+	.long   04cc1cbfH
+	.word   06e80H
+SUCK_BARAKA5A:
+	.word   68,32,113,9
+	.long   04cc51cfH
+	.word   06580H
+SUCK_BARAKA6A:
+	.word   46,22,91,1
+	.long   04cc7183H
+	.word   06580H
+SUCK_BARAKA7A:
+	.word   23,11,68,-10
+	.long   04cc810fH
+	.word   06080H
+SUCK_KATANA1A:
+	.word   28,92,129,-24
+	.long   04cc8587H
+	.word   06580H
+SUCK_KATANA1B:
+	.word   55,123,101,-13
+	.long   04cc9f0bH
+	.word   06880H
+SUCK_KATANA2A:
+	.word   27,45,169,-35
+	.long   04ccead7H
+	.word   06580H
+SUCK_KATANA2B:
+	.word   97,106,142,-5
+	.long   04ccf839H
+	.word   06d80H
+SUCK_KATANA3A:
+	.word   26,65,163,-17
+	.long   04cd518dH
+	.word   06580H
+SUCK_KATANA3B:
+	.word   92,89,137,-2
+	.long   04cd6391H
+	.word   06e80H
+SUCK_KATANA4A:
+	.word   89,62,135,2
+	.long   04cda829H
+	.word   06e80H
+SUCK_KATANA5A:
+	.word   81,49,126,9
+	.long   04cdda3dH
+	.word   06e80H
+SUCK_KATANA6A:
+	.word   62,20,108,-2
+	.long   04cdfbc3H
+	.word   06280H
+SUCK_KATANA7A:
+	.word   33,14,78,-7
+	.long   04ce0e63H
+	.word   06580H
+SUCK_KATANA8A:
+	.word   18,10,63,-11
+	.long   04ce13fbH
+	.word   06080H
+SUCK_CAGE1A:
+	.word   25,94,124,-27
+	.long   04ce16f7H
+	.word   06480H
+SUCK_CAGE1B:
+	.word   53,126,99,-12
+	.long   04ce37e7H
+	.word   06980H
+SUCK_CAGE2A:
+	.word   23,46,164,-26
+	.long   04ce8377H
+	.word   06180H
+SUCK_CAGE2B:
+	.word   95,104,141,-1
+	.long   04ce90e1H
+	.word   06c80H
+SUCK_CAGE3A:
+	.word   17,59,170,-1
+	.long   04ceef4dH
+	.word   06180H
+SUCK_CAGE3B:
+	.word   107,84,153,10
+	.long   04cf004fH
+	.word   06d80H
+SUCK_CAGE4A:
+	.word   97,61,144,8
+	.long   04cf5737H
+	.word   06d80H
+SUCK_CAGE5A:
+	.word   85,33,133,3
+	.long   04cf9195H
+	.word   06e80H
+SUCK_CAGE6A:
+	.word   59,23,106,3
+	.long   04cfb343H
+	.word   06a80H
+SUCK_CAGE7A:
+	.word   22,16,69,-4
+	.long   04cfc3c1H
+	.word   06080H
+SUCK_LUNGLAO1A:
+	.word   28,67,155,-35
+	.long   04cfc867H
+	.word   06580H
+SUCK_LUNGLAO1B:
+	.word   83,129,127,-2
+	.long   04cfde23H
+	.word   06d80H
+SUCK_LUNGLAO2A:
+	.word   27,41,167,-14
+	.long   04d040a5H
+	.word   06580H
+SUCK_LUNGLAO2B:
+	.word   98,106,140,3
+	.long   04d04df3H
+	.word   06d80H
+SUCK_LUNGLAO3A:
+	.word   24,81,164,13
+	.long   04d0ae37H
+	.word   06180H
+SUCK_LUNGLAO3B:
+	.word   96,52,140,18
+	.long   04d0c517H
+	.word   06d80H
+SUCK_LUNGLAO4A:
+	.word   106,57,149,17
+	.long   04d112fbH
+	.word   06e80H
+SUCK_LUNGLAO5A:
+	.word   74,32,119,11
+	.long   04d1527fH
+	.word   06680H
+SUCK_LUNGLAO6A:
+	.word   53,27,96,6
+	.long   04d171ebH
+	.word   06680H
+SUCK_LUNGLAO7A:
+	.word   24,16,68,-5
+	.long   04d18205H
+	.word   06080H
+SUCK_LIUKANG1A:
+	.word   27,75,140,-35
+	.long   04d18723H
+	.word   06580H
+SUCK_LIUKANG1B:
+	.word   68,120,113,-7
+	.long   04d19fddH
+	.word   06880H
+SUCK_LIUKANG2A:
+	.word   22,39,165,-23
+	.long   04d1efb7H
+	.word   06080H
+SUCK_LIUKANG2B:
+	.word   97,96,143,-3
+	.long   04d1faa3H
+	.word   06d80H
+SUCK_LIUKANG3A:
+	.word   26,69,160,6
+	.long   04d25053H
+	.word   06580H
+SUCK_LIUKANG3B:
+	.word   87,47,134,10
+	.long   04d26457H
+	.word   06d80H
+SUCK_LIUKANG4A:
+	.word   100,44,146,10
+	.long   04d2a331H
+	.word   06e80H
+SUCK_LIUKANG5A:
+	.word   70,30,117,7
+	.long   04d2daf1H
+	.word   06680H
+SUCK_LIUKANG6A:
+	.word   43,23,89,2
+	.long   04d2f549H
+	.word   06580H
+SUCK_LIUKANG7A:
+	.word   17,19,63,-4
+	.long   04d30117H
+	.word   06080H
+	.TEXT
+

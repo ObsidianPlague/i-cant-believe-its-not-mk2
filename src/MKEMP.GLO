@@ -1,0 +1,7 @@
+	.globl	HOMORPH_P
+	.globl	KMORPH_P
+	.globl	RDMORPH_P
+	.globl	VDMORPH_P
+	.globl	SCORPMO_P
+	.globl	GOMORPH_P
+	.globl	SUBMO_P

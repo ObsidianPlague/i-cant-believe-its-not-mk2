@@ -1,0 +1,3 @@
+	.globl	ROPE_P
+	.globl	SKEL_P
+	.globl	SPINE_P

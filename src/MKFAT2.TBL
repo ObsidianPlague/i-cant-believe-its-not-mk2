@@ -1,0 +1,153 @@
+	.DATA
+CHUNK1A:
+	.word   51,63,25,31
+	.long   04809a0dH
+	.word   06580H
+	.long   DGUTZ_P
+BLDSPLASH1:
+	.word   19,12,10,5
+	.long   0480cac7H
+	.word   06080H
+	.long   BLOODY_P
+CHUNK1B:
+	.word   54,56,26,27
+	.long   0480ced5H
+	.word   06580H
+CHUNK1C:
+	.word   63,51,31,25
+	.long   048101fdH
+	.word   06580H
+CHUNK2A:
+	.word   11,32,5,15
+	.long   0481318bH
+	.word   06000H
+CHUNK2B:
+	.word   27,24,13,11
+	.long   048139cbH
+	.word   06580H
+CHUNK2C:
+	.word   32,9,15,4
+	.long   048140bbH
+	.word   06480H
+CHUNK3A:
+	.word   27,24,13,11
+	.long   04814685H
+	.word   06080H
+CHUNK3B:
+	.word   34,29,16,14
+	.long   048153ffH
+	.word   06080H
+CHUNK3C:
+	.word   24,28,11,13
+	.long   0481622bH
+	.word   06080H
+CHUNK4A:
+	.word   31,15,15,7
+	.long   04816fefH
+	.word   06180H
+CHUNK4B:
+	.word   27,25,13,12
+	.long   04817883H
+	.word   06480H
+CHUNK4C:
+	.word   15,31,7,15
+	.long   048181cdH
+	.word   06080H
+CHUNK5A:
+	.word   26,31,12,15
+	.long   04818af3H
+	.word   06080H
+CHUNK5B:
+	.word   28,32,13,15
+	.long   048198f9H
+	.word   06080H
+CHUNK5C:
+	.word   31,26,15,12
+	.long   0481a707H
+	.word   06180H
+CHUNK6A:
+	.word   18,21,8,10
+	.long   0481b52dH
+	.word   06080H
+CHUNK6B:
+	.word   20,22,9,10
+	.long   0481bbe7H
+	.word   06080H
+CHUNK6C:
+	.word   21,18,10,8
+	.long   0481c3c3H
+	.word   06080H
+CHUNK7A:
+	.word   29,31,14,15
+	.long   0481cb0dH
+	.word   06080H
+CHUNK7B:
+	.word   30,31,14,15
+	.long   0481daabH
+	.word   06080H
+CHUNK7C:
+	.word   31,29,15,14
+	.long   0481e977H
+	.word   06080H
+CHUNK8A:
+	.word   19,33,9,16
+	.long   0481f8abH
+	.word   06080H
+CHUNK8B:
+	.word   30,27,14,13
+	.long   048203ebH
+	.word   06480H
+CHUNK8C:
+	.word   33,18,16,8
+	.long   04820f31H
+	.word   06580H
+CHUNK9A:
+	.word   19,14,9,6
+	.long   048217ddH
+	.word   06080H
+CHUNK9B:
+	.word   15,19,7,9
+	.long   04821c73H
+	.word   06080H
+CHUNK9C:
+	.word   14,19,6,9
+	.long   048221c7H
+	.word   06080H
+CHUNK10A:
+	.word   30,29,14,14
+	.long   04822715H
+	.word   06180H
+CHUNK10B:
+	.word   24,35,11,17
+	.long   048232ddH
+	.word   06080H
+CHUNK10C:
+	.word   29,30,14,14
+	.long   04823de5H
+	.word   06180H
+CHUNK11A:
+	.word   17,27,8,13
+	.long   048249f1H
+	.word   06080H
+CHUNK11B:
+	.word   23,22,11,10
+	.long   04825243H
+	.word   06080H
+CHUNK11C:
+	.word   27,18,13,8
+	.long   04825a97H
+	.word   06080H
+CHUNK12A:
+	.word   26,31,12,15
+	.long   0482630dH
+	.word   06080H
+CHUNK12B:
+	.word   28,32,13,15
+	.long   04827113H
+	.word   06080H
+CHUNK12C:
+	.word   31,27,15,13
+	.long   04827f81H
+	.word   06180H
+	.TEXT
+

@@ -1,0 +1,117 @@
+MIDWAY
+Video Game Department
+____________________
+
+Background File Format
+
+Copyright 1987 Midway Manufacturing Company
+All Rights Reserved
+
+
+        Backgrounds
+        
+	   Backgrounds are nothing more than several images placed together to
+	   form an element or module.  Each image is called a block.  The
+	   different blocks may use the same image data.  The modules are then
+	   used by the game program to construct the
+	   finished background.
+
+		Examples:
+
+			In NARC each module usually made up one building.  The
+			program would then place these modules side by side to
+			form a city street.
+
+			In TROG each module made up one of the islands.
+
+			In T2 each module made up all or part of one scrolling
+			plane.
+
+        Background Files
+        
+	    There are actually two files associated with any given set of
+	    backgrounds.  The first has an extension of BDB.  This file
+	    contains all of the block position and module information.  The
+	    second has an extension of BDD.  This file contains all of the
+	    image data and palette information.
+
+        BDB File Format
+        
+	The BDB file is stored as an ASCII file.
+
+	   The BDB file header is as follows:
+
+		Variable	Type		Description
+		name		string		name of background
+		xlength		unsigned word	x length of background
+		ylength		unsigned word	y length of background
+		zlength		unsigned word	z length of background
+		numMods	unsigned word	number of defined modules
+		numPals	unsigned word	number of stored palettes
+		numBlocks	unsigned word	total number of blocks
+                        
+	Following the header in the BDB file is a list of the module
+	definitions numMods long.
+
+	   A module definition is as follows: 
+
+		Variable	Type		Definition
+		mod_name	string		name of module
+		mod_ul_x	unsigned word	upper left x coord. of mod
+		mod_lr_x	unsigned word	lower right x coord. of mod
+		mod_ul_y	unsigned word	upper left y coord. of mod
+		mod_lr_y	unsigned word	lower right y coord. of mod
+
+	Following the module definitions in the BDB file is a sequential list
+	of all of the visible background blocks.
+
+	   A background block definition is as follows:       
+
+		Variable	Type		Description
+	(hex)	block_z		unsigned word	block z position in universe
+		block_x		unsigned word	block x position in universe
+		block_y		unsigned word	block y position in universe
+	(hex)	block_hdr	unsigned word	data header index
+		block_pal	unsigned word	palette index
+
+	BDD File Format
+
+	The BDD file is mostly binary however all header information is stored
+	in ASCII.
+
+	  The BDD file header is as follows:
+
+		Variable	Type		Definition
+		num_images	unsigned word	number of images
+
+	The data for each background image follows the image header.  They are
+	in sequential order.  Each image has a header and then the data stored
+	as follows: 
+     
+		Variable	Type		Definition     
+	(hex)	old_hdr		unsigned word   matches block_hdr field in
+						block definition
+		width		unsigned word	x width of image
+		height		unsigned word	y height of image
+		big_pal		unsigned word	ignore
+
+		There are (width*height) bytes of data that follow the image
+		header.  This is the actual image data.
+
+	In order to associate the the image data with a given block, you must
+	scan through the image headers until you find one whose old_hdr field
+	matches the block_hdr field of the block you are working on.
+
+	Following all of the image data is the color palette data.  The
+	palettes are stored the same way as the images(i.e header followed by
+	data).  The format is as follows:
+
+		Variable	Type		Definition           
+		pname		string		palette name
+		ncolors		unsigned word	number of colors stored
+
+		There are (ncolors*2) bytes of data that follow a given
+		palette's header.  This is the actual color data.
+
+	To associate a color palette with a given block, use the block_pal
+	field in the block header as a direct index to the correct palette.   

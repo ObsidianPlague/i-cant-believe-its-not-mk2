@@ -1,0 +1,714 @@
+**************************************************************************
+*											     *
+*  video game project:	Mortal Kombat 2							*
+* 											     *
+*  game software:    	Ed Boon								     *
+* 											     *
+*  module: Shao Kahn										*
+*											     *
+**************************************************************************
+	.FILE	'MKSK.ASM'
+	.WIDTH	132
+	.OPTION	B,D,L,T
+	.MNOLIST
+*
+* GET THE SYSTEM STUFF
+*
+	.INCLUDE	MAINEQU.ASM
+	.INCLUDE	MKSK.TBL
+	.INCLUDE	IMGTBL.GLO
+	.text
+
+sk_anitab1
+	.long	a_skstance   	; 0 = stance
+	.long	a_skwalkf    	; 1 = walk forward
+	.long	a_skturn     	; 2 = turnaround
+	.long	a_skpunch    	; 3 = punch
+	.long	a_skkick     	; 4 = kick
+	.long	a_skuppercut 	; 5 = uppercut
+	.long	a_sk_spear	; 6 = spear
+	.long	a_sk_swept	; 7 = swept
+	.long	a_skblock    	; 8 = block
+	.long	a_skkdown    	; 9 = knocked down
+	.long	a_skwalkb    	; a = walk backward
+	.long	a_skgetup	; b = getup
+	.long	a_skhit		; c = getting hit
+	.long	a_sk_laugh   	; d = victory	
+	.long	kahn_dummy	; e = 
+	.long	a_sk_zap	; f = projectile throw
+	.long	a_sk_stumble	; 10 = stumble
+	.long	a_bike_kicked	; 11 = bike kicked
+	.long	kahn_dummy	; 12 =
+	.long	a_sk_noogied	; 13 = noogy by jax
+	.long	a_skcharge   	; 14 = charge attack
+	.long	a_shredded	; 15 =
+	.long	a_stone_crack  	; 16 = stone cracking !!
+	.long	stone_explode	; 17	=
+	.long	a_sk_talkup	; 18	=
+	.long	a_sk_talkdown	; 19	=
+sk_anitab2
+
+;*************************************************************************
+
+kahn_dummy
+a_skstance
+	.long	BGSTANCE1
+	.long	BGSTANCE2
+	.long	BGSTANCE3
+	.long	BGSTANCE4
+	.long	BGSTANCE5
+	.long	BGSTANCE6
+	.long	BGSTANCE7
+	.long	ani_jump,a_skstance
+
+BGSTANCE1
+	.long	BGSTANCE1A,BGSTANCE1B,0
+BGSTANCE2
+	.long	BGSTANCE2A,BGSTANCE2B,0
+BGSTANCE3
+	.long	BGSTANCE3A,BGSTANCE3B,BGSTANCE3C,0
+BGSTANCE4
+	.long	BGSTANCE4A,BGSTANCE4B,BGSTANCE4C,0
+BGSTANCE5
+	.long	BGSTANCE5A,BGSTANCE5B,BGSTANCE5C,0
+BGSTANCE6
+	.long	BGSTANCE6A,BGSTANCE6B,BGSTANCE6C,0
+BGSTANCE7
+	.long	BGSTANCE7A,BGSTANCE7B,0
+
+;*************************************************************************
+
+a_skwalkf
+	.long	BGWALK1
+	.long	BGWALK2
+	.long	BGWALK3
+	.long	BGWALK4
+	.long	BGWALK5
+	.long	BGWALK6
+	.long	BGWALK7
+	.long	BGWALK8
+	.long	BGWALK9
+	.long	ani_jump,a_skwalkf
+
+a_skwalkb
+	.long	BGWALK9
+	.long	BGWALK8
+	.long	BGWALK7
+	.long	BGWALK6
+	.long	BGWALK5
+	.long	BGWALK4
+	.long	BGWALK3
+	.long	BGWALK2
+	.long	BGWALK1
+	.long	ani_jump,a_skwalkb
+
+
+BGWALK1	.long	BGWALKTORSO1,BGWALKLEG1A,BGWALKLEG1B,0
+BGWALK2	.long	BGWALKTORSO2,BGWALKLEG2A,BGWALKLEG2B,0
+BGWALK3	.long	BGWALKTORSO3,BGWALKLEG3A,BGWALKLEG3B,0
+BGWALK4	.long	BGWALKTORSO4,BGWALKLEG4A,0
+BGWALK5	.long	BGWALKTORSO5,BGWALKLEG5A,BGWALKLEG5B,0
+BGWALK6	.long	BGWALKTORSO6,BGWALKLEG6A,BGWALKLEG6B,0
+BGWALK7	.long	BGWALKTORSO7,BGWALKLEG7A,BGWALKLEG7B,0
+BGWALK8	.long	BGWALKTORSO8,BGWALKLEG8A,BGWALKLEG8B,0
+BGWALK9	.long	BGWALKTORSO9,BGWALKLEG9A,BGWALKLEG9B,0
+
+;*************************************************************************
+
+a_skturn
+	.long	BGTURN1
+	.long	BGTURN2
+	.long	ani_flip
+	.long	BGTURN1
+	.long	0
+
+BGTURN1	.long	BGTURN1A,BGTURN1B,BGTURN1C,0
+BGTURN2	.long	BGTURN2A,BGTURN2B,0
+
+;*************************************************************************
+
+a_skuppercut
+	.long	BGUPPERCUT1
+	.long	BGUPPERCUT2
+	.long	BGUPPERCUT3
+	.long	BGUPPERCUT4
+	.long	BGUPPERCUT5
+	.long	ani_nosleep
+	.long	BGUPPERCUT6
+	.long	0
+	.long	BGUPPERCUT7
+	.long	0
+
+BGUPPERCUT1
+	.long	BGUPPERCUT1A,BGUPPERCUT1B,BGUPPERCUT1C,BGUPPERCUT1D,0
+BGUPPERCUT2
+	.long	BGUPPERCUT2A,BGUPPERCUT2B,BGUPPERCUT2C,0
+BGUPPERCUT3
+	.long	BGUPPERCUT3A,BGUPPERCUT3B,0
+BGUPPERCUT4
+	.long	BGUPPERCUT4A,BGUPPERCUT4B,BGUPPERCUT4C,BGUPPERCUT4D,0
+BGUPPERCUT5
+	.long	BGUPPERCUT5A,BGUPPERCUT5B,BGUPPERCUT5C,BGUPPERCUT5D,0
+BGUPPERCUT6
+	.long	BGUPPERCUT6A,BGUPPERCUT6B,BGUPPERCUT6C,BGUPPERCUT6D,0
+BGUPPERCUT7
+	.long	BGUPPERCUT7A,BGUPPERCUT7B,BGUPPERCUT7C,0
+
+;************************************************************************
+
+a_skpunch
+	.long	BGPUNCH1
+	.long	BGPUNCH2
+	.long	BGPUNCH3
+	.long	BGPUNCH4
+	.long	BGPUNCH5
+	.long	0
+
+	.long	BGPUNCH2
+	.long	BGPUNCH1
+	.long	0
+
+BGPUNCH1	.long	BGPUNCH1A,BGPUNCH1B,BGPUNCH1C,0
+BGPUNCH2	.long	BGPUNCH2A,BGPUNCH2B,0
+BGPUNCH3	.long	BGPUNCH3A,BGPUNCH3B,0
+BGPUNCH4	.long	BGPUNCH4A,BGPUNCH4B,BGPUNCH4C,0
+BGPUNCH5	.long	BGPUNCH5A,BGPUNCH5B,BGPUNCH5C,0
+
+;************************************************************************
+
+a_sk_laugh
+	.long	BGLAFF1
+	.long	BGLAFF2
+	.long	BGLAFF3
+	.long	BGLAFF4
+	.long	BGLAFF3
+	.long	BGLAFF2
+	.long	ani_jump,a_sk_laugh
+
+BGLAFF1	.long	BGLAFFLEG1A,BGLAFFLEG1B,BGLAFF1A,BGLAFF1B,0
+BGLAFF2	.long	BGLAFFLEG1A,BGLAFFLEG1B,BGLAFF2A,BGLAFF2B,BGLAFF2C,BGLAFF2D,0
+BGLAFF3	.long	BGLAFFLEG1A,BGLAFFLEG1B,BGLAFF3A,BGLAFF3B,BGLAFF3C,BGLAFF3D,0
+BGLAFF4	.long	BGLAFFLEG1A,BGLAFFLEG1B,BGLAFF4A,BGLAFF4B,BGLAFF4C,BGLAFF4D,0
+
+;************************************************************************
+
+a_skkick
+	.long	BGKICK1
+	.long	BGKICK2
+	.long	BGKICK3
+	.long	BGKICK4
+	.long	BGKICK5
+	.long	0
+	.long	BGKICK4
+	.long	BGKICK3
+	.long	BGKICK2
+	.long	BGKICK1
+	.long	0
+
+BGKICK1	.long	BGKICK1A,BGKICK1B,BGKICK1C,0
+BGKICK2	.long	BGKICK2A,BGKICK2B,BGKICK2C,0
+BGKICK3	.long	BGKICK3A,BGKICK3B,BGKICK3C,BGKICK3D,0
+BGKICK4	.long	BGKICK4A,BGKICK4B,0
+BGKICK5	.long	BGKICK5A,BGKICK5B,BGKICK5C,0
+
+;************************************************************************
+
+a_skcharge
+	.long	BGCHARGE1
+	.long	BGCHARGE2
+	.long	BGCHARGE3
+	.long	BGCHARGE4
+	.long	0
+	.long	BGCHARGE3
+	.long	BGCHARGE2
+	.long	BGCHARGE1
+	.long	0
+
+BGCHARGE1
+	.long	BGCHARGE1A,BGCHARGE1B,BGCHARGE1C,0
+BGCHARGE2
+	.long	BGCHARGE2A,BGCHARGE2B,BGCHARGE2C,0
+BGCHARGE3
+	.long	BGCHARGE3A,BGCHARGE3B,BGCHARGE3C,0
+BGCHARGE4
+	.long	BGCHARGE4A,BGCHARGE4B,BGCHARGE4C,0
+
+;************************************************************************
+
+a_skblock
+	.long	BGBLOCK1
+	.long	BGBLOCK2
+	.long	BGBLOCK3
+	.long	0
+	.long	BGBLOCK2
+	.long	BGBLOCK1
+	.long	0
+
+BGBLOCK1	.long	BGBLOCK1A,BGBLOCK1B,BGBLOCK1C,0
+BGBLOCK2	.long	BGBLOCK2A,BGBLOCK2B,0
+BGBLOCK3	.long	BGBLOCK3A,BGBLOCK3B,0
+
+;************************************************************************
+
+
+BGJUMP1	.long	BGJUMP1A,BGJUMP1B,BGJUMP1C,0
+BGJUMP2	.long	BGJUMP2A,BGJUMP2B,BGJUMP2C,0
+BGJUMP3	.long	BGJUMP3A,BGJUMP3B,BGJUMP3C,0
+
+;************************************************************************
+
+a_skkdown
+	.long	BGKNOCKDOWN1
+	.long	BGKNOCKDOWN2
+	.long	BGKNOCKDOWN3
+	.long	BGKNOCKDOWN4
+	.long	BGKNOCKDOWN5
+	.long	BGKNOCKDOWN6
+	.long	0
+	.long	BGKNOCKDOWN7
+	.long	BGKNOCKDOWN8
+	.long	BGKNOCKDOWN9
+	.long	0
+	.long	BGKNOCKDOWN8
+	.long	BGKNOCKDOWN9
+	.long	BGKNOCKDOWN9		; we need this
+	.long	0
+
+BGKNOCKDOWN1
+	.long	BGKNOCKDOWN1A,BGKNOCKDOWN1B,BGKNOCKDOWN1C,0
+BGKNOCKDOWN2
+	.long	BGKNOCKDOWN2A,BGKNOCKDOWN2B,BGKNOCKDOWN2C,BGKNOCKDOWN2D,0
+BGKNOCKDOWN3
+	.long	BGKNOCKDOWN3A,BGKNOCKDOWN3B,BGKNOCKDOWN3C,BGKNOCKDOWN3D,0
+BGKNOCKDOWN4
+	.long	BGKNOCKDOWN4A,BGKNOCKDOWN4B,BGKNOCKDOWN4C,BGKNOCKDOWN4D,0
+BGKNOCKDOWN5
+	.long	BGKNOCKDOWN5A,BGKNOCKDOWN5B,BGKNOCKDOWN5C,0
+BGKNOCKDOWN6
+	.long	BGKNOCKDOWN6A,BGKNOCKDOWN6B,BGKNOCKDOWN6C,BGKNOCKDOWN6D,0
+BGKNOCKDOWN7
+	.long	BGKNOCKDOWN7A,BGKNOCKDOWN7B,BGKNOCKDOWN7C,BGKNOCKDOWN7D,0
+BGKNOCKDOWN8
+	.long	BGKNOCKDOWN8A,BGKNOCKDOWN8B,BGKNOCKDOWN8C,BGKNOCKDOWN8D,0
+BGKNOCKDOWN9
+	.long	BGKNOCKDOWN9A,BGKNOCKDOWN9B,BGKNOCKDOWN9C,0
+
+;************************************************************************
+
+BGBIGPOW1
+	.long	BGBIGPOW1A,BGBIGPOW1B,BGBIGPOW1C,0
+BGBIGPOW2
+	.long	BGBIGPOW2A,BGBIGPOW2B,BGBIGPOW2C,0
+BGBIGPOW3
+	.long	BGBIGPOW3A,BGBIGPOW3B,BGBIGPOW3C,0
+BGBIGPOW4
+	.long	BGBIGPOW4A,BGBIGPOW4B,BGBIGPOW4C,0
+BGBIGPOW5
+	.long	BGBIGPOW5A,BGBIGPOW5B,BGBIGPOW5C,BGBIGPOW5D
+	.long	0
+BGBIGPOW6
+	.long	BGBIGPOW6A,BGBIGPOW6B,BGBIGPOW6C,0
+BGBIGPOW7
+	.long	BGBIGPOW7A,BGBIGPOW7B,BGBIGPOW7C,0
+BGBIGPOW8
+	.long	BGBIGPOW8A,BGBIGPOW8B,BGBIGPOW8C,0
+BGBIGPOW9
+	.long	BGBIGPOW9A,BGBIGPOW9B,0
+
+
+
+BGJUMPFLY1
+	.long	BGJUMPFLY1A,BGJUMPFLY1B,0
+BGJUMPFLY2
+	.long	BGJUMPFLY2A,BGJUMPFLY2B,0
+BGJUMPFLY3
+	.long	BGJUMPFLY3A,BGJUMPFLY3B,BGJUMPFLY3C,0
+
+;****************************************************************************
+
+a_sk_zap
+	.long	BGTHROW1
+	.long	BGTHROW2
+	.long	BGTHROW3
+	.long	BGTHROW4
+	.long	0
+	.long	BGTHROW5
+	.long	0
+
+BGTHROW1	.long	BGTHROW1A,BGTHROW1B,BGTHROW1C,BGTHROW1D,0
+BGTHROW2	.long	BGTHROW2A,BGTHROW2B,BGTHROW2C,BGTHROW2D,0
+BGTHROW3	.long	BGTHROW3A,BGTHROW3B,BGTHROW3C,BGTHROW3D,BGTHROW3E,0
+BGTHROW4	.long	BGTHROW4A,BGTHROW4B,BGTHROW4C,BGTHROW4D,0
+BGTHROW5	.long	BGTHROW5A,BGTHROW5B,BGTHROW5C,BGTHROW5D,BGTHROW5E,0
+
+a_sk_spear
+	.long	SPEAR1
+	.long	SPEAR2
+	.long	SPEAR3
+	.long	SPEAR4
+	.long	0
+
+j_spear	.long	SPEAR4
+	.long	SPEAR5
+	.long	ani_jump,j_spear
+	.long	0
+*
+* spear hit
+*
+	.long	SPEAR6
+	.long	SPEAR7
+	.long	SPEAR8
+	.long	SPEAR9
+	.long	SPEAR10
+	.long	SPEAR11
+	.long	SPEAR12
+	.long	SPEAR13
+	.long	0
+
+SPEAR1	.long	BGSPEAR1,0
+SPEAR2	.long	BGSPEAR2,0
+SPEAR3	.long	BGSPEAR3,0
+SPEAR4	.long	BGSPEAR4,0
+SPEAR5	.long	BGSPEAR5,0
+SPEAR6	.long	BGSPEAR6,0
+SPEAR7	.long	BGSPEAR7,0
+SPEAR8	.long	BGSPEAR8,0
+SPEAR9	.long	BGSPEAR9,0
+SPEAR10	.long	BGSPEAR10,0
+SPEAR11	.long	BGSPEAR11,0
+SPEAR12	.long	BGSPEAR12,0
+SPEAR13	.long	BGSPEAR13,0
+
+;****************************************************************************
+
+BGSLAM1	.long	BGSLAM1A,BGSLAM1B,BGSLAM1C,0
+BGSLAM2	.long	BGSLAM2A,BGSLAM2B,0
+BGSLAM3	.long	BGSLAM3A,BGSLAM3B,0
+BGSLAM4	.long	BGSLAM4A,BGSLAM4B,BGSLAM4C,BGSLAM4D,0
+BGSLAM5	.long	BGSLAM5A,BGSLAM5B,BGSLAM5C,0
+BGSLAM6	.long	BGSLAM6A,BGSLAM6B,0
+
+;****************************************************************************
+
+BGSONICLAP1
+	.long	BGSONICLAP1A,BGSONICLAP1B,BGSONICLAP1C,0
+BGSONICLAP2
+	.long	BGSONICLAP2A,BGSONICLAP2B,BGSONICLAP2C,0
+BGSONICLAP3
+	.long	BGSONICLAP3A,BGSONICLAP3B,BGSONICLAP3C,0
+BGSONICLAP4
+	.long	BGSONICLAP4A,BGSONICLAP4B,BGSONICLAP4C,BGSONICLAP4D
+	.long	0
+BGSONICLAP5
+	.long	BGSONICLAP5A,BGSONICLAP5B,BGSONICLAP5C,0
+BGPORTPUNCH1
+	.long	BGPORTPUNCH1A,BGPORTPUNCH1B,BGPORTPUNCH1C,BGPORTPUNCH1D
+	.long	0
+BGPORTPUNCH2
+	.long	BGPORTPUNCH2A,BGPORTPUNCH2B,BGPORTPUNCH2C,BGPORTPUNCH2D
+	.long	0
+BGPORTPUNCH3
+	.long	BGPORTPUNCH3A,BGPORTPUNCH3B,BGPORTPUNCH3C,BGPORTPUNCH3D
+	.long	BGPORTPUNCH3E,0
+BGPORTPUNCH4
+	.long	BGPORTPUNCH4A,BGPORTPUNCH4B,0
+BGPORTPUNCH5
+	.long	BGPORTPUNCH5A,BGPORTPUNCH5B,BGPORTPUNCH5C,0
+BGPORTPUNCH6
+	.long	BGPORTPUNCH6A,BGPORTPUNCH6B,BGPORTPUNCH6C,0
+BGPORTPUNCH7
+	.long	BGPORTPUNCH7A,BGPORTPUNCH7B,BGPORTPUNCH7C,BGPORTPUNCH7D
+	.long	BGPORTFIST1,BGPORTFIST2,BGPORTFIST3,0
+BGBIGFIST1
+	.long	BGBIGFIST1A,BGBIGFIST1B,BGBIGFIST1C,BGBIGFIST1D
+	.long	BGBIGFIST1C,BGBIGFIST1D
+	.long	0
+
+;**************************************************************************
+
+a_sk_talkup
+	.long	BGTALK1
+j_sktu	.long	BGTALK2
+	.long	BGTALK3
+	.long	BGTALK4
+	.long	BGTALK5
+	.long	0
+
+	.long	BGTALK4
+	.long	BGTALK3
+	.long	ani_jump,j_sktu
+	.long	0
+
+	.long	BGTALK4
+	.long	BGTALK3
+	.long	BGTALK2
+	.long	BGTALK1
+	.long	0
+
+
+BGTALK1
+	.long	BGTALKLEG1A,BGTALKLEG1B
+	.long	BGTALK1A,BGTALK1B,0
+
+BGTALK2
+	.long	BGTALKLEG1A,BGTALKLEG1B
+	.long	BGTALK2A,BGTALK2B,0
+
+BGTALK3
+	.long	BGTALKLEG1A,BGTALKLEG1B
+	.long	BGTALK3A,BGTALK3B,0
+
+BGTALK4
+	.long	BGTALKLEG1A,BGTALKLEG1B
+	.long	BGTALK4A,BGTALK4B,0
+
+BGTALK5
+	.long	BGTALKLEG1A,BGTALKLEG1B
+	.long	BGTALK5A,BGTALK5B,0
+
+;**************************************************************************
+
+a_sk_talkdown
+	.long	BGTAWNT1
+j_sktd	.long	BGTAWNT2
+	.long	BGTAWNT3
+	.long	BGTAWNT4
+	.long	0
+
+	.long	BGTAWNT3
+	.long	ani_jump,j_sktd
+
+BGTAWNT1
+	.long	BGTALKLEG1A,BGTALKLEG1B
+	.long	BGTAWNT1A,BGTAWNT1B,BGTAWNT1C,0
+BGTAWNT2
+	.long	BGTALKLEG1A,BGTALKLEG1B
+	.long	BGTAWNT2A,BGTAWNT2B,BGTAWNT2C,0
+BGTAWNT3
+	.long	BGTALKLEG1A,BGTALKLEG1B
+	.long	BGTAWNT3A,BGTAWNT3B,BGTAWNT3C,0
+BGTAWNT4
+	.long	BGTALKLEG1A,BGTALKLEG1B
+	.long	BGTAWNT4A,BGTAWNT4B,BGTAWNT4C,0
+
+;************************************************************************
+
+a_sk_swept
+	.long	BGSWEEPHIT1
+	.long	BGSWEEPHIT2
+	.long	BGSWEEPHIT1
+	.long	0
+
+BGSWEEPHIT1
+	.long	BGSWEEPHIT1A,BGSWEEPHIT1B,BGSWEEPHIT1C,BGSWEEPHIT1D,0
+BGSWEEPHIT2
+	.long	BGSWEEPHIT2A,BGSWEEPHIT2B,BGSWEEPHIT2C,BGSWEEPHIT2D,0
+
+;************************************************************************
+
+a_sk_noogied
+	.long	BGSTUMBLE1
+	.long	BGSTUMBLE2
+	.long	BGSTUMBLE3
+	.long	BGSTUMBLE2
+	.long	0
+
+a_sk_stumble
+	.long	BGSTUMBLE1
+	.long	BGSTUMBLE2
+	.long	BGSTUMBLE3
+	.long	BGSTUMBLE4
+	.long	BGSTUMBLE5
+	.long	BGSTUMBLE6
+	.long	BGSTUMBLE7
+	.long	0
+
+a_shredded
+a_bike_kicked
+	.long	BGSTUMBLE1
+	.long	BGSTUMBLE2
+	.long	BGSTUMBLE3
+	.long	BGSTUMBLE4
+	.long	BGSTUMBLE5
+	.long	BGSTUMBLE6
+	.long	BGSTUMBLE7
+	.long	ani_jump,a_bike_kicked
+
+
+BGSTUMBLE1
+	.long	BGSTUMBLE1A,BGSTUMBLE1B,0
+BGSTUMBLE2
+	.long	BGSTUMBLE2A,BGSTUMBLE2B,BGSTUMBLE2C,0
+BGSTUMBLE3
+	.long	BGSTUMBLE3A,BGSTUMBLE3B,BGSTUMBLE3C,0
+BGSTUMBLE4
+	.long	BGSTUMBLE4A,BGSTUMBLE4B,0
+BGSTUMBLE5
+	.long	BGSTUMBLE5A,BGSTUMBLE5B,0
+BGSTUMBLE6
+	.long	BGSTUMBLE6A,BGSTUMBLE6B,0
+BGSTUMBLE7
+	.long	BGSTUMBLE7A,BGSTUMBLE7B,0
+
+;************************************************************************
+
+a_skgetup
+	.long	BGGETUP1
+	.long	BGGETUP2
+	.long	BGGETUP3
+	.long	BGGETUP4
+	.long	BGGETUP5
+	.long	BGGETUP6
+	.long	BGGETUP7
+	.long	0
+
+BGGETUP1
+	.long	BGGETUP1A,BGGETUP1B,BGGETUP1C,BGGETUP1D
+	.long	BGGETUP1E,0
+BGGETUP2
+	.long	BGGETUP2A,BGGETUP2B,BGGETUP2C,BGGETUP2D
+	.long	BGGETUP2E,0
+BGGETUP3
+	.long	BGGETUP3A,BGGETUP3B,BGGETUP3C,0
+BGGETUP4
+	.long	BGGETUP4A,BGGETUP4B,BGGETUP4C,0
+BGGETUP5
+	.long	BGGETUP5A,BGGETUP5B,BGGETUP5C,0
+BGGETUP6
+	.long	BGGETUP6A,BGGETUP6B,0
+BGGETUP7
+	.long	BGGETUP7A,BGGETUP7B,BGGETUP7C,0
+
+;**************************************************************************
+
+a_skhit
+	.long	BGHIT2
+	.long	BGHIT3
+	.long	BGHIT2
+	.long	BGHIT1
+	.long	0
+
+BGHIT1	.long	BGHIT1A,BGHIT1B,BGHIT1C,0
+BGHIT2	.long	BGHIT2A,BGHIT2B,0
+BGHIT3	.long	BGHIT3A,BGHIT3B,0
+
+;**************************************************************************
+
+a_stone_crack
+	.long	BGSTONECRACK1
+	.long	BGSTONECRACK2
+	.long	BGSTONECRACK3
+	.long	BGSTONECRACK4
+	.long	BGSTONECRACK5
+	.long	BGSTONECRACK6
+	.long	BGSTONECRACK7
+	.long	0
+
+	.long	BGSTONECRACK8
+	.long	0
+
+BGSTONECRACK1
+	.long	BGSTONECRACK1A,BGSTONECRACK1B,0
+BGSTONECRACK2
+	.long	BGSTONECRACK2A,BGSTONECRACK2B,0
+BGSTONECRACK3
+	.long	BGSTONECRACK3A,BGSTONECRACK3B,0
+BGSTONECRACK4
+	.long	BGSTONECRACK4A,BGSTONECRACK4B,0
+BGSTONECRACK5
+	.long	BGSTONECRACK5A,BGSTONECRACK5B,0
+BGSTONECRACK6
+	.long	BGSTONECRACK6A,BGSTONECRACK6B,0
+BGSTONECRACK7
+	.long	BGSTONECRACK7A,BGSTONECRACK7B,0
+BGSTONECRACK8
+	.long	BGSTONECRACK8A,BGSTONECRACK8B
+
+;**************************************************************************
+
+BGTURNSTONE1
+	.long	BGTURNSTONE1A,BGTURNSTONE1B,0
+BGTURNSTONE2
+	.long	BGTURNSTONE2A,BGTURNSTONE2B,0
+BGTURNSTONE3
+	.long	BGTURNSTONE3A,0
+BGTURNSTONE4
+	.long	BGTURNSTONE4A,0
+BGTURNSTONE5
+	.long	BGTURNSTONE5A,0
+BGTURNSTONE6
+	.long	BGTURNSTONE6A,BGTURNSTONE6B,0
+BGTURNSTONE7
+	.long	BGTURNSTONE7A,BGTURNSTONE7B,BGTURNSTONE7C,0
+BGTURNSTONE8
+	.long	BGTURNSTONE8A,BGTURNSTONE8B,BGTURNSTONE8C,0
+
+
+stone_explode
+	.long	BIGSTONE1
+	.word	48,0
+	.long	BIGSTONE2
+	.word	46,-12
+	.long	BIGSTONE3
+	.word	40,-25
+
+	.long	BIGSTONE4
+	.word	29,-38
+	.long	BIGSTONE5
+	.word	16,-45
+	.long	BIGSTONE6
+	.word	0,-48
+	.long	0
+
+
+KAHNBIG1
+	.word   21,23,10,11
+	.long   038010a6H
+	.word   06080H
+	.long	STONE_P
+
+KAHNLIL1
+	.word   9,11,4,5
+	.long   03805dc6H
+	.word   06000H
+	.long	STONE_P
+
+STONE_P:
+	.word   43 
+	.word   00000h,00400h,00421h,00821h,00842h,00c42h,00c63h,01063h
+	.word   01084h,014a5h,018a5h,018a6h,018c6h,01cc6h,01ce7h,02108h
+	.word   02529h,02929h,0294ah,02d6bh,0318ch,035adh,039adh,039ceh
+	.word   03defh,04210h,049d1h,04631h,04a31h,04a52h,04e73h,05294h
+	.word   056b5h,05ad6h,05ef7h,06318h,06739h,06b5ah,06f7bh,0739ch
+	.word   077bdh,07bdeh,07fffh
+
+a_bigstone
+	.long	KAHNBIG1
+	.long	BIGSTONE2
+	.long	BIGSTONE3
+	.long	BIGSTONE4
+	.long	BIGSTONE5
+	.long	BIGSTONE6
+	.long	BIGSTONE7
+	.long	BIGSTONE8
+	.long	0
+
+a_lilstone
+	.long	KAHNLIL1
+	.long	LILSTONE2
+	.long	LILSTONE3
+	.long	LILSTONE4
+	.long	LILSTONE5
+	.long	LILSTONE6
+	.long	LILSTONE7
+	.long	LILSTONE8
+	.long	0
+
+STONEBOD
+	.long	STONEBODA,STONEBODB,0
+
+;***********************************************************************
+
+	.END
+
+

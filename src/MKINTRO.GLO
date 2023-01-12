@@ -1,0 +1,9 @@
+	.globl	RDBOX_P
+	.globl	LKBOX_P
+	.globl	NJ2BOX_P
+	.globl	KBOX_P
+	.globl	NJ1BOX_P
+	.globl	GBOX_P
+	.globl	LZBOX_P
+	.globl	GOROBOX_P
+	.globl	EMPBOX_P

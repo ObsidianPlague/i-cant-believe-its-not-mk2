@@ -1,0 +1,148 @@
+	.DATA
+FN2BOX:
+	.word   55,70,0,0
+	.long   0400394eH
+	.word   07000H
+	.long   BOX7_P
+FN1BOX:
+	.word   55,70,0,0
+	.long   0400a294H
+	.word   07000H
+	.long   BOX6_P
+JXBOX:
+	.word   55,70,0,0
+	.long   04010bdaH
+	.word   07000H
+	.long   BOX3_P
+STBOX:
+	.word   55,70,0,0
+	.long   04017520H
+	.word   07000H
+	.long   BOX4_P
+RDBOX:
+	.word   55,70,0,0
+	.long   0401de66H
+	.word   07000H
+	.long   BOX5_P
+SZBOX:
+	.word   55,70,0,0
+	.long   040247acH
+	.word   07000H
+	.long   BOX1_P
+HHBOX:
+	.word   55,70,0,0
+	.long   0402b0f2H
+	.word   07000H
+	.long   BOX2_P
+LKBOX:
+	.word   55,70,0,0
+	.long   04031a38H
+	.word   07000H
+	.long   BOX8_P
+JCBOX:
+	.word   55,70,0,0
+	.long   0403837eH
+	.word   07000H
+	.long   BOX9_P
+RPBOX:
+	.word   55,70,0,0
+	.long   0403ecc4H
+	.word   07000H
+	.long   BOX10_P
+SCBOX:
+	.word   55,70,0,0
+	.long   0404560aH
+	.word   07000H
+	.long   BOX11_P
+UGBOX:
+	.word   55,70,0,0
+	.long   0404bf50H
+	.word   07000H
+	.long   BOX12_P
+smframe1:
+	.word   22,51,0,0
+	.long   04052896H
+	.word   05000H
+	.long   boxfrm_p
+smframe2:
+	.word   21,51,0,0
+	.long   04053e80H
+	.word   05000H
+	.long   boxfrm_p
+smhhbox:
+	.word   35,45,0,0
+	.long   0405536bH
+	.word   06000H
+	.long   HHBOX65_p
+smszbox:
+	.word   35,45,0,0
+	.long   04057855H
+	.word   06000H
+	.long   SZBOX65_P
+smugbox:
+	.word   35,45,0,0
+	.long   04059d3fH
+	.word   06000H
+	.long   UGBOX65_p
+smscbox:
+	.word   35,45,0,0
+	.long   0405c229H
+	.word   06000H
+	.long   SCBOX65_p
+smjcbox:
+	.word   35,45,0,0
+	.long   0405e713H
+	.word   06000H
+	.long   JCBOX65_p
+smrdbox:
+	.word   35,45,0,0
+	.long   04060bfdH
+	.word   06000H
+	.long   RDBOX65_p
+smrpbox:
+	.word   35,45,0,0
+	.long   040630e7H
+	.word   06000H
+	.long   RPBOX65_p
+smjxbox:
+	.word   35,45,0,0
+	.long   040655d1H
+	.word   06000H
+	.long   JXBOX65_p
+smlkbox:
+	.word   35,45,0,0
+	.long   04067abbH
+	.word   06000H
+	.long   LKBOX65_p
+smktbox:
+	.word   35,45,0,0
+	.long   04069fa5H
+	.word   06000H
+	.long   KTBOX65_p
+smlabox:
+	.word   35,45,0,0
+	.long   0406c48fH
+	.word   06000H
+	.long   LABOX65_p
+smstbox:
+	.word   35,45,0,0
+	.long   0406e979H
+	.word   06000H
+	.long   STBOX65_p
+peakboss:
+	.word   61,123,0,0
+	.long   04070e63H
+	.word   06000H
+	.long   topboss_p
+smgorobox:
+	.word   35,45,0,0
+	.long   0407be3dH
+	.word   06000H
+	.long   smgor_p
+mysterybox:
+	.word   35,45,0,0
+	.long   0407e327H
+	.word   05000H
+	.long   myster_p
+	.TEXT
+

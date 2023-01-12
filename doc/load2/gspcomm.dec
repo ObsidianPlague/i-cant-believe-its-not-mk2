@@ -1,0 +1,14 @@
+
+void SetHostIo (char *stringtemp,int msgflg);
+void SetAuto(long addr,char val);
+void WrGSP(int val);
+int  RdGSP(void);
+void WrGSPLong(long val);
+long RdGSPLong(void);
+void SetGSPAddr(long addr);
+long GetGSPAddr(void);
+void RdGSPBuffer(int *bufoff,int num);
+void WrGSPBuffer(int *bufoff,int num);
+int  GetHSTCTLH(void);
+void SetHSTCTLH(char val);
+
